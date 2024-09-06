@@ -35,7 +35,7 @@ form {
 }
 
 button,select,
-input {
+input,input[type="date"] {
   border: 0;
   outline: 0;
   font-size: 12px;
