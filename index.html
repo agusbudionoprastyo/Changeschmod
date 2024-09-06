@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChangeSchMod</title>
+    <link rel="icon" href="images/icon/drawable-hdpi/icon.png" type="image/x-icon">
+    <!-- <link rel="manifest" href="manifest.json"> -->
+    <link rel="stylesheet" type="text/css" href="sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet"> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://kit.fontawesome.com/3595b79eb9.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <form id="imageForm"> 
+    <img src="images/logo.png" alt="logo" class="logo">
+
+        <label><h2>1st Employee</h2></label> 
+
+        <div class="input-group">
+            <div class="input-wrapper">
+                <label for="name"><h3>Name</h3></label>
+                <select id="name" style="width: 100%;">
+                    <option value=""></option>
+                    <option value="Doni Abiyantoro">Doni Abiyantoro</option>
+                    <option value="Laras">Laras</option>
+                    <option value="Heri">Heri</option>
+                    <option value="Fajar F">Fajar F</option>
+                    <option value="Ardhiny">Ardhiny</option>
+                    <option value="Robbi Isnanto">Robbi Isnanto</option>
+                    <option value="Sugiartono">Sugiartono</option>
+                    <option value="Lukman Prayogo">Lukman Prayogo</option>
+                    <option value="Ota Setiawan">Ota Setiawan</option>
+                    <option value="Dian Nurkhasanah">Dian Nurkhasanah</option>
+                    <option value="Dela Rosita">Dela Rosita</option>
+                    <option value="Fajar Kuncoro">Fajar Kuncoro</option>
+                    <option value="Hendri D Prayogo">Hendri D Prayogo</option>
+                    <option value="Septi Fira">Septi Fira</option>
+                    <option value="Faizin/Dodi">Faizin/Dodi</option>
+                    <option value="Hendrik/Syahrul">Hendrik/Syahrul</option>
+                    <option value="Agus Budiono Prastyo">Agus Budiono Prastyo</option>
+                </select>
+            </div>            
+            <div class="input-wrapper">
+                <label for="dept"><h3>Department</h3></label>
+                <input type="text" id="dept"/>
+            </div>
+            <div class="input-wrapper">
+                <label for="pos"><h3>Position</h3></label>
+                <input type="text" id="pos"/>
+            </div>
+        </div>
+        <div id="signature-pad-1" class="signature-pad" >
+            <label><h2>Requested By (Employee 1)</h2></label>
+            <canvas></canvas>
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <button type="button" class="undoClear" data-action="clear"><i class="fa-solid fa-eraser"></i></button>
+                    <button type="button" data-action="undo"><i class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <label><h2>2nd Employee</h2></label> 
+
+        <div class="input-group">
+            <div class="input-wrapper">
+                <label for="name2"><h3>Name</h3></label>
+                <select id="name2" style="width: 100%;">
+                    <option value=""></option>
+                    <option value="Doni Abiyantoro">Doni Abiyantoro</option>
+                    <option value="Laras">Laras</option>
+                    <option value="Heri">Heri</option>
+                    <option value="Fajar F">Fajar F</option>
+                    <option value="Ardhiny">Ardhiny</option>
+                    <option value="Robbi Isnanto">Robbi Isnanto</option>
+                    <option value="Sugiartono">Sugiartono</option>
+                    <option value="Lukman Prayogo">Lukman Prayogo</option>
+                    <option value="Ota Setiawan">Ota Setiawan</option>
+                    <option value="Dian Nurkhasanah">Dian Nurkhasanah</option>
+                    <option value="Dela Rosita">Dela Rosita</option>
+                    <option value="Fajar Kuncoro">Fajar Kuncoro</option>
+                    <option value="Hendri D Prayogo">Hendri D Prayogo</option>
+                    <option value="Septi Fira">Septi Fira</option>
+                    <option value="Faizin/Dodi">Faizin/Dodi</option>
+                    <option value="Hendrik/Syahrul">Hendrik/Syahrul</option>
+                    <option value="Agus Budiono Prastyo">Agus Budiono Prastyo</option>
+                </select>
+            </div>  
+            <div class="input-wrapper">
+                <label for="dept2"><h3>Department</h3></label>
+                <input type="text" id="dept2"/>
+            </div>
+            <div class="input-wrapper">
+                <label for="pos2"><h3>Position</h3></label>
+                <input type="text" id="pos2"/>
+            </div>
+        </div>
+        <div id="signature-pad-2" class="signature-pad" >
+            <label><h2>Agreed By (Employee 2)</h2></label>
+            <canvas></canvas>
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <button type="button" class="undoClear" data-action="clear"><i class="fa-solid fa-eraser"></i></button>
+                    <button type="button" data-action="undo"><i class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+        </div>
+
+        <label><h2>Schedule Change</h2></label>
+
+
+        <div class="input-group">
+            <div class="input-wrapper">
+                <label for="sch1"><h3>From</h3></label>
+                <input type="date" id="sch1" placeholder="**/**/****"/>
+            </div>
+            <div class="input-wrapper">
+                <label for="sch2"><h3>To</h3></label>
+                <input type="date" id="sch2" placeholder="**/**/****"/>
+            </div>
+        </div>
+
+        <div id="message"></div>
+        <input type="hidden" id="roomtype"/>
+        <input type="hidden" id="pdfFile"/>
+        
+        <div id="signature-pad-3" class="signature-pad" >
+            <label><h2>Approved By (General Manager)</h2></label>
+            <canvas></canvas>
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <button type="button" class="undoClear" data-action="clear"><i class="fa-solid fa-eraser"></i></button>
+                    <button type="button" data-action="undo"><i class="fa-solid fa-rotate-left"></i></button>
+                </div>
+            </div>
+        </div>
+        <div id="signature-pad-4" >
+            <label><h2>Acknowledged By (HR Manager)</h2></label>
+            <canvas></canvas>
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <button type="button" class="undoClear" data-action="clear"><i class="fa-solid fa-eraser"></i></button>
+                    <button type="button" data-action="undo"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button type="button" id="save-btn" class="cyan">SUBMIT</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="js/signature_pad.umd.js"></script>
+    <!-- <script src="js/app.js"></script> -->
+    <script src="js/axios.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.worker.min.js"></script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const pads = [];
+                const canvases = [];
+                
+                function resizeCanvas(canvas) {
+                    const ratio = Math.max(window.devicePixelRatio || 1, 1);
+                    canvas.width = canvas.offsetWidth * ratio;
+                    canvas.height = canvas.offsetHeight * ratio;
+                    canvas.getContext("2d").scale(ratio, ratio);
+                    // Clear the canvas to avoid incorrect isEmpty() value
+                    const pad = pads[canvases.indexOf(canvas)];
+                    if (pad) pad.clear();
+                }
+                
+                // Initialize Signature Pads
+                for (let i = 1; i <= 4; i++) {
+                    const canvas = document.querySelector(`#signature-pad-${i} canvas`);
+                    canvases.push(canvas);
+                    pads[i - 1] = new SignaturePad(canvas);
+                    
+                    // Event listener for Undo Button
+                    const undoButton = document.querySelector(`#signature-pad-${i} [data-action=undo]`);
+                    if (undoButton) {
+                        undoButton.addEventListener("click", () => {
+                            const pad = pads[i - 1];
+                            const data = pad.toData();
+                            if (data) {
+                                data.pop(); // Remove the last dot or line
+                                pad.fromData(data);
+                            }
+                        });
+                    }
+                    
+                    // Event listener for Clear Button
+                    const clearButton = document.querySelector(`#signature-pad-${i} .undoClear`);
+                    if (clearButton) {
+                        clearButton.addEventListener('click', function() {
+                            pads[i - 1].clear();
+                        });
+                    }
+                    
+                    // Event listener for Save Button
+                    if (i === 4) { // Assuming the last pad has a submit button
+                        const saveButton = document.querySelector(`#signature-pad-${i} #save-btn`);
+                        if (saveButton) {
+                            saveButton.addEventListener('click', function() {
+                                if (!pads[i - 1].isEmpty()) {
+                                    const dataURL = pads[i - 1].toDataURL();
+                                    console.log(`Signature ${i} data URL:`, dataURL);
+                                    // Handle the data URL (e.g., send it to a server or display it)
+                                } else {
+                                    alert('Please provide a signature before submitting.');
+                                }
+                            });
+                        }
+                    }
+                }
+                
+                // Resize all canvases on page load
+                canvases.forEach(canvas => resizeCanvas(canvas));
+                
+                // Resize canvases on window resize
+                window.addEventListener("resize", function() {
+                    canvases.forEach(canvas => resizeCanvas(canvas));
+                });
+            });
+        </script>
+
+</body>
+</html>
