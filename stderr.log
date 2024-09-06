@@ -1,0 +1,1760 @@
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:80
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:2
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:2
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:2
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:2
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:2
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1
+window.addEventListener('load', function() {
+^
+
+ReferenceError: window is not defined
+    at Object.<anonymous> (/home/dafm5634/public_html/regcard.dafam.cloud/js/script.js:1:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+    at Module._compile (node:internal/modules/cjs/loader:1241:14)
+
+Node.js v20.9.0
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from 'pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from 'node_module/pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from 'node_module/pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from 'node_module/pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from 'node_module/pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from 'node_module/pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from 'node_module/pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+Exception ignored in: <_io.TextIOWrapper name='<stdout>' mode='w' encoding='utf-8'>
+BrokenPipeError: [Errno 32] Broken pipe
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+/home/dafm5634/public_html/regcard.dafam.cloud/server.js:1
+import { PDFDocument, rgb } from '../pdf-lib';
+^^^^^^
+
+SyntaxError: Cannot use import statement outside a module
+    at internalCompileFunction (node:internal/vm:73:18)
+    at wrapSafe (node:internal/modules/cjs/loader:1153:20)
+    at Module._compile (node:internal/modules/cjs/loader:1205:27)
+    at Module._extensions..js (node:internal/modules/cjs/loader:1295:10)
+    at Module.load (node:internal/modules/cjs/loader:1091:32)
+    at Module._load (node:internal/modules/cjs/loader:938:12)
+    at Module.require (node:internal/modules/cjs/loader:1115:19)
+    at require (node:internal/modules/helpers:130:18)
+    at startApplication (/usr/local/lsws/fcgi-bin/lsnode.js:48:15)
+    at Object.<anonymous> (/usr/local/lsws/fcgi-bin/lsnode.js:16:1)
+
+Node.js v20.9.0
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)
+Error: Missing data
+    at /home/dafm5634/public_html/regcard.dafam.cloud/server.js:24:19
+    at Layer.handle [as handle_request] (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/layer.js:95:5)
+    at next (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/express/lib/router/route.js:149:13)
+    at done (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:45:7)
+    at indicateDone (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:49:68)
+    at Multipart.<anonymous> (/home/dafm5634/nodevenv/public_html/regcard.dafam.cloud/20/lib/node_modules/multer/lib/make-middleware.js:166:7)
+    at Multipart.emit (node:events:514:28)
+    at emitCloseNT (node:internal/streams/destroy:132:10)
+    at process.processTicksAndRejections (node:internal/process/task_queues:81:21)

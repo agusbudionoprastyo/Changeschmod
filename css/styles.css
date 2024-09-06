@@ -1,0 +1,284 @@
+body,
+html {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+body,
+p,
+input,
+select,
+textarea,
+button {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.2px;
+  font-size: 12px;
+  margin-bottom: 2rem;
+}
+
+div,
+p {
+  color: #3c3c40;
+  text-shadow: 1px 1px 1px #fff;
+}
+
+form {
+  padding: 16px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.segment {
+  padding: 32px 0;
+  text-align: center;
+}
+
+button,select,
+input {
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  border-radius: 15px;
+  padding: 16px;
+  background-color: #fff;
+  text-shadow: 1px 1px 0 #fff;
+}
+
+label {
+  display: block;
+  margin-left: 10px;
+  /* margin-bottom: 5px; */
+  width: 100%;
+}
+
+/* Gaya umum input */
+input,select {
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+input:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+select:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+textarea:focus {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+/* select {
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    appearance: none;
+    -webkit-appearance: none;
+  } */
+
+/* Gaya untuk input alamat (textarea) */
+.input-address {
+  box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+  width: 100%;
+  height: 100px; /* Atur tinggi textarea sesuai kebutuhan */
+  min-height: 100px; /* Atur tinggi minimum textarea */
+  resize: none; /* Menonaktifkan resize textarea */
+  padding: 16px;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  border: 0;
+  border-radius: 15px;
+  background-color: #ebecf0;
+  text-shadow: 1px 1px 0 #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  appearance: none;
+  -webkit-appearance: none;
+  white-space: pre-wrap; /* Memastikan teks wrap ke bawah */
+}
+
+button {
+  color: #61677c;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+button:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+button:active {
+  box-shadow: inset 1px 1px 2px #babecc, inset -1px -1px 2px #fff;
+}
+
+button.cyan {
+  display: block;
+  width: 100%;
+  color: #00aea5;
+  margin-left: 1rem;
+}
+
+button.roomType{
+    display: block;
+    width: 100%;
+    color: #ff2b85;
+    margin-left: 1rem;
+}
+
+button.scan{
+    width: 50%;
+    color: #61677c;
+}
+
+button.undoClear {
+    display: block;
+    margin-right: 1rem;
+  }
+
+button.red {
+    display: block;
+    width: 100%;
+    color: #b60c53;
+  }
+  
+.input-group {
+    margin-bottom: 15px; /* Untuk memberikan ruang antara setiap input */
+}
+
+.input-group .input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Menyusun label ke kiri */
+}
+
+.input-group .input-wrapper label {
+    /* margin-left: 8px; */
+    margin-bottom: 30px; /* Memberikan ruang antara label dan input */
+}
+
+.input-group .input-wrapper input select {
+    max-width: 100%; /* Input memanjang hingga ke tepi kanan page */
+    margin-left: 0; /* Menghapus margin kiri */
+}  
+
+.doNot {
+    float: right;
+    width: 70px; /* Ubah sesuai dengan ukuran yang Anda inginkan */
+    margin-left: 10px; /* Atur jarak antara gambar dan teks */
+}
+
+.logo {
+    display: flex;
+    margin-top: 2rem;
+    margin-bottom: 5rem;
+    align-items: center;
+    justify-content: flex-start; 
+    max-width: 200px; /* Ubah sesuai dengan ukuran yang Anda inginkan */
+    filter: invert(80%);
+}
+
+
+  /* CSS untuk lapisan transparan */
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Warna latar belakang dengan transparansi */
+    z-index: 9999; /* Mengatur tumpukan z untuk menempatkan di atas konten lain */
+    display: none; /* Mulai dengan menyembunyikan overlay */
+}
+
+#loading img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px; 
+    height: 30px;
+}
+
+.inputfile {
+	width: 0.1px;
+	height: 0.1px;
+	opacity: 0;
+	overflow: hidden;
+	position: absolute;
+	z-index: -1;
+}
+
+.inputfile + label {
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    border-radius: 15px;
+    padding: 16px;
+    background-color: #ebecf0;
+    text-shadow: 1px 1px 0 #fff;
+    color: #61677c;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+    text-align: center;
+}
+
+.inputfile:focus + label,
+.inputfile + label:hover {
+    box-shadow: -2px -2px 5px #fff, 2px 2px 5px #babecc;
+}
+
+.swal2-popup {
+    border-radius: 15px !important;
+  }
+
+.swal2-input{
+    border-radius: 15px !important;
+}
+
+  /* Untuk mengatur ukuran canvas */
+#signature-pad canvas {
+    box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
+    box-sizing: border-box;
+    transition: all 0.2s ease-in-out;
+    border-radius: 15px;
+    width: 100%;
+    height: 250px;
+    margin-bottom: 15px;  
+    appearance: none;
+    -webkit-appearance: none;
+}
+
+.swal2-confirm {
+    text-shadow: none;
+    border-radius: 20px; /* Atur radius sesuai kebutuhan Anda */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Gaya CSS untuk menyesuaikan posisi tombol */
+.swal2-actions {
+    display: flex;
+    justify-content: flex-end;
+}
+.swal2-actions button {
+    margin: 0 5px; /* Mengatur jarak antara tombol */
+}
+.swal2-select {
+    width: auto;
+    height: 50px;
+    justify-content: center;
+}
