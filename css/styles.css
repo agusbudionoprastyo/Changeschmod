@@ -35,7 +35,7 @@ form {
 }
 
 button,select,
-input,input[type="date"] {
+input {
   border: 0;
   outline: 0;
   font-size: 12px;
@@ -130,6 +130,12 @@ button.red {
 .input-group .input-wrapper input {
     max-width: 100%; /* Input memanjang hingga ke tepi kanan page */
     margin-left: 1rem; /* Menghapus margin kiri */
+}  
+
+.input-group .input-wrapper input[type="date"]{
+  max-width: 100%; /* Input memanjang hingga ke tepi kanan page */
+  margin-left: 1rem; /* Menghapus margin kiri */
+  padding: 16px;
 }  
 
 .logo {
