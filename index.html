@@ -172,15 +172,24 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const pads = [];
                 const canvases = [];
-                
+
                 function resizeCanvas(canvas) {
                     const ratio = Math.max(window.devicePixelRatio || 1, 1);
-                    canvas.width = canvas.offsetWidth * ratio;
-                    canvas.height = canvas.offsetHeight * ratio;
-                    canvas.getContext("2d").scale(ratio, ratio);
-                    // Clear the canvas to avoid incorrect isEmpty() value
+                    const context = canvas.getContext("2d");
+                    const width = canvas.offsetWidth;
+                    const height = canvas.offsetHeight;
+                    
+                    canvas.width = width * ratio;
+                    canvas.height = height * ratio;
+                    
+                    context.scale(ratio, ratio);
+                    context.clearRect(0, 0, width, height); // Clear the canvas before resizing
+
+                    // Optionally, you may want to re-render the existing signature here
                     const pad = pads[canvases.indexOf(canvas)];
-                    if (pad) pad.clear();
+                    if (pad && !pad.isEmpty()) {
+                        pad.fromData(pad.toData());
+                    }
                 }
                 
                 // Initialize Signature Pads
