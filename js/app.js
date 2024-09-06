@@ -1,55 +1,134 @@
-const wrapper = document.getElementById("signature-pad");
-const clearButton = wrapper.querySelector("[data-action=clear]");
-const undoButton = wrapper.querySelector("[data-action=undo]");
-const savePNGButton = wrapper.querySelector("[data-action=save-png]");
-const canvas = wrapper.querySelector("canvas");
-const signaturePad = new SignaturePad(canvas, {
-  // It's Necessary to use an opaque color when saving image as JPEG;
-  // this option can be omitted if only saving as PNG or SVG
-  backgroundColor: 'rgba(0, 0, 0, 0)' // 
-});
+document.addEventListener('DOMContentLoaded', function() {
+  const pads = [];
+  const canvases = [];
 
-function download(dataURL, filename) {
-  const blob = dataURLToBlob(dataURL);
-  const url = window.URL.createObjectURL(blob);
+  function resizeCanvas(canvas) {
+      const ratio = Math.max(window.devicePixelRatio || 1, 1);
+      const context = canvas.getContext("2d");
+      const width = canvas.offsetWidth;
+      const height = canvas.offsetHeight;
 
-  const a = document.createElement("a");
-  a.style = "display: none";
-  a.href = url;
-  a.download = filename;
+      canvas.width = width * ratio;
+      canvas.height = height * ratio;
 
-  document.body.appendChild(a);
-  a.click();
+      context.scale(ratio, ratio);
+      context.clearRect(0, 0, width, height); // Clear the canvas before resizing
 
-  window.URL.revokeObjectURL(url);
-}
-
-// One could simply use Canvas#toBlob method instead, but it's just to show
-// that it can be done using result of SignaturePad#toDataURL.
-function dataURLToBlob(dataURL) {
-  // Code taken from https://github.com/ebidel/filer.js
-  const parts = dataURL.split(';base64,');
-  const contentType = parts[0].split(":")[1];
-  const raw = window.atob(parts[1]);
-  const rawLength = raw.length;
-  const uInt8Array = new Uint8Array(rawLength);
-
-  for (let i = 0; i < rawLength; ++i) {
-    uInt8Array[i] = raw.charCodeAt(i);
+      // Optionally re-render the existing signature here
+      const pad = pads[canvases.indexOf(canvas)];
+      if (pad && !pad.isEmpty()) {
+          pad.fromData(pad.toData());
+      }
   }
 
-  return new Blob([uInt8Array], { type: contentType });
-}
+  // Initialize Signature Pads
+  for (let i = 1; i <= 4; i++) {
+      const canvas = document.querySelector(`#signature-pad-${i} canvas`);
+      canvases.push(canvas);
+      pads[i - 1] = new SignaturePad(canvas);
 
-clearButton.addEventListener("click", () => {
-  signaturePad.clear();
-});
+      // Event listener for Undo Button
+      const undoButton = document.querySelector(`#signature-pad-${i} [data-action=undo]`);
+      if (undoButton) {
+          undoButton.addEventListener("click", () => {
+              const pad = pads[i - 1];
+              const data = pad.toData();
+              if (data) {
+                  data.pop(); // Remove the last dot or line
+                  pad.fromData(data);
+              }
+          });
+      }
 
-undoButton.addEventListener("click", () => {
-  const data = signaturePad.toData();
+      // Event listener for Clear Button
+      const clearButton = document.querySelector(`#signature-pad-${i} .undoClear`);
+      if (clearButton) {
+          clearButton.addEventListener('click', function() {
+              pads[i - 1].clear();
+          });
+      }
 
-  if (data) {
-    data.pop(); // remove the last dot or line
-    signaturePad.fromData(data);
+      // Event listener for Save Button
+      if (i === 4) { // Assuming the last pad has a submit button
+          const saveButton = document.querySelector(`#signature-pad-${i} #save-btn`);
+          if (saveButton) {
+              saveButton.addEventListener('click', function() {
+                  if (!pads[i - 1].isEmpty()) {
+                      const dataURL = pads[i - 1].toDataURL();
+                      console.log(`Signature ${i} data URL:`, dataURL);
+                      // Handle the data URL (e.g., send it to a server or display it)
+                  } else {
+                      alert('Please provide a signature before submitting.');
+                  }
+              });
+          }
+      }
   }
+
+  // Resize all canvases on page load
+  canvases.forEach(canvas => resizeCanvas(canvas));
+
+  // Resize canvases on window resize
+  window.addEventListener("resize", function() {
+      canvases.forEach(canvas => resizeCanvas(canvas));
+  });
+
+  const dateInputs = {
+      sch1: document.getElementById('sch1'),
+      sch2: document.getElementById('sch2')
+  };
+
+  const selectElements = {
+      mod: document.getElementById('mod'),
+      mod2: document.getElementById('mod2')
+  };
+
+  function updateOptions(dateInputId, selectId) {
+      const dateValue = dateInputs[dateInputId].value;
+      const selectedDate = new Date(dateValue);
+      const selectElement = selectElements[selectId];
+
+      if (!dateValue) return; // Exit if no date is selected
+
+      // Clear existing options
+      selectElement.innerHTML = '';
+
+      // Determine if the selected date is a weekend or weekday
+      const dayOfWeek = selectedDate.getDay();
+      let options;
+
+      if (dayOfWeek === 0 || dayOfWeek === 6) {
+          // Weekend (Saturday or Sunday)
+          options = [
+              { value: 'MOD 1', text: 'MOD 1' },
+              { value: 'MOD 2', text: 'MOD 2' }
+          ];
+      } else {
+          // Weekday (Monday to Friday)
+          options = [
+              { value: 'MOD', text: 'MOD' }
+          ];
+      }
+
+      // Add new options to the select element
+      options.forEach(option => {
+          const opt = document.createElement('option');
+          opt.value = option.value;
+          opt.textContent = option.text;
+          selectElement.appendChild(opt);
+      });
+  }
+
+  // Event listeners for each date input
+  dateInputs.sch1.addEventListener('change', function() {
+      updateOptions('sch1', 'mod');
+  });
+
+  dateInputs.sch2.addEventListener('change', function() {
+      updateOptions('sch2', 'mod2');
+  });
+
+  // Initial calls to set the correct options based on current date
+  updateOptions('sch1', 'mod');
+  updateOptions('sch2', 'mod2');
 });
