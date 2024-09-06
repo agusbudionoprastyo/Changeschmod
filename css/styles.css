@@ -123,7 +123,7 @@ button.red {
 }
 
 .input-group .input-wrapper select {
-  max-width: 60%; /* Input memanjang hingga ke tepi kanan page */
+  width: 5rem; /* Input memanjang hingga ke tepi kanan page */
   margin-left: 1rem; /* Menghapus margin kiri */
 }  
 
