@@ -136,6 +136,7 @@ button.red {
   max-width: 100%; /* Input memanjang hingga ke tepi kanan page */
   margin-left: 1rem; /* Menghapus margin kiri */
   padding: 16px;
+  height: 40px;
 }  
 
 .logo {
