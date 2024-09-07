@@ -14,7 +14,7 @@
     <script src="https://kit.fontawesome.com/3595b79eb9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form id="imageForm" action="https://script.google.com/macros/s/AKfycbytWiLuONk5Vb7hXmTl6ZMgWooFvz8uC_BbuavHnaGnmR_cndLMHVvfZlpXruEDxIC1zg/exec" method="POST">
+    <form id="imageForm">
     <img src="images/logo.png" alt="logo" class="logo">
 
         <label><h2>1st Employee</h2></label> 
@@ -144,8 +144,6 @@
             </div>
         </div>
 
-        <div id="message"></div>
-        <input type="hidden" id="roomtype"/>
         <input type="hidden" id="pdfFile"/>
         
         <div id="signature-pad-3" class="signature-pad" >
@@ -178,5 +176,27 @@
     <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.worker.min.js"></script>
+
+    <!-- JavaScript for handling form submission -->
+    <script>
+        document.getElementById('save-btn').addEventListener('click', function() {
+          // Mengambil data dari form
+          var formData = new FormData(document.getElementById('imageForm'));
+          
+          // Mengirim data menggunakan Fetch API
+          fetch('https://script.google.com/macros/s/AKfycbytWiLuONk5Vb7hXmTl6ZMgWooFvz8uC_BbuavHnaGnmR_cndLMHVvfZlpXruEDxIC1zg/exec', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.text())
+          .then(result => {
+            // Menampilkan hasil dari Google Apps Script
+            alert(result);
+          })
+          .catch(error => {
+            console.error('Error:', error);
+          });
+        });
+      </script>
 </body>
 </html>
