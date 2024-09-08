@@ -16,8 +16,9 @@
 <body>
     <form id="imageForm">
     <img src="images/logo.png" alt="logo" class="logo">
-
-        <label><h2>1st Employee</h2></label> 
+        <label><h2>Schedule Change</h2></label>
+        <br>
+        <label><h3>1<sup>st</sup> Employee</h3></label> 
 
         <div class="input-group">
             <div class="input-wrapper">
@@ -61,8 +62,22 @@
                 <input type="text" id="pos" name="pos"/>
             </div>
         </div>
+
+        <div class="input-group">
+            <div class="input-wrapper">
+                <label for="from1"><h3>From</h3></label>
+                <select id="frommod1" name="frommod1"></select>
+                <input type="date" id="from1" name="from1" />
+            </div>
+            <div class="input-wrapper">
+                <label for="to1"><h3>To</h3></label>
+                <select id="tomod1" name="tomod1"></select>
+                <input type="date" id="to1" name="to1"/>
+            </div>
+        </div>
+
         <div id="signature-pad-1" class="signature-pad" >
-            <label><h2>Requested By (Employee 1)</h2></label>
+            <label><h3>Requested By (Employee 1)</h3></label>
             <canvas></canvas>
             <div class="input-group">
                 <div class="input-wrapper">
@@ -72,7 +87,7 @@
             </div>
         </div>
 
-        <label><h2>2nd Employee</h2></label> 
+        <label><h3>2<sup>nd</sup> Employee</h3></label> 
 
         <div class="input-group">
             <div class="input-wrapper">
@@ -116,8 +131,22 @@
                 <input type="text" id="pos2" name="pos2"/>
             </div>
         </div>
+
+        <div class="input-group">
+            <div class="input-wrapper">
+                <label for="from2"><h3>From</h3></label>
+                <select id="frommod2" name="frommod2"></select>
+                <input type="date" id="from2" name="from2" />
+            </div>
+            <div class="input-wrapper">
+                <label for="to2"><h3>To</h3></label>
+                <select id="tomod2" name="tomod2"></select>
+                <input type="date" id="to2" name="to2"/>
+            </div>
+        </div>
+
         <div id="signature-pad-2" class="signature-pad" >
-            <label><h2>Agreed By (Employee 2)</h2></label>
+            <label><h3>Agreed By (Employee 2)</h3></label>
             <canvas></canvas>
             <div class="input-group">
                 <div class="input-wrapper">
@@ -126,28 +155,11 @@
                 </div>
             </div>
         </div>
-
-        <label><h2>Schedule Change</h2></label>
-
-        <div class="input-group">
-            <div class="input-wrapper">
-                <label for="sch1"><h3>From</h3></label>
-                <input type="date" id="sch1" name="sch1" />
-                <select id="mod" name="mod">
-                </select>
-            </div>
-            <div class="input-wrapper">
-                <label for="sch2"><h3>To</h3></label>
-                <input type="date" id="sch2" name="sch2"/>
-                <select id="mod2" name="mod2">
-                </select>
-            </div>
-        </div>
-
+    <hr><br>
         <input type="hidden" id="pdfFile"/>
         
         <div id="signature-pad-3" class="signature-pad" >
-            <label><h2>Approved By (General Manager)</h2></label>
+            <label><h3>Approved By (General Manager)</h3></label>
             <canvas></canvas>
             <div class="input-group">
                 <div class="input-wrapper">
@@ -157,7 +169,7 @@
             </div>
         </div>
         <div id="signature-pad-4" class="signature-pad" >
-            <label><h2>Acknowledged By (HR Manager)</h2></label>
+            <label><h3>Acknowledged By (HR Manager)</h3></label>
             <canvas></canvas>
             <div class="input-group">
                 <div class="input-wrapper">
@@ -174,11 +186,12 @@
     <script src="js/app.js"></script>
     <script src="js/axios.min.js"></script>
     <script src="js/script.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.worker.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.0.279/pdf.worker.min.js"></script> -->
 
     <!-- JavaScript for handling form submission -->
-    <script>
+    <!-- <script>
         document.getElementById('save-btn').addEventListener('click', function() {
           // Mengambil data dari form
           var formData = new FormData(document.getElementById('imageForm'));
@@ -197,6 +210,216 @@
             console.error('Error:', error);
           });
         });
-      </script>
+      </script> -->
+      <!-- <script>
+        // Initialize signature pads
+        const signaturePads = ['signature-pad-1', 'signature-pad-2', 'signature-pad-3', 'signature-pad-4'];
+
+        signaturePads.forEach(id => {
+            const canvas = document.querySelector(`#${id} canvas`);
+            const signaturePad = new SignaturePad(canvas);
+            const undoBtn = document.querySelector(`#${id} button[data-action="undo"]`);
+            const clearBtn = document.querySelector(`#${id} button[data-action="clear"]`);
+
+            undoBtn.addEventListener('click', () => signaturePad.undo());
+            clearBtn.addEventListener('click', () => signaturePad.clear());
+        });
+
+        // Function to get signature data
+        function getSignatureData(canvasId) {
+            var canvas = document.querySelector(`#${canvasId} canvas`);
+            return canvas ? canvas.toDataURL('image/png') : '';
+        }
+
+        document.getElementById('save-btn').addEventListener('click', async function() {
+            // Get form data
+            var formData = new FormData(document.getElementById('imageForm'));
+
+            // Get signature data
+            var signature1 = getSignatureData('signature-pad-1');
+            var signature2 = getSignatureData('signature-pad-2');
+            var signature3 = getSignatureData('signature-pad-3');
+            var signature4 = getSignatureData('signature-pad-4');
+
+            // Add signature data to FormData
+            formData.append('signature1', signature1);
+            formData.append('signature2', signature2);
+            formData.append('signature3', signature3);
+            formData.append('signature4', signature4);
+
+            // Create PDF
+            const url = 'modreqform/ScheduleChangeMOD.pdf'; // URL to your PDF file
+            const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+            const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+
+            // Example of adding text to the PDF
+            const pages = pdfDoc.getPages();
+            const firstPage = pages[0];
+            firstPage.drawText(`${formData.get('name')}`, { x: 188, y: 260, size: 10 });
+            firstPage.drawText(`${formData.get('dept')}`, { x: 188, y: 240, size: 10 });
+            firstPage.drawText(`${formData.get('pos')}`, { x: 188, y: 220, size: 10 });
+            firstPage.drawText(`${formData.get('from1')}`, { x: 188, y: 160, size: 10 });
+            firstPage.drawText(`${formData.get('frommod1')}`, { x: 260, y: 160, size: 10 });
+            firstPage.drawText(`${formData.get('to1')}`, { x: 188, y: 140, size: 10 });
+            firstPage.drawText(`${formData.get('tomod1')}`, { x: 260, y: 140, size: 10 });
+
+            firstPage.drawText(`${formData.get('name2')}`, { x: 380, y: 260, size: 10 });
+            firstPage.drawText(`${formData.get('dept2')}`, { x: 380, y: 240, size: 10 });
+            firstPage.drawText(`${formData.get('pos2')}`, { x: 380, y: 220, size: 10 });
+            firstPage.drawText(`${formData.get('from2')}`, { x: 380, y: 160, size: 10 });
+            firstPage.drawText(`${formData.get('frommod2')}`, { x: 442, y: 160, size: 10 });
+            firstPage.drawText(`${formData.get('to2')}`, { x: 380, y: 140, size: 10 });
+            firstPage.drawText(`${formData.get('tomod2')}`, { x: 442, y: 140, size: 10 });
+
+
+            // Example of adding a signature image to the PDF
+            const signatureImage = await pdfDoc.embedPng(signature1);
+            const signatureImage2 = await pdfDoc.embedPng(signature2);
+            const signatureImage3= await pdfDoc.embedPng(signature3);
+            const signatureImage4 = await pdfDoc.embedPng(signature4);
+            firstPage.drawImage(signatureImage, { x: 40, y: 50, width: 115, height: 50 });
+            firstPage.drawImage(signatureImage2, { x: 180, y: 50, width: 115, height: 50 });
+            firstPage.drawImage(signatureImage3, { x: 314, y: 50, width: 115, height: 50 });
+            firstPage.drawImage(signatureImage4, { x: 450, y: 50, width: 115, height: 50 });
+
+
+            // Save PDF and create a download link
+            const pdfBytes = await pdfDoc.save();
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+            const urlObject = URL.createObjectURL(blob);
+
+            const link = document.createElement('a');
+            link.href = urlObject;
+            link.download = 'updated-file.pdf';
+            link.click();
+            URL.revokeObjectURL(urlObject);
+
+            // Optionally, send data to server
+            fetch('https://script.google.com/macros/s/AKfycbytWiLuONk5Vb7hXmTl6ZMgWooFvz8uC_BbuavHnaGnmR_cndLMHVvfZlpXruEDxIC1zg/exec', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(result => {
+                Swal.fire({
+                    title: 'Success!',
+                    text: result,
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Something went wrong.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            });
+        });
+    </script> -->
+
+    <script>
+        // Initialize signature pads
+        const signaturePads = ['signature-pad-1', 'signature-pad-2', 'signature-pad-3', 'signature-pad-4'];
+
+        signaturePads.forEach(id => {
+            const canvas = document.querySelector(`#${id} canvas`);
+            const signaturePad = new SignaturePad(canvas);
+            const undoBtn = document.querySelector(`#${id} button[data-action="undo"]`);
+            const clearBtn = document.querySelector(`#${id} button[data-action="clear"]`);
+
+            undoBtn.addEventListener('click', () => signaturePad.undo());
+            clearBtn.addEventListener('click', () => signaturePad.clear());
+        });
+
+        // Function to get signature data
+        function getSignatureData(canvasId) {
+            var canvas = document.querySelector(`#${canvasId} canvas`);
+            return canvas ? canvas.toDataURL('image/png') : '';
+        }
+
+        document.getElementById('save-btn').addEventListener('click', async function() {
+            // Get form data
+            var formData = new FormData(document.getElementById('imageForm'));
+
+            // Get signature data
+            var signature1 = getSignatureData('signature-pad-1');
+            var signature2 = getSignatureData('signature-pad-2');
+            var signature3 = getSignatureData('signature-pad-3');
+            var signature4 = getSignatureData('signature-pad-4');
+
+            // Create PDF
+            const url = 'modreqform/ScheduleChangeMOD.pdf'; // URL to your PDF file
+            const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
+            const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
+
+            // Example of adding text and signatures to the PDF
+            const pages = pdfDoc.getPages();
+            const firstPage = pages[0];
+
+            firstPage.drawText(`${formData.get('name')}`, { x: 188, y: 260, size: 10 });
+            firstPage.drawText(`${formData.get('dept')}`, { x: 188, y: 240, size: 10 });
+            firstPage.drawText(`${formData.get('pos')}`, { x: 188, y: 220, size: 10 });
+            firstPage.drawText(`${formData.get('from1')}`, { x: 188, y: 160, size: 10 });
+            firstPage.drawText(`${formData.get('frommod1')}`, { x: 260, y: 160, size: 10 });
+            firstPage.drawText(`${formData.get('to1')}`, { x: 188, y: 140, size: 10 });
+            firstPage.drawText(`${formData.get('tomod1')}`, { x: 260, y: 140, size: 10 });
+
+            firstPage.drawText(`${formData.get('name2')}`, { x: 380, y: 260, size: 10 });
+            firstPage.drawText(`${formData.get('dept2')}`, { x: 380, y: 240, size: 10 });
+            firstPage.drawText(`${formData.get('pos2')}`, { x: 380, y: 220, size: 10 });
+            firstPage.drawText(`${formData.get('from2')}`, { x: 380, y: 160, size: 10 });
+            firstPage.drawText(`${formData.get('frommod2')}`, { x: 442, y: 160, size: 10 });
+            firstPage.drawText(`${formData.get('to2')}`, { x: 380, y: 140, size: 10 });
+            firstPage.drawText(`${formData.get('tomod2')}`, { x: 442, y: 140, size: 10 });
+
+            // Example of adding signature images to the PDF
+            const signatureImage = await pdfDoc.embedPng(signature1);
+            const signatureImage2 = await pdfDoc.embedPng(signature2);
+            const signatureImage3 = await pdfDoc.embedPng(signature3);
+            const signatureImage4 = await pdfDoc.embedPng(signature4);
+
+            firstPage.drawImage(signatureImage, { x: 40, y: 50, width: 115, height: 50 });
+            firstPage.drawImage(signatureImage2, { x: 180, y: 50, width: 115, height: 50 });
+            firstPage.drawImage(signatureImage3, { x: 314, y: 50, width: 115, height: 50 });
+            firstPage.drawImage(signatureImage4, { x: 450, y: 50, width: 115, height: 50 });
+
+            // Save PDF as blob
+            const pdfBytes = await pdfDoc.save();
+            const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+
+            // Upload to Google Drive and get the link
+            const webAppUrl = 'https://script.google.com/macros/s/AKfycbytWiLuONk5Vb7hXmTl6ZMgWooFvz8uC_BbuavHnaGnmR_cndLMHVvfZlpXruEDxIC1zg/exec'; // Replace with your Google Apps Script Web App URL
+
+            // Create FormData and append the file
+            const uploadFormData = new FormData();
+            uploadFormData.append('file', blob, `MODReqform_${new Date().toISOString().replace(/[:.]/g, '-')}.pdf`);
+
+            try {
+                const response = await fetch(webAppUrl, {
+                    method: 'POST',
+                    body: uploadFormData
+                });
+
+                const result = await response.text();
+                Swal.fire({
+                    title: 'Success!',
+                    text: result,
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                });
+            } catch (error) {
+                console.error('Error:', error);
+                Swal.fire({
+                    title: 'Error!',
+                    text: 'Something went wrong.',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        });
+    </script>
 </body>
 </html>

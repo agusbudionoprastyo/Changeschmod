@@ -74,61 +74,75 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   const dateInputs = {
-      sch1: document.getElementById('sch1'),
-      sch2: document.getElementById('sch2')
-  };
+    from1: document.getElementById('from1'),
+    to1: document.getElementById('to1'),
+    from2: document.getElementById('from2'),
+    to2: document.getElementById('to2')
+};
 
-  const selectElements = {
-      mod: document.getElementById('mod'),
-      mod2: document.getElementById('mod2')
-  };
+const selectElements = {
+    frommod1: document.getElementById('frommod1'),
+    tomod1: document.getElementById('tomod1'),
+    frommod2: document.getElementById('frommod2'),
+    tomod2: document.getElementById('tomod2')
+};
 
-  function updateOptions(dateInputId, selectId) {
-      const dateValue = dateInputs[dateInputId].value;
-      const selectedDate = new Date(dateValue);
-      const selectElement = selectElements[selectId];
+function updateOptions(dateInputId, selectId) {
+    const dateValue = dateInputs[dateInputId].value;
+    const selectedDate = new Date(dateValue);
+    const selectElement = selectElements[selectId];
 
-      if (!dateValue) return; // Exit if no date is selected
+    if (!dateValue) return; // Exit if no date is selected
 
-      // Clear existing options
-      selectElement.innerHTML = '';
+    // Clear existing options
+    selectElement.innerHTML = '';
 
-      // Determine if the selected date is a weekend or weekday
-      const dayOfWeek = selectedDate.getDay();
-      let options;
+    // Determine if the selected date is a weekend or weekday
+    const dayOfWeek = selectedDate.getDay();
+    let options;
 
-      if (dayOfWeek === 0 || dayOfWeek === 6) {
-          // Weekend (Saturday or Sunday)
-          options = [
-              { value: 'MOD 1', text: 'MOD 1' },
-              { value: 'MOD 2', text: 'MOD 2' }
-          ];
-      } else {
-          // Weekday (Monday to Friday)
-          options = [
-              { value: 'MOD', text: 'MOD' }
-          ];
-      }
+    if (dayOfWeek === 0 || dayOfWeek === 6) {
+        // Weekend (Saturday or Sunday)
+        options = [
+            { value: 'MOD 1', text: 'MOD 1' },
+            { value: 'MOD 2', text: 'MOD 2' }
+        ];
+    } else {
+        // Weekday (Monday to Friday)
+        options = [
+            { value: 'MOD', text: 'MOD' }
+        ];
+    }
 
-      // Add new options to the select element
-      options.forEach(option => {
-          const opt = document.createElement('option');
-          opt.value = option.value;
-          opt.textContent = option.text;
-          selectElement.appendChild(opt);
-      });
-  }
+    // Add new options to the select element
+    options.forEach(option => {
+        const opt = document.createElement('option');
+        opt.value = option.value;
+        opt.textContent = option.text;
+        selectElement.appendChild(opt);
+    });
+}
 
-  // Event listeners for each date input
-  dateInputs.sch1.addEventListener('change', function() {
-      updateOptions('sch1', 'mod');
-  });
+// Event listeners for each date input
+dateInputs.from1.addEventListener('change', function() {
+    updateOptions('from1', 'frommod1');
+});
 
-  dateInputs.sch2.addEventListener('change', function() {
-      updateOptions('sch2', 'mod2');
-  });
+dateInputs.to1.addEventListener('change', function() {
+    updateOptions('to1', 'tomod1');
+});
 
-  // Initial calls to set the correct options based on current date
-  updateOptions('sch1', 'mod');
-  updateOptions('sch2', 'mod2');
+dateInputs.from2.addEventListener('change', function() {
+    updateOptions('from2', 'frommod2');
+});
+
+dateInputs.to2.addEventListener('change', function() {
+    updateOptions('to2', 'tomod2');
+});
+
+// Initial calls to set the correct options based on current date
+updateOptions('from1', 'frommod1');
+updateOptions('to1', 'tomod1');
+updateOptions('from2', 'frommod2');
+updateOptions('to2', 'tomod2');
 });

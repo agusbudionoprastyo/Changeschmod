@@ -190,3 +190,9 @@ button.red {
     height: 50px;
     justify-content: center;
 }
+
+hr {
+  border: 0;
+  border-top: 1px dashed #000; /* Thickness and color of the line */
+  margin: 20px 0; /* Space above and below the line */
+}
