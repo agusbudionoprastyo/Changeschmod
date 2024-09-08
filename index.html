@@ -323,42 +323,42 @@
     <script>
         // Initialize signature pads
         const signaturePads = ['signature-pad-1', 'signature-pad-2', 'signature-pad-3', 'signature-pad-4'];
-
+    
         signaturePads.forEach(id => {
             const canvas = document.querySelector(`#${id} canvas`);
             const signaturePad = new SignaturePad(canvas);
             const undoBtn = document.querySelector(`#${id} button[data-action="undo"]`);
             const clearBtn = document.querySelector(`#${id} button[data-action="clear"]`);
-
+    
             undoBtn.addEventListener('click', () => signaturePad.undo());
             clearBtn.addEventListener('click', () => signaturePad.clear());
         });
-
+    
         // Function to get signature data
         function getSignatureData(canvasId) {
-            var canvas = document.querySelector(`#${canvasId} canvas`);
+            const canvas = document.querySelector(`#${canvasId} canvas`);
             return canvas ? canvas.toDataURL('image/png') : '';
         }
-
+    
         document.getElementById('save-btn').addEventListener('click', async function() {
             // Get form data
-            var formData = new FormData(document.getElementById('imageForm'));
-
+            const formData = new FormData(document.getElementById('imageForm'));
+    
             // Get signature data
-            var signature1 = getSignatureData('signature-pad-1');
-            var signature2 = getSignatureData('signature-pad-2');
-            var signature3 = getSignatureData('signature-pad-3');
-            var signature4 = getSignatureData('signature-pad-4');
-
+            const signature1 = getSignatureData('signature-pad-1');
+            const signature2 = getSignatureData('signature-pad-2');
+            const signature3 = getSignatureData('signature-pad-3');
+            const signature4 = getSignatureData('signature-pad-4');
+    
             // Create PDF
             const url = 'modreqform/ScheduleChangeMOD.pdf'; // URL to your PDF file
             const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
             const pdfDoc = await PDFLib.PDFDocument.load(existingPdfBytes);
-
+    
             // Example of adding text and signatures to the PDF
             const pages = pdfDoc.getPages();
             const firstPage = pages[0];
-
+    
             firstPage.drawText(`${formData.get('name')}`, { x: 188, y: 260, size: 10 });
             firstPage.drawText(`${formData.get('dept')}`, { x: 188, y: 240, size: 10 });
             firstPage.drawText(`${formData.get('pos')}`, { x: 188, y: 220, size: 10 });
@@ -366,7 +366,7 @@
             firstPage.drawText(`${formData.get('frommod1')}`, { x: 260, y: 160, size: 10 });
             firstPage.drawText(`${formData.get('to1')}`, { x: 188, y: 140, size: 10 });
             firstPage.drawText(`${formData.get('tomod1')}`, { x: 260, y: 140, size: 10 });
-
+    
             firstPage.drawText(`${formData.get('name2')}`, { x: 380, y: 260, size: 10 });
             firstPage.drawText(`${formData.get('dept2')}`, { x: 380, y: 240, size: 10 });
             firstPage.drawText(`${formData.get('pos2')}`, { x: 380, y: 220, size: 10 });
@@ -374,35 +374,35 @@
             firstPage.drawText(`${formData.get('frommod2')}`, { x: 442, y: 160, size: 10 });
             firstPage.drawText(`${formData.get('to2')}`, { x: 380, y: 140, size: 10 });
             firstPage.drawText(`${formData.get('tomod2')}`, { x: 442, y: 140, size: 10 });
-
+    
             // Example of adding signature images to the PDF
             const signatureImage = await pdfDoc.embedPng(signature1);
             const signatureImage2 = await pdfDoc.embedPng(signature2);
             const signatureImage3 = await pdfDoc.embedPng(signature3);
             const signatureImage4 = await pdfDoc.embedPng(signature4);
-
+    
             firstPage.drawImage(signatureImage, { x: 40, y: 50, width: 115, height: 50 });
             firstPage.drawImage(signatureImage2, { x: 180, y: 50, width: 115, height: 50 });
             firstPage.drawImage(signatureImage3, { x: 314, y: 50, width: 115, height: 50 });
             firstPage.drawImage(signatureImage4, { x: 450, y: 50, width: 115, height: 50 });
-
+    
             // Save PDF as blob
             const pdfBytes = await pdfDoc.save();
             const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-
+    
             // Upload to Google Drive and get the link
             const webAppUrl = 'https://script.google.com/macros/s/AKfycbytWiLuONk5Vb7hXmTl6ZMgWooFvz8uC_BbuavHnaGnmR_cndLMHVvfZlpXruEDxIC1zg/exec'; // Replace with your Google Apps Script Web App URL
-
+    
             // Create FormData and append the file
             const uploadFormData = new FormData();
             uploadFormData.append('file', blob, `MODReqform_${new Date().toISOString().replace(/[:.]/g, '-')}.pdf`);
-
+    
             try {
                 const response = await fetch(webAppUrl, {
                     method: 'POST',
                     body: uploadFormData
                 });
-
+    
                 const result = await response.text();
                 Swal.fire({
                     title: 'Success!',
@@ -420,6 +420,6 @@
                 });
             }
         });
-    </script>
+    </script>    
 </body>
 </html>
