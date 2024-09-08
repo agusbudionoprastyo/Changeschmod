@@ -1,148 +1,299 @@
-document.addEventListener('DOMContentLoaded', function() {
-  const pads = [];
-  const canvases = [];
+// document.addEventListener('DOMContentLoaded', function() {
+//   const pads = [];
+//   const canvases = [];
 
-  function resizeCanvas(canvas) {
+//   function resizeCanvas(canvas) {
+//       const ratio = Math.max(window.devicePixelRatio || 1, 1);
+//       const context = canvas.getContext("2d");
+//       const width = canvas.offsetWidth;
+//       const height = canvas.offsetHeight;
+
+//       canvas.width = width * ratio;
+//       canvas.height = height * ratio;
+
+//       context.scale(ratio, ratio);
+//       context.clearRect(0, 0, width, height); // Clear the canvas before resizing
+
+//       // Optionally re-render the existing signature here
+//       const pad = pads[canvases.indexOf(canvas)];
+//       if (pad && !pad.isEmpty()) {
+//           pad.fromData(pad.toData());
+//       }
+//   }
+
+//   // Initialize Signature Pads
+//   for (let i = 1; i <= 4; i++) {
+//       const canvas = document.querySelector(`#signature-pad-${i} canvas`);
+//       canvases.push(canvas);
+//       pads[i - 1] = new SignaturePad(canvas);
+
+//       // Event listener for Undo Button
+//       const undoButton = document.querySelector(`#signature-pad-${i} [data-action=undo]`);
+//       if (undoButton) {
+//           undoButton.addEventListener("click", () => {
+//               const pad = pads[i - 1];
+//               const data = pad.toData();
+//               if (data) {
+//                   data.pop(); // Remove the last dot or line
+//                   pad.fromData(data);
+//               }
+//           });
+//       }
+
+//       // Event listener for Clear Button
+//       const clearButton = document.querySelector(`#signature-pad-${i} .undoClear`);
+//       if (clearButton) {
+//           clearButton.addEventListener('click', function() {
+//               pads[i - 1].clear();
+//           });
+//       }
+
+//       // Event listener for Save Button
+//       if (i === 4) { // Assuming the last pad has a submit button
+//           const saveButton = document.querySelector(`#signature-pad-${i} #save-btn`);
+//           if (saveButton) {
+//               saveButton.addEventListener('click', function() {
+//                   if (!pads[i - 1].isEmpty()) {
+//                       const dataURL = pads[i - 1].toDataURL();
+//                       console.log(`Signature ${i} data URL:`, dataURL);
+//                       // Handle the data URL (e.g., send it to a server or display it)
+//                   } else {
+//                       alert('Please provide a signature before submitting.');
+//                   }
+//               });
+//           }
+//       }
+//   }
+
+//   // Resize all canvases on page load
+//   canvases.forEach(canvas => resizeCanvas(canvas));
+
+//   // Resize canvases on window resize
+//   window.addEventListener("resize", function() {
+//       canvases.forEach(canvas => resizeCanvas(canvas));
+//   });
+
+//   const dateInputs = {
+//     from1: document.getElementById('from1'),
+//     to1: document.getElementById('to1'),
+//     from2: document.getElementById('from2'),
+//     to2: document.getElementById('to2')
+// };
+
+// const selectElements = {
+//     frommod1: document.getElementById('frommod1'),
+//     tomod1: document.getElementById('tomod1'),
+//     frommod2: document.getElementById('frommod2'),
+//     tomod2: document.getElementById('tomod2')
+// };
+
+// function updateOptions(dateInputId, selectId) {
+//     const dateValue = dateInputs[dateInputId].value;
+//     const selectedDate = new Date(dateValue);
+//     const selectElement = selectElements[selectId];
+
+//     if (!dateValue) return; // Exit if no date is selected
+
+//     // Clear existing options
+//     selectElement.innerHTML = '';
+
+//     // Determine if the selected date is a weekend or weekday
+//     const dayOfWeek = selectedDate.getDay();
+//     let options;
+
+//     if (dayOfWeek === 0 || dayOfWeek === 6) {
+//         // Weekend (Saturday or Sunday)
+//         options = [
+//             { value: 'MOD 1', text: 'MOD 1' },
+//             { value: 'MOD 2', text: 'MOD 2' }
+//         ];
+//     } else {
+//         // Weekday (Monday to Friday)
+//         options = [
+//             { value: 'MOD', text: 'MOD' }
+//         ];
+//     }
+
+//     // Add new options to the select element
+//     options.forEach(option => {
+//         const opt = document.createElement('option');
+//         opt.value = option.value;
+//         opt.textContent = option.text;
+//         selectElement.appendChild(opt);
+//     });
+// }
+
+// // Event listeners for each date input
+// dateInputs.from1.addEventListener('change', function() {
+//     updateOptions('from1', 'frommod1');
+// });
+
+// dateInputs.to1.addEventListener('change', function() {
+//     updateOptions('to1', 'tomod1');
+// });
+
+// dateInputs.from2.addEventListener('change', function() {
+//     updateOptions('from2', 'frommod2');
+// });
+
+// dateInputs.to2.addEventListener('change', function() {
+//     updateOptions('to2', 'tomod2');
+// });
+
+// // Initial calls to set the correct options based on current date
+// updateOptions('from1', 'frommod1');
+// updateOptions('to1', 'tomod1');
+// updateOptions('from2', 'frommod2');
+// updateOptions('to2', 'tomod2');
+// });
+
+// document.addEventListener("DOMContentLoaded", function() {
+//     // Menangani perubahan pada input 'from1' dan 'frommod1'
+//     document.getElementById('from1').addEventListener('change', updateToFields);
+//     document.getElementById('frommod1').addEventListener('change', updateToFields);
+//     document.getElementById('to1').addEventListener('change', updateToFields);
+//     document.getElementById('tomod1').addEventListener('change', updateToFields);
+
+//     function updateToFields() {
+//         // Ambil nilai dari 'from1' dan 'frommod1'
+//         const fromDate = document.getElementById('from1').value;
+//         const fromSelect = document.getElementById('frommod1').value;
+//         const toDate = document.getElementById('to1').value;
+//         const toSelect = document.getElementById('tomod1').value;
+        
+//         // Set nilai 'to2' dan 'tomod2' sesuai dengan nilai 'from1' dan 'frommod1'
+//         document.getElementById('to2').value = fromDate;
+//         document.getElementById('tomod2').value = fromSelect;
+//         document.getElementById('from2').value = toDate;
+//         document.getElementById('frommod2').value = toSelect;
+//     }
+// });  
+
+document.addEventListener('DOMContentLoaded', function() {
+    const pads = [];
+    const canvases = [];
+  
+    function resizeCanvas(canvas) {
       const ratio = Math.max(window.devicePixelRatio || 1, 1);
       const context = canvas.getContext("2d");
       const width = canvas.offsetWidth;
       const height = canvas.offsetHeight;
-
+  
       canvas.width = width * ratio;
       canvas.height = height * ratio;
-
+  
       context.scale(ratio, ratio);
       context.clearRect(0, 0, width, height); // Clear the canvas before resizing
-
+  
       // Optionally re-render the existing signature here
       const pad = pads[canvases.indexOf(canvas)];
       if (pad && !pad.isEmpty()) {
-          pad.fromData(pad.toData());
+        pad.fromData(pad.toData());
       }
-  }
-
-  // Initialize Signature Pads
-  for (let i = 1; i <= 4; i++) {
+    }
+  
+    // Initialize Signature Pads
+    for (let i = 1; i <= 4; i++) {
       const canvas = document.querySelector(`#signature-pad-${i} canvas`);
       canvases.push(canvas);
       pads[i - 1] = new SignaturePad(canvas);
-
+  
       // Event listener for Undo Button
       const undoButton = document.querySelector(`#signature-pad-${i} [data-action=undo]`);
       if (undoButton) {
-          undoButton.addEventListener("click", () => {
-              const pad = pads[i - 1];
-              const data = pad.toData();
-              if (data) {
-                  data.pop(); // Remove the last dot or line
-                  pad.fromData(data);
-              }
-          });
+        undoButton.addEventListener("click", () => {
+          const pad = pads[i - 1];
+          const data = pad.toData();
+          if (data) {
+            data.pop(); // Remove the last dot or line
+            pad.fromData(data);
+          }
+        });
       }
-
+  
       // Event listener for Clear Button
       const clearButton = document.querySelector(`#signature-pad-${i} .undoClear`);
       if (clearButton) {
-          clearButton.addEventListener('click', function() {
-              pads[i - 1].clear();
-          });
+        clearButton.addEventListener('click', function() {
+          pads[i - 1].clear();
+        });
       }
-
+  
       // Event listener for Save Button
       if (i === 4) { // Assuming the last pad has a submit button
-          const saveButton = document.querySelector(`#signature-pad-${i} #save-btn`);
-          if (saveButton) {
-              saveButton.addEventListener('click', function() {
-                  if (!pads[i - 1].isEmpty()) {
-                      const dataURL = pads[i - 1].toDataURL();
-                      console.log(`Signature ${i} data URL:`, dataURL);
-                      // Handle the data URL (e.g., send it to a server or display it)
-                  } else {
-                      alert('Please provide a signature before submitting.');
-                  }
-              });
-          }
+        const saveButton = document.querySelector(`#signature-pad-${i} #save-btn`);
+        if (saveButton) {
+          saveButton.addEventListener('click', function() {
+            if (!pads[i - 1].isEmpty()) {
+              const dataURL = pads[i - 1].toDataURL();
+              console.log(`Signature ${i} data URL:`, dataURL);
+              // Handle the data URL (e.g., send it to a server or display it)
+            } else {
+              alert('Please provide a signature before submitting.');
+            }
+          });
+        }
       }
-  }
-
-  // Resize all canvases on page load
-  canvases.forEach(canvas => resizeCanvas(canvas));
-
-  // Resize canvases on window resize
-  window.addEventListener("resize", function() {
+    }
+  
+    // Resize all canvases on page load
+    canvases.forEach(canvas => resizeCanvas(canvas));
+  
+    // Resize canvases on window resize
+    window.addEventListener("resize", function() {
       canvases.forEach(canvas => resizeCanvas(canvas));
+    });
   });
 
-  const dateInputs = {
-    from1: document.getElementById('from1'),
-    to1: document.getElementById('to1'),
-    from2: document.getElementById('from2'),
-    to2: document.getElementById('to2')
-};
+  function updateOptions() {
+    const from1Date = document.getElementById('from1').value;
+    const to1Date = document.getElementById('to1').value;
+    const from1Day = new Date(from1Date).getDay();
+    const to1Day = new Date(to1Date).getDay();
+    
+    const weekdaysOptions = ['MOD'];
+    const weekendsOptions = ['MOD 1', 'MOD 2'];
 
-const selectElements = {
-    frommod1: document.getElementById('frommod1'),
-    tomod1: document.getElementById('tomod1'),
-    frommod2: document.getElementById('frommod2'),
-    tomod2: document.getElementById('tomod2')
-};
-
-function updateOptions(dateInputId, selectId) {
-    const dateValue = dateInputs[dateInputId].value;
-    const selectedDate = new Date(dateValue);
-    const selectElement = selectElements[selectId];
-
-    if (!dateValue) return; // Exit if no date is selected
-
-    // Clear existing options
-    selectElement.innerHTML = '';
-
-    // Determine if the selected date is a weekend or weekday
-    const dayOfWeek = selectedDate.getDay();
-    let options;
-
-    if (dayOfWeek === 0 || dayOfWeek === 6) {
-        // Weekend (Saturday or Sunday)
-        options = [
-            { value: 'MOD 1', text: 'MOD 1' },
-            { value: 'MOD 2', text: 'MOD 2' }
-        ];
-    } else {
-        // Weekday (Monday to Friday)
-        options = [
-            { value: 'MOD', text: 'MOD' }
-        ];
+    function populateSelect(selectElement, options) {
+        selectElement.innerHTML = ''; // Clear existing options
+        options.forEach(option => {
+            const opt = document.createElement('option');
+            opt.value = option;
+            opt.text = option;
+            selectElement.add(opt);
+        });
+        selectElement.disabled = false; // Enable the select element
     }
 
-    // Add new options to the select element
-    options.forEach(option => {
-        const opt = document.createElement('option');
-        opt.value = option.value;
-        opt.textContent = option.text;
-        selectElement.appendChild(opt);
-    });
+    // Update first set of selects
+    if (from1Date) {
+        populateSelect(document.getElementById('frommod1'), (from1Day === 0 || from1Day === 6) ? weekendsOptions : weekdaysOptions);
+    }
+    if (to1Date) {
+        populateSelect(document.getElementById('tomod1'), (to1Day === 0 || to1Day === 6) ? weekendsOptions : weekdaysOptions);
+    }
+
+    // Automatically fill second set of selects with same values as the first set
+    document.getElementById('from2').value = to1Date;
+    document.getElementById('to2').value = from1Date;
+
+    // Sync second set of selects with the same options
+    syncSelectOptions('frommod1', 'tomod2');
+    syncSelectOptions('tomod1', 'frommod2');
 }
 
-// Event listeners for each date input
-dateInputs.from1.addEventListener('change', function() {
-    updateOptions('from1', 'frommod1');
-});
+function syncSelectOptions(sourceId, targetId) {
+    const sourceSelect = document.getElementById(sourceId);
+    const targetSelect = document.getElementById(targetId);
 
-dateInputs.to1.addEventListener('change', function() {
-    updateOptions('to1', 'tomod1');
-});
+    // Copy options from source select to target select
+    targetSelect.innerHTML = sourceSelect.innerHTML;
 
-dateInputs.from2.addEventListener('change', function() {
-    updateOptions('from2', 'frommod2');
-});
+    // Set target select value to match source select value if it exists
+    if (sourceSelect.value) {
+        targetSelect.value = sourceSelect.value;
+    }
+}
 
-dateInputs.to2.addEventListener('change', function() {
-    updateOptions('to2', 'tomod2');
-});
-
-// Initial calls to set the correct options based on current date
-updateOptions('from1', 'frommod1');
-updateOptions('to1', 'tomod1');
-updateOptions('from2', 'frommod2');
-updateOptions('to2', 'tomod2');
-});
+// Initial setup
+updateOptions();
