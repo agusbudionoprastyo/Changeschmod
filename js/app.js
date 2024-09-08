@@ -219,21 +219,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }
   
-      // Event listener for Save Button
-      if (i === 4) { // Assuming the last pad has a submit button
-        const saveButton = document.querySelector(`#signature-pad-${i} #save-btn`);
-        if (saveButton) {
-          saveButton.addEventListener('click', function() {
-            if (!pads[i - 1].isEmpty()) {
-              const dataURL = pads[i - 1].toDataURL();
-              console.log(`Signature ${i} data URL:`, dataURL);
-              // Handle the data URL (e.g., send it to a server or display it)
-            } else {
-              alert('Please provide a signature before submitting.');
+        // Event listener for Save Button
+        if (i === 4) { // Assuming the last pad has a submit button
+            const saveButton = document.querySelector(`#signature-pad-${i} #save-btn`);
+            if (saveButton) {
+            saveButton.addEventListener('click', function() {
+                // Directly obtain data URL from the pad without checking if it's empty
+                const dataURL = pads[i - 1].toDataURL();
+                console.log(`Signature ${i} data URL:`, dataURL);
+                // Handle the data URL (e.g., send it to a server or display it)
+            });
             }
-          });
-        }
-      }
+        }  
     }
   
     // Resize all canvases on page load

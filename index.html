@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChangeSchMod</title>
     <link rel="icon" href="images/icon/drawable-hdpi/icon.png" type="image/x-icon">
-    <!-- <link rel="manifest" href="manifest.json"> -->
     <link rel="stylesheet" type="text/css" href="sweetalert2/dist/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet"> 
@@ -14,8 +13,8 @@
     <script src="https://kit.fontawesome.com/3595b79eb9.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <form id="imageForm">
-    <img src="images/logo.png" alt="logo" class="logo">
+    <form id="imageForm" onsubmit="return validateForm()">
+        <img src="images/logo.png" alt="logo" class="logo">
         <label><h2>Schedule Change</h2></label>
         <br>
         <label><h3>1<sup>st</sup> Employee</h3></label> 
@@ -76,13 +75,13 @@
             </div>
         </div>
 
-        <div id="signature-pad-1" class="signature-pad" >
+        <div id="signature-pad-1" class="signature-pad">
             <label><h3>Requested By (Employee 1)</h3></label>
-            <canvas></canvas>
+            <canvas id="signature1"></canvas>
             <div class="input-group">
                 <div class="input-wrapper">
-                    <button type="button" class="undoClear" data-action="clear"><i class="fa-solid fa-eraser"></i></button>
-                    <button type="button" data-action="undo"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button type="button" class="undoClear" data-action="clear" onclick="clearSignature('signature1')"><i class="fa-solid fa-eraser"></i></button>
+                    <button type="button" data-action="undo" onclick="undoSignature('signature1')"><i class="fa-solid fa-rotate-left"></i></button>
                 </div>
             </div>
         </div>
@@ -116,7 +115,7 @@
             <div class="input-wrapper">
                 <label for="dept2"><h3>Department</h3></label>
                 <select id="dept2" name="dept2" style="width: 100%;">
-                    <option value="" disabled selected >...</option>
+                    <option value="" disabled selected>...</option>
                     <option value="A&G">A&G</option>
                     <option value="ENG">Engineering</option>
                     <option value="FBS">FB Service</option>
@@ -135,46 +134,49 @@
         <div class="input-group">
             <div class="input-wrapper">
                 <label for="from2"><h3>From</h3></label>
-                <select id="frommod2" name="frommod2" readonly></select>
-                <input type="date" id="from2" name="from2" readonly />
+                <select id="frommod2" name="frommod2" disabled></select>
+                <input type="date" id="from2" name="from2" disabled />
             </div>
             <div class="input-wrapper">
                 <label for="to2"><h3>To</h3></label>
-                <select id="tomod2" name="tomod2" readonly></select>
-                <input type="date" id="to2" name="to2" readonly />
+                <select id="tomod2" name="tomod2" disabled></select>
+                <input type="date" id="to2" name="to2" disabled />
             </div>
         </div>
 
-        <div id="signature-pad-2" class="signature-pad" >
+        <div id="signature-pad-2" class="signature-pad">
             <label><h3>Agreed By (Employee 2)</h3></label>
-            <canvas></canvas>
+            <canvas id="signature2"></canvas>
             <div class="input-group">
                 <div class="input-wrapper">
-                    <button type="button" class="undoClear" data-action="clear"><i class="fa-solid fa-eraser"></i></button>
-                    <button type="button" data-action="undo"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button type="button" class="undoClear" data-action="clear" onclick="clearSignature('signature2')"><i class="fa-solid fa-eraser"></i></button>
+                    <button type="button" data-action="undo" onclick="undoSignature('signature2')"><i class="fa-solid fa-rotate-left"></i></button>
                 </div>
             </div>
         </div>
-    <hr><br>
-        <input type="hidden" id="pdfFile"/>
         
-        <div id="signature-pad-3" class="signature-pad" >
+        <hr><br>
+
+        <input type="hidden" id="pdfFile"/>
+
+        <div id="signature-pad-3" class="signature-pad">
             <label><h3>Approved By (General Manager)</h3></label>
-            <canvas></canvas>
+            <canvas id="signature3"></canvas>
             <div class="input-group">
                 <div class="input-wrapper">
-                    <button type="button" class="undoClear" data-action="clear"><i class="fa-solid fa-eraser"></i></button>
-                    <button type="button" data-action="undo"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button type="button" class="undoClear" data-action="clear" onclick="clearSignature('signature3')"><i class="fa-solid fa-eraser"></i></button>
+                    <button type="button" data-action="undo" onclick="undoSignature('signature3')"><i class="fa-solid fa-rotate-left"></i></button>
                 </div>
             </div>
         </div>
-        <div id="signature-pad-4" class="signature-pad" >
+
+        <div id="signature-pad-4" class="signature-pad">
             <label><h3>Acknowledged By (HR Manager)</h3></label>
-            <canvas></canvas>
+            <canvas id="signature4"></canvas>
             <div class="input-group">
                 <div class="input-wrapper">
-                    <button type="button" class="undoClear" data-action="clear"><i class="fa-solid fa-eraser"></i></button>
-                    <button type="button" data-action="undo"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button type="button" class="undoClear" data-action="clear" onclick="clearSignature('signature4')"><i class="fa-solid fa-eraser"></i></button>
+                    <button type="button" data-action="undo" onclick="undoSignature('signature4')"><i class="fa-solid fa-rotate-left"></i></button>
                     <button type="button" id="save-btn" class="cyan">SUBMIT</button>
                 </div>
             </div>
