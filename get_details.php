@@ -4,7 +4,7 @@ $username = "dafm5634_ag";
 $password = "Ag7us777__";
 $dbname = "dafm5634_modschedule";
 
-$name = intval($_GET['name']);
+$id = intval($_GET['id']);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT dept, position FROM employees WHERE name = $name";
+$sql = "SELECT dept, position FROM employees WHERE id = $id";
 $result = $conn->query($sql);
 
 $details = [];
