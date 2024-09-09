@@ -15,6 +15,20 @@ document.getElementById('save-btn').addEventListener('click', async function() {
         const signature3 = getSignatureData('signature3');
         const signature4 = getSignatureData('signature4');
 
+        // Get the select element
+        const selectElement = document.getElementById('name');
+        // Get the selected option
+        const selectedOption = selectElement.options[selectElement.selectedIndex];
+        // Get the text of the selected option
+        const selectedText = selectedOption.text;
+
+                // Get the select element
+                const selectElement2 = document.getElementById('name2');
+                // Get the selected option
+                const selectedOption2 = selectElement2.options[selectElement2.selectedIndex];
+                // Get the text of the selected option
+                const selectedText2 = selectedOption2.text;
+
         // Load and manipulate PDF
         const url = 'modreqform/ScheduleChangeMOD.pdf'; // URL to your PDF file
         const existingPdfBytes = await fetch(url).then(res => res.arrayBuffer());
@@ -24,7 +38,9 @@ document.getElementById('save-btn').addEventListener('click', async function() {
         const firstPage = pages[0];
 
         // Add text and signatures to the PDF
-        firstPage.drawText(`${formData.get('name') || ''}`, { x: 188, y: 260, size: 10 });
+        // firstPage.drawText(`${formData.get('name') || ''}`, { x: 188, y: 260, size: 10 });
+        // Now use selectedText in your drawText function
+        firstPage.drawText(`${selectedText || ''}`, { x: 188, y: 260, size: 10 });
         firstPage.drawText(`${formData.get('dept') || ''}`, { x: 188, y: 240, size: 10 });
         firstPage.drawText(`${formData.get('pos') || ''}`, { x: 188, y: 220, size: 10 });
         firstPage.drawText(`${formData.get('from1') || ''}`, { x: 188, y: 160, size: 10 });
@@ -32,7 +48,8 @@ document.getElementById('save-btn').addEventListener('click', async function() {
         firstPage.drawText(`${formData.get('to1') || ''}`, { x: 188, y: 140, size: 10 });
         firstPage.drawText(`${formData.get('tomod1') || ''}`, { x: 260, y: 140, size: 10 });
 
-        firstPage.drawText(`${formData.get('name2') || ''}`, { x: 380, y: 260, size: 10 });
+        // firstPage.drawText(`${formData.get('name2') || ''}`, { x: 380, y: 260, size: 10 });
+        firstPage.drawText(`${selectedText2 || ''}`, { x: 188, y: 260, size: 10 });
         firstPage.drawText(`${formData.get('dept2') || ''}`, { x: 380, y: 240, size: 10 });
         firstPage.drawText(`${formData.get('pos2') || ''}`, { x: 380, y: 220, size: 10 });
         firstPage.drawText(`${formData.get('to1') || ''}`, { x: 380, y: 160, size: 10 });
