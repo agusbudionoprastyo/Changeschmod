@@ -1,27 +1,37 @@
-        <div class="input-group">
-            <div class="input-wrapper">
-                <label for="from1"><h3>From</h3></label>
-                <select id="frommod1" name="frommod1"></select>
-                <input type="date" id="from1" name="from1" />
-            </div>
+<div class="input-group">
+    <div class="input-wrapper">
+        <label for="name"><h3>Name</h3></label>
+        <select id="name" name="name" style="width: 100%;">
+        </select>
+    </div>    
 
-            <div class="input-wrapper">
-                <label for="to1"><h3>To</h3></label>
-                <select id="tomod1" name="tomod1"></select>
-                <input type="date" id="to1" name="to1"/>
-            </div>
-        </div>
+    <div class="input-wrapper">
+        <label for="dept"><h3>Department</h3></label>
+        <input type="text" id="dept" name="dept" style="width: 100%;">
+        </input>
+    </div>
 
-        <div class="input-group">
-            <div class="input-wrapper">
-                <label for="from2"><h3>From</h3></label>
-                <select id="frommod2" name="frommod2"></select>
-                <input type="date" id="from2" name="from2" />
-            </div>
-            
-            <div class="input-wrapper">
-                <label for="to2"><h3>To</h3></label>
-                <select id="tomod2" name="tomod2"></select>
-                <input type="date" id="to2" name="to2"/>
-            </div>
-        </div>
+    <div class="input-wrapper">
+        <label for="pos"><h3>Position</h3></label>
+        <input type="text" id="pos" name="pos"/>
+    </div>
+</div>
+
+<div class="input-group">
+    <div class="input-wrapper">
+        <label for="name2"><h3>Name</h3></label>
+        <select id="name2" name="name2" style="width: 100%;">
+        </select>
+    </div>    
+
+    <div class="input-wrapper">
+        <label for="dept2"><h3>Department</h3></label>
+        <input type="text" id="dept2" name="dept2" style="width: 100%;">
+        </input>
+    </div>
+
+    <div class="input-wrapper">
+        <label for="pos2"><h3>Position</h3></label>
+        <input type="text" id="pos2" name="pos2"/>
+    </div>
+</div>
