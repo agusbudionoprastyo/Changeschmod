@@ -106,8 +106,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     populateNames();
-    updateDetails(nameSelect, document.getElementById('person'), document.getElementById('dept'), document.getElementById('pos'));
-    updateDetails(name2Select, document.getElementById('person2'), document.getElementById('dept2'), document.getElementById('pos2'));
+    updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'));
+    updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'));
   });
 
   function updateOptions() {
