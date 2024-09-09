@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 data.forEach(person => {
                     const option = document.createElement('option');
-                    option.value = person.id;
+                    option.value = person.name;
                     option.textContent = person.name;
                     nameSelect.appendChild(option);
                     name2Select.appendChild(option.cloneNode(true));
