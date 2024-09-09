@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    function updateDetails(selectElement, deptInput, posInput) {
+    function updateDetails(selectElement, deptInput, posInput, nameInput) {
         selectElement.addEventListener('change', function () {
             const id = this.value;
             if (id) {
@@ -97,17 +97,19 @@ document.addEventListener('DOMContentLoaded', function() {
                     .then(data => {
                         deptInput.value = data.dept;
                         posInput.value = data.position;
+                        nameInput.value = data.name;
                     });
             } else {
                 deptInput.value = '';
                 posInput.value = '';
+                nameInput.value = '';
             }
         });
     }
 
     populateNames();
-    updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'));
-    updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'));
+    updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
+    updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
   });
 
   function updateOptions() {
