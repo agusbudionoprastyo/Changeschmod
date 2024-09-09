@@ -24,7 +24,7 @@ document.getElementById('save-btn').addEventListener('click', async function() {
         const firstPage = pages[0];
 
         // Add text and signatures to the PDF
-        firstPage.drawText(`${formData.get('person') || ''}`, { x: 188, y: 260, size: 10 });
+        firstPage.drawText(`${formData.get('name') || ''}`, { x: 188, y: 260, size: 10 });
         firstPage.drawText(`${formData.get('dept') || ''}`, { x: 188, y: 240, size: 10 });
         firstPage.drawText(`${formData.get('pos') || ''}`, { x: 188, y: 220, size: 10 });
         firstPage.drawText(`${formData.get('from1') || ''}`, { x: 188, y: 160, size: 10 });
@@ -32,7 +32,7 @@ document.getElementById('save-btn').addEventListener('click', async function() {
         firstPage.drawText(`${formData.get('to1') || ''}`, { x: 188, y: 140, size: 10 });
         firstPage.drawText(`${formData.get('tomod1') || ''}`, { x: 260, y: 140, size: 10 });
 
-        firstPage.drawText(`${formData.get('person2') || ''}`, { x: 380, y: 260, size: 10 });
+        firstPage.drawText(`${formData.get('name2') || ''}`, { x: 380, y: 260, size: 10 });
         firstPage.drawText(`${formData.get('dept2') || ''}`, { x: 380, y: 240, size: 10 });
         firstPage.drawText(`${formData.get('pos2') || ''}`, { x: 380, y: 220, size: 10 });
         firstPage.drawText(`${formData.get('to1') || ''}`, { x: 380, y: 160, size: 10 });
