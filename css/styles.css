@@ -110,8 +110,8 @@ button.red {
 
 button.date-input {
   display: block;
-  width: 80%;
-  margin-left: 1rem;
+  /* width: 80%; */
+  margin-left: 0;
 }
   
 .input-group {
