@@ -99,6 +99,11 @@ document.getElementById('save-btn').addEventListener('click', async function() {
                 popup: 'rounded',
                 confirmButton: 'roundedBtn'
             }
+        }).then(() => {
+            // Add a delay before reloading
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
         });
     } catch (error) {
         console.error('Error:', error);
@@ -112,9 +117,13 @@ document.getElementById('save-btn').addEventListener('click', async function() {
                 popup: 'rounded',
                 confirmButton: 'roundedBtn'
             }
+        }).then(() => {
+            // Add a delay before reloading
+            setTimeout(() => {
+                window.location.reload();
+            }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
         });
     }
-    window.location.reload();
 });
 
 function getSignatureData(canvasId) {
