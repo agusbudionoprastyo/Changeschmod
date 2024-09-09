@@ -19,7 +19,7 @@
         <br>
         <label><h3>1<sup>st</sup> Employee</h3></label> 
 
-        <div class="input-group">
+        <!-- <div class="input-group">
             <div class="input-wrapper">
                 <label for="name"><h3>Name</h3></label>
                 <select id="name" name="name" style="width: 100%;">
@@ -46,7 +46,7 @@
             <div class="input-wrapper">
                 <label for="dept"><h3>Department</h3></label>
                 <select id="dept" name="dept" style="width: 100%;">
-                    <option value="" disabled selected>...</option>
+                    <option value="" disabled selected></option>
                     <option value="Administrative & General">A&G</option>
                     <option value="Engineering">Engineering</option>
                     <option value="F&B Service">FB Service</option>
@@ -60,19 +60,37 @@
                 <label for="pos"><h3>Position</h3></label>
                 <input type="text" id="pos" name="pos"/>
             </div>
+        </div> -->
+
+        <div class="input-group">
+            <div class="input-wrapper">
+                <label for="name"><h3>Name</h3></label>
+                <select id="name" name="name" style="width: 100%;">
+                </select>
+            </div>    
+    
+            <div class="input-wrapper">
+                <label for="dept"><h3>Department</h3></label>
+                <input type="text" id="dept" name="dept" style="width: 100%;" readonly>
+            </div>
+    
+            <div class="input-wrapper">
+                <label for="pos"><h3>Position</h3></label>
+                <input type="text" id="pos" name="pos" readonly>
+            </div>
         </div>
 
         <div class="input-group">
             <label for="from1"><h3>From</h3></label>
             <div class="input-wrapper">
-                <button type="button" class="date-input" onclick="openDatePicker('from1')"><i class="fa-solid fa-calendar"></i></button>
+                <button type="button" class="date-input" onclick="openDatePicker('from1')"><i class="fa-solid fa-calendar-day"></i></button>
                 <input type="date" class="date-input" id="from1" name="from1" onchange="updateOptions()"/>
                 <select id="frommod1" name="frommod1" onchange="syncSelectOptions('frommod1', 'tomod2')"></select>
             </div>
 
             <label for="to1"><h3>To</h3></label>
             <div class="input-wrapper">
-                <button type="button" class="date-input" onclick="openDatePicker('to1')"><i class="fa-solid fa-calendar"></i></button>
+                <button type="button" class="date-input" onclick="openDatePicker('to1')"><i class="fa-solid fa-calendar-day"></i></button>
                 <input type="date" class="date-input" id="to1" name="to1" onchange="updateOptions()"/>
                 <select id="tomod1" name="tomod1" onchange="syncSelectOptions('tomod1', 'frommod2')"></select>
             </div>
@@ -91,7 +109,7 @@
 
         <label><h3>2<sup>nd</sup> Employee</h3></label> 
 
-        <div class="input-group">
+        <!-- <div class="input-group">
             <div class="input-wrapper">
                 <label for="name2"><h3>Name</h3></label>
                 <select id="name2" name="name2" style="width: 100%;">
@@ -118,7 +136,7 @@
             <div class="input-wrapper">
                 <label for="dept2"><h3>Department</h3></label>
                 <select id="dept2" name="dept2" style="width: 100%;">
-                    <option value="" disabled selected>...</option>
+                    <option value="" disabled selected></option>
                     <option value="Administrative & General">A&G</option>
                     <option value="Engineering">Engineering</option>
                     <option value="F&B Service">FB Service</option>
@@ -131,6 +149,24 @@
             <div class="input-wrapper">
                 <label for="pos2"><h3>Position</h3></label>
                 <input type="text" id="pos2" name="pos2"/>
+            </div>
+        </div> -->
+
+        <div class="input-group">
+            <div class="input-wrapper">
+                <label for="name2"><h3>Name</h3></label>
+                <select id="name2" name="name2" style="width: 100%;">
+                </select>
+            </div>    
+    
+            <div class="input-wrapper">
+                <label for="dept2"><h3>Department</h3></label>
+                <input type="text" id="dept2" name="dept2" style="width: 100%;" readonly>
+            </div>
+    
+            <div class="input-wrapper">
+                <label for="pos2"><h3>Position</h3></label>
+                <input type="text" id="pos2" name="pos2" readonly>
             </div>
         </div>
 
