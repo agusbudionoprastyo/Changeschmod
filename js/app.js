@@ -71,8 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Fetch Data
-    const NameText = document.getElementById('NameText');
-    const NameText2 = document.getElementById('NameText2');
     const nameSelect = document.getElementById('name');
     const name2Select = document.getElementById('name2');
 
@@ -90,26 +88,20 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    function updateDetails(selectElement, nameInput, deptInput, posInput) {
+    function updateDetails(selectElement, deptInput, posInput) {
         selectElement.addEventListener('change', function () {
             const id = this.value;
             if (id) {
                 fetch(`get_details.php?id=${id}`)
                     .then(response => response.json())
                     .then(data => {
-                        nameInput.value = data.name;
                         deptInput.value = data.dept;
                         posInput.value = data.position;
                     });
             } else {
-                nameInput.value = '';
                 deptInput.value = '';
                 posInput.value = '';
             }
-            // Update hidden input for selected text
-            if (selectElement === nameSelect) {
-              NameText.value = selectedText;
-          }
         });
     }
 
