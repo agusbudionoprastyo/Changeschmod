@@ -1,15 +1,8 @@
-// Event listener for form inputs to save data
-document.getElementById('imageForm').addEventListener('input', saveFormData);
-
-// Event listener for signature canvases to save signature data
-document.querySelectorAll('.signature-pad canvas').forEach(canvas => {
-    canvas.addEventListener('change', saveFormData);
-});
-
 document.getElementById('save-btn').addEventListener('click', async function() {
     try {
         // Validate the form before proceeding
         if (!validateForm()) {
+            loadingAlert.close();
             return;
         }
 
@@ -97,7 +90,6 @@ document.getElementById('save-btn').addEventListener('click', async function() {
 
         const result = await response.text();
         loadingAlert.close();
-        localStorage.removeItem('formData');
         Swal.fire({
             icon: 'info',
             title: 'Success!',
@@ -206,80 +198,3 @@ function openDatePicker(inputId) {
         console.error('Input element not found:', inputId);
     }
 }
-
-// Helper function to get the data URL from a canvas
-function getSignatureDataUrl(canvasId) {
-    const canvas = document.getElementById(canvasId);
-    return canvas ? canvas.toDataURL() : '';
-}
-
-// Helper function to set the data URL to a canvas
-function setSignatureFromDataUrl(canvasId, dataUrl) {
-    const canvas = document.getElementById(canvasId);
-    if (canvas) {
-        const context = canvas.getContext('2d');
-        const img = new Image();
-        img.onload = function() {
-            canvas.width = img.width;
-            canvas.height = img.height;
-            context.drawImage(img, 0, 0);
-        };
-        img.src = dataUrl;
-    }
-}
-
-// Save form data including signatures
-function saveFormData() {
-    const formData = {
-        name: document.getElementById('name').value,
-        dept: document.getElementById('dept').value,
-        pos: document.getElementById('pos').value,
-        from1: document.getElementById('from1').value,
-        frommod1: document.getElementById('frommod1').value,
-        to1: document.getElementById('to1').value,
-        tomod1: document.getElementById('tomod1').value,
-        name2: document.getElementById('name2').value,
-        dept2: document.getElementById('dept2').value,
-        pos2: document.getElementById('pos2').value,
-        from2: document.getElementById('from2').value,
-        frommod2: document.getElementById('frommod2').value,
-        to2: document.getElementById('to2').value,
-        tomod2: document.getElementById('tomod2').value,
-        signature1: getSignatureDataUrl('signature1'),
-        signature2: getSignatureDataUrl('signature2'),
-        signature3: getSignatureDataUrl('signature3'),
-        signature4: getSignatureDataUrl('signature4')
-    };
-    localStorage.setItem('formData', JSON.stringify(formData));
-}
-
-// Load form data including signatures
-function loadFormData() {
-    const savedData = localStorage.getItem('formData');
-    if (savedData) {
-        const formData = JSON.parse(savedData);
-        document.getElementById('name').value = formData.name || '';
-        document.getElementById('dept').value = formData.dept || '';
-        document.getElementById('pos').value = formData.pos || '';
-        document.getElementById('from1').value = formData.from1 || '';
-        document.getElementById('frommod1').value = formData.frommod1 || '';
-        document.getElementById('to1').value = formData.to1 || '';
-        document.getElementById('tomod1').value = formData.tomod1 || '';
-        document.getElementById('name2').value = formData.name2 || '';
-        document.getElementById('dept2').value = formData.dept2 || '';
-        document.getElementById('pos2').value = formData.pos2 || '';
-        document.getElementById('from2').value = formData.from2 || '';
-        document.getElementById('frommod2').value = formData.frommod2 || '';
-        document.getElementById('to2').value = formData.to2 || '';
-        document.getElementById('tomod2').value = formData.tomod2 || '';
-        
-        // Set signatures from saved data
-        setSignatureFromDataUrl('signature1', formData.signature1 || '');
-        setSignatureFromDataUrl('signature2', formData.signature2 || '');
-        setSignatureFromDataUrl('signature3', formData.signature3 || '');
-        setSignatureFromDataUrl('signature4', formData.signature4 || '');
-    }
-}
-
-// Load form data on page load
-window.onload = loadFormData;
