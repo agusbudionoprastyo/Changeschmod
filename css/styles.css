@@ -107,6 +107,12 @@ button.red {
     width: 100%;
     color: #b60c53;
   }
+
+  button.date-input {
+    display: block;
+    width: 100%;
+    margin-left: 1rem;
+  }
   
 .input-group {
     margin-bottom: 15px; /* Untuk memberikan ruang antara setiap input */
