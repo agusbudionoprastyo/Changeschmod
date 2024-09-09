@@ -132,13 +132,13 @@ document.addEventListener('DOMContentLoaded', function() {
         selectElement.disabled = false; // Enable the select element
     }
 
-    // // Update first set of selects
-    // if (from1Date) {
-    //     populateSelect(document.getElementById('frommod1'), (from1Day === 0 || from1Day === 6) ? weekendsOptions : weekdaysOptions);
-    // }
-    // if (to1Date) {
-    //     populateSelect(document.getElementById('tomod1'), (to1Day === 0 || to1Day === 6) ? weekendsOptions : weekdaysOptions);
-    // }
+    // Update first set of selects
+    if (from1Date) {
+        populateSelect(document.getElementById('frommod1'), (from1Day === 0 || from1Day === 6) ? weekendsOptions : weekdaysOptions);
+    }
+    else if (to1Date) {
+        populateSelect(document.getElementById('tomod1'), (to1Day === 0 || to1Day === 6) ? weekendsOptions : weekdaysOptions);
+    }
 
     // Automatically fill second set of selects with same values as the first set
     document.getElementById('from2').value = to1Date;
