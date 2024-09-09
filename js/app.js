@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(data => {
                 data.forEach(person => {
                     const option = document.createElement('option');
-                    option.value = person.id;
+                    option.value = person.name;
                     option.textContent = person.name;
                     nameSelect.appendChild(option);
                     name2Select.appendChild(option.cloneNode(true));
@@ -88,19 +88,17 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    function updateDetails(selectElement, personInput, deptInput, posInput) {
+    function updateDetails(selectElement, deptInput, posInput) {
         selectElement.addEventListener('change', function () {
             const id = this.value;
             if (id) {
                 fetch(`get_details.php?id=${id}`)
                     .then(response => response.json())
                     .then(data => {
-                        personInput.value = data.name;
                         deptInput.value = data.dept;
                         posInput.value = data.position;
                     });
             } else {
-                personInput.value = '';
                 deptInput.value = '';
                 posInput.value = '';
             }
