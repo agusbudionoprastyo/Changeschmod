@@ -198,44 +198,44 @@ function openDatePicker(inputId) {
     }
 }
 
-//fetchDatabase
+// //fetchDatabase
 
-document.addEventListener('DOMContentLoaded', function () {
-    const nameSelect = document.getElementById('name');
-    const name2Select = document.getElementById('name2');
+// document.addEventListener('DOMContentLoaded', function () {
+//     const nameSelect = document.getElementById('name');
+//     const name2Select = document.getElementById('name2');
 
-    function populateNames() {
-        fetch('get_names.php')
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(person => {
-                    const option = document.createElement('option');
-                    option.value = person.name;
-                    option.textContent = person.name;
-                    nameSelect.appendChild(option);
-                    name2Select.appendChild(option.cloneNode(true));
-                });
-            });
-    }
+//     function populateNames() {
+//         fetch('get_names.php')
+//             .then(response => response.json())
+//             .then(data => {
+//                 data.forEach(person => {
+//                     const option = document.createElement('option');
+//                     option.value = person.id;
+//                     option.textContent = person.name;
+//                     nameSelect.appendChild(option);
+//                     name2Select.appendChild(option.cloneNode(true));
+//                 });
+//             });
+//     }
 
-    function updateDetails(selectElement, deptInput, posInput) {
-        selectElement.addEventListener('change', function () {
-            const id = this.value;
-            if (id) {
-                fetch(`get_details.php?id=${id}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        deptInput.value = data.dept;
-                        posInput.value = data.position;
-                    });
-            } else {
-                deptInput.value = '';
-                posInput.value = '';
-            }
-        });
-    }
+//     function updateDetails(selectElement, deptInput, posInput) {
+//         selectElement.addEventListener('change', function () {
+//             const id = this.value;
+//             if (id) {
+//                 fetch(`get_details.php?id=${id}`)
+//                     .then(response => response.json())
+//                     .then(data => {
+//                         deptInput.value = data.dept;
+//                         posInput.value = data.position;
+//                     });
+//             } else {
+//                 deptInput.value = '';
+//                 posInput.value = '';
+//             }
+//         });
+//     }
 
-    populateNames();
-    updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'));
-    updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'));
-});
+//     populateNames();
+//     updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'));
+//     updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'));
+// });

@@ -69,6 +69,47 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener("resize", function() {
       canvases.forEach(canvas => resizeCanvas(canvas));
     });
+
+    // Fetch Data
+    const nameSelect = document.getElementById('name');
+    const name2Select = document.getElementById('name2');
+
+    function populateNames() {
+        fetch('get_names.php')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(person => {
+                    const option = document.createElement('option');
+                    option.value = person.id;
+                    option.textContent = person.name;
+                    nameSelect.appendChild(option);
+                    name2Select.appendChild(option.cloneNode(true));
+                });
+            });
+    }
+
+    function updateDetails(selectElement, personInput, deptInput, posInput) {
+        selectElement.addEventListener('change', function () {
+            const id = this.value;
+            if (id) {
+                fetch(`get_details.php?id=${id}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        personInput.value = data.name;
+                        deptInput.value = data.dept;
+                        posInput.value = data.position;
+                    });
+            } else {
+                personInput.value = '';
+                deptInput.value = '';
+                posInput.value = '';
+            }
+        });
+    }
+
+    populateNames();
+    updateDetails(nameSelect, document.getElementById('name'), document.getElementById('dept'), document.getElementById('pos'));
+    updateDetails(name2Select, document.getElementById('name2'), document.getElementById('dept2'), document.getElementById('pos2'));
   });
 
   function updateOptions() {
