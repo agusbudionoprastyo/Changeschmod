@@ -103,7 +103,7 @@ document.getElementById('save-btn').addEventListener('click', async function() {
             // Add a delay before reloading
             setTimeout(() => {
                 window.location.reload();
-            }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
+            }, 1000); // Delay in milliseconds (1000ms = 1 seconds)
         });
     } catch (error) {
         console.error('Error:', error);
@@ -121,7 +121,7 @@ document.getElementById('save-btn').addEventListener('click', async function() {
             // Add a delay before reloading
             setTimeout(() => {
                 window.location.reload();
-            }, 1000); // Delay in milliseconds (2000ms = 2 seconds)
+            }, 1000); // Delay in milliseconds (1000ms = 1 seconds)
         });
     }
 });
