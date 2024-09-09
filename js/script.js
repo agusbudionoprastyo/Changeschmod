@@ -24,7 +24,7 @@ document.getElementById('save-btn').addEventListener('click', async function() {
         const firstPage = pages[0];
 
         // Add text and signatures to the PDF
-        firstPage.drawText(`${formData.get('name') || ''}`, { x: 188, y: 260, size: 10 });
+        firstPage.drawText(`${formData.get('person') || ''}`, { x: 188, y: 260, size: 10 });
         firstPage.drawText(`${formData.get('dept') || ''}`, { x: 188, y: 240, size: 10 });
         firstPage.drawText(`${formData.get('pos') || ''}`, { x: 188, y: 220, size: 10 });
         firstPage.drawText(`${formData.get('from1') || ''}`, { x: 188, y: 160, size: 10 });
@@ -32,7 +32,7 @@ document.getElementById('save-btn').addEventListener('click', async function() {
         firstPage.drawText(`${formData.get('to1') || ''}`, { x: 188, y: 140, size: 10 });
         firstPage.drawText(`${formData.get('tomod1') || ''}`, { x: 260, y: 140, size: 10 });
 
-        firstPage.drawText(`${formData.get('name2') || ''}`, { x: 380, y: 260, size: 10 });
+        firstPage.drawText(`${formData.get('person2') || ''}`, { x: 380, y: 260, size: 10 });
         firstPage.drawText(`${formData.get('dept2') || ''}`, { x: 380, y: 240, size: 10 });
         firstPage.drawText(`${formData.get('pos2') || ''}`, { x: 380, y: 220, size: 10 });
         firstPage.drawText(`${formData.get('to1') || ''}`, { x: 380, y: 160, size: 10 });
@@ -197,45 +197,3 @@ function openDatePicker(inputId) {
         console.error('Input element not found:', inputId);
     }
 }
-
-// //fetchDatabase
-
-// document.addEventListener('DOMContentLoaded', function () {
-//     const nameSelect = document.getElementById('name');
-//     const name2Select = document.getElementById('name2');
-
-//     function populateNames() {
-//         fetch('get_names.php')
-//             .then(response => response.json())
-//             .then(data => {
-//                 data.forEach(person => {
-//                     const option = document.createElement('option');
-//                     option.value = person.id;
-//                     option.textContent = person.name;
-//                     nameSelect.appendChild(option);
-//                     name2Select.appendChild(option.cloneNode(true));
-//                 });
-//             });
-//     }
-
-//     function updateDetails(selectElement, deptInput, posInput) {
-//         selectElement.addEventListener('change', function () {
-//             const id = this.value;
-//             if (id) {
-//                 fetch(`get_details.php?id=${id}`)
-//                     .then(response => response.json())
-//                     .then(data => {
-//                         deptInput.value = data.dept;
-//                         posInput.value = data.position;
-//                     });
-//             } else {
-//                 deptInput.value = '';
-//                 posInput.value = '';
-//             }
-//         });
-//     }
-
-//     populateNames();
-//     updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'));
-//     updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'));
-// });
