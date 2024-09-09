@@ -149,14 +149,6 @@ button.red {
     filter: invert(80%);
 }
 
-.swal2-popup {
-    border-radius: 15px !important;
-  }
-
-.swal2-input {
-    border-radius: 15px !important;
-}
-
   /* Untuk mengatur ukuran canvas */
 .signature-pad canvas{
     box-shadow: inset 2px 2px 5px #babecc, inset -5px -5px 10px #fff;
@@ -170,29 +162,36 @@ button.red {
     -webkit-appearance: none;
 }
 
-.swal2-confirm {
-    text-shadow: none;
-    border-radius: 20px; /* Atur radius sesuai kebutuhan Anda */
-    display: flex;
-    justify-content: flex-end;
-}
-
-/* Gaya CSS untuk menyesuaikan posisi tombol */
-.swal2-actions {
-    display: flex;
-    justify-content: flex-end;
-}
-.swal2-actions button {
-    margin: 0 5px; /* Mengatur jarak antara tombol */
-}
-.swal2-select {
-    width: auto;
-    height: 50px;
-    justify-content: center;
-}
-
 hr {
   border: 0;
   border-top: 1px dashed #000; /* Thickness and color of the line */
   margin: 20px 0; /* Space above and below the line */
+}
+
+/* swal */
+.rounded {
+  border-radius: 25px; /* Menambahkan sudut bulat dengan radius 10px */
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.roundedBtn {
+    border-radius: 25px; /* Menambahkan sudut bulat dengan radius 10px */
+    background-color: #fff;
+    color: #242424;
+    text-shadow: none;
+    font-weight: bold;
+    box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+    font-weight: 600;
+}
+.roundedBtnCancel {
+  border-radius: 25px; /* Menambahkan sudut bulat dengan radius 10px */
+  background-color: #fff;
+  color: #b60c53;
+  text-shadow: none;
+  font-weight: bold;
+  box-shadow: -5px -5px 20px #fff, 5px 5px 20px #babecc;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  font-weight: 600;
 }

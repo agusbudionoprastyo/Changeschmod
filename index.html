@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChangeSchMod</title>
     <link rel="icon" href="images/icon/drawable-hdpi/icon.png" type="image/x-icon">
-    <link rel="stylesheet" type="text/css" href="sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/south-street/jquery-ui.css" rel="stylesheet"> 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
@@ -47,13 +47,13 @@
                 <label for="dept"><h3>Department</h3></label>
                 <select id="dept" name="dept" style="width: 100%;">
                     <option value="" disabled selected>...</option>
-                    <option value="A&G">A&G</option>
-                    <option value="ENG">Engineering</option>
-                    <option value="FBS">FB Service</option>
-                    <option value="FBP">FB Product</option>
-                    <option value="FO">Front Office</option>
-                    <option value="HK">Housekeeping</option>
-                    <option value="SM">Sales & Marketing</option>
+                    <option value="Administrative & General">A&G</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="F&B Service">FB Service</option>
+                    <option value="F&B Product">FB Product</option>
+                    <option value="Front Office">Front Office</option>
+                    <option value="Hiousekeeping">Housekeeping</option>
+                    <option value="Sales & Marketing">Sales & Marketing</option>
                 </select>
             </div>
             <div class="input-wrapper">
@@ -70,8 +70,9 @@
             </div>
             <div class="input-wrapper">
                 <label for="to1"><h3>To</h3></label>
-                <select id="tomod1" name="tomod1" onchange="syncSelectOptions('tomod1', 'frommod2')"></select>
+                <button type="button" onclick="openDatePicker('to1')"><i class="fa-solid fa-calendar"></i></button>
                 <input type="date" id="to1" name="to1" onchange="updateOptions()"/>
+                <select id="tomod1" name="tomod1" onchange="syncSelectOptions('tomod1', 'frommod2')"></select>
             </div>
         </div>
 
@@ -116,13 +117,13 @@
                 <label for="dept2"><h3>Department</h3></label>
                 <select id="dept2" name="dept2" style="width: 100%;">
                     <option value="" disabled selected>...</option>
-                    <option value="A&G">A&G</option>
-                    <option value="ENG">Engineering</option>
-                    <option value="FBS">FB Service</option>
-                    <option value="FBP">FB Product</option>
-                    <option value="FO">Front Office</option>
-                    <option value="HK">Housekeeping</option>
-                    <option value="SM">Sales & Marketing</option>
+                    <option value="Administrative & General">A&G</option>
+                    <option value="Engineering">Engineering</option>
+                    <option value="F&B Service">FB Service</option>
+                    <option value="F&B Product">FB Product</option>
+                    <option value="Front Office">Front Office</option>
+                    <option value="Hiousekeeping">Housekeeping</option>
+                    <option value="Sales & Marketing">Sales & Marketing</option>
                 </select>                
             </div>
             <div class="input-wrapper">
@@ -183,12 +184,23 @@
         </div>
     </form>
     
-    <script src="sweetalert2/dist/sweetalert2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <script src="js/signature_pad.umd.js"></script>
     <script src="js/app.js"></script>
     <script src="js/axios.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+
+    <script>
+        function openDatePicker(inputId) {
+            const inputElement = document.getElementById(inputId);
+            if (inputElement) {
+                inputElement.focus(); // Focus on the date input to open the calendar
+            } else {
+                console.error('Input element not found:', inputId);
+            }
+        }
+    </script>
 
 </body>
 </html>
