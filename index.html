@@ -44,14 +44,24 @@
             <div class="input-wrapper">
                 <button type="button" class="date-input" onclick="openDatePicker('from1')"><i class="fa-solid fa-calendar-day"></i></button>
                 <input type="date" class="date-input" id="from1" name="from1" onchange="updateOptions()"/>
-                <select id="frommod1" name="frommod1" onchange="syncSelectOptions('frommod1', 'tomod2')"></select>
+                <select id="frommod1" name="frommod1">
+                    <option value="" selected disabled></option>
+                    <option value="MOD">MOD</option>
+                    <option value="MOD 1">MOD 1</option>
+                    <option value="MOD 2">MOD 2</option>
+                </select>
             </div>
 
             <label for="to1"><h3>To</h3></label>
             <div class="input-wrapper">
                 <button type="button" class="date-input" onclick="openDatePicker('to1')"><i class="fa-solid fa-calendar-day"></i></button>
                 <input type="date" class="date-input" id="to1" name="to1" onchange="updateOptions()"/>
-                <select id="tomod1" name="tomod1" onchange="syncSelectOptions('tomod1', 'frommod2')"></select>
+                <select id="tomod1" name="tomod1">
+                    <option value="" selected disabled></option>
+                    <option value="MOD">MOD</option>
+                    <option value="MOD 1">MOD 1</option>
+                    <option value="MOD 2">MOD 2</option>
+                </select>
             </div>
         </div>
 
