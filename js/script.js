@@ -188,3 +188,12 @@ function isCanvasEmpty(canvasId) {
     }
     return true;
 }
+
+function openDatePicker(inputId) {
+    const inputElement = document.getElementById(inputId);
+    if (inputElement) {
+        inputElement.focus(); // Focus on the date input to open the calendar
+    } else {
+        console.error('Input element not found:', inputId);
+    }
+}
