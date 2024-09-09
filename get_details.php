@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT dept, position FROM employees WHERE id = $id";
+$sql = "SELECT name, dept, position FROM employees WHERE id = $id";
 $result = $conn->query($sql);
 
 $details = [];
