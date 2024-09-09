@@ -1,8 +1,15 @@
+// Event listener for form inputs to save data
+document.getElementById('imageForm').addEventListener('input', saveFormData);
+
+// Event listener for signature canvases to save signature data
+document.querySelectorAll('.signature-pad canvas').forEach(canvas => {
+    canvas.addEventListener('change', saveFormData);
+});
+
 document.getElementById('save-btn').addEventListener('click', async function() {
     try {
         // Validate the form before proceeding
         if (!validateForm()) {
-            loadingAlert.close();
             return;
         }
 
@@ -176,8 +183,6 @@ function validateForm() {
     return valid;
 }
 
-
-
 // Function to check if the canvas is empty
 function isCanvasEmpty(canvasId) {
     const canvas = document.getElementById(canvasId);
@@ -275,3 +280,6 @@ function loadFormData() {
         setSignatureFromDataUrl('signature4', formData.signature4 || '');
     }
 }
+
+// Load form data on page load
+window.onload = loadFormData;
