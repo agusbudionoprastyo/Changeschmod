@@ -132,12 +132,19 @@ button.red {
     margin-left: 1rem; /* Menghapus margin kiri */
 }  
 
-.input-group .input-wrapper input[type="date"]{
+.input-group .input-wrapper input[date] {
   max-width: 100%; /* Input memanjang hingga ke tepi kanan page */
-  margin-left: 1rem; /* Menghapus margin kiri */
+  margin-left: 1rem;   /* Menghapus margin kiri */
   padding: 16px;
   height: 45px;
 }  
+
+.input-wrapper .calendar {
+  position: absolute;
+  left: 9rem;
+  font-size: 4;
+  z-index: 1; /* Ensure button is on top of the input */
+}
 
 .logo {
     display: flex;
