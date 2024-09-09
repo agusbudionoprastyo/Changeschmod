@@ -132,7 +132,7 @@ button.red {
     margin-left: 1rem; /* Menghapus margin kiri */
 }  
 
-.input-group .input-wrapper input[date] {
+.input-group .input-wrapper .date-input {
   max-width: 100%; /* Input memanjang hingga ke tepi kanan page */
   margin-left: 1rem;   /* Menghapus margin kiri */
   padding: 16px;

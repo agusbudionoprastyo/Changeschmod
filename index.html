@@ -66,12 +66,12 @@
             <div class="input-wrapper">
                 <label for="from1"><h3>From</h3></label>
                 <select id="frommod1" name="frommod1" onchange="syncSelectOptions('frommod1', 'tomod2')"></select>
-                <input type="date" id="from1" name="from1" onchange="updateOptions()"/>
+                <input type="date" class="date-input" id="from1" name="from1" onchange="updateOptions()"/>
             </div>
             <div class="input-wrapper">
                 <label for="to1"><h3>To</h3></label>
                 <button type="button" class="calendar" onclick="openDatePicker('to1')"><i class="fa-solid fa-calendar"></i></button>
-                <input type="date" id="to1" name="to1" onchange="updateOptions()"/>
+                <input type="date" class="date-input" id="to1" name="to1" onchange="updateOptions()"/>
                 <select id="tomod1" name="tomod1" onchange="syncSelectOptions('tomod1', 'frommod2')"></select>
             </div>
         </div>
@@ -136,12 +136,12 @@
             <div class="input-wrapper">
                 <label for="from2"><h3>From</h3></label>
                 <select id="frommod2" name="frommod2" disabled></select>
-                <input type="date" id="from2" name="from2" disabled />
+                <input type="date" class="date-input" id="from2" name="from2" disabled />
             </div>
             <div class="input-wrapper">
                 <label for="to2"><h3>To</h3></label>
                 <select id="tomod2" name="tomod2" disabled></select>
-                <input type="date" id="to2" name="to2" disabled />
+                <input type="date" class="date-input" id="to2" name="to2" disabled />
             </div>
         </div>
 
