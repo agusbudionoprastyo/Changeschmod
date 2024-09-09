@@ -1,6 +1,6 @@
 <?php
 $servername = "localhost";
-$username = "ag";
+$username = "dafm5634_ag";
 $password = "Ag7us777__";
 $dbname = "dafm5634_modschedule";
 
