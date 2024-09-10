@@ -112,6 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
                   option2.textContent = person.name;
                   name2Select.appendChild(option2);
               });
+              // Call loadFromLocalStorage after populating names
+              loadFromLocalStorage();
           });
   }
 
@@ -191,12 +193,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const nameSelect = document.getElementById('name');
   const name2Select = document.getElementById('name2');
   const inputsAndSelects = document.querySelectorAll("input, select");
+  
+  // Panggil fungsi populateNames dan updateDetails setelah DOM siap
   populateNames();
-
-  // Panggil fungsi updateDetails untuk kedua dropdown
   updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
   updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
-
-  // Mengisi nilai dari localStorage saat halaman dimuat
-  loadFromLocalStorage();
 });
