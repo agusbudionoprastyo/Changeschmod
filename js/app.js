@@ -137,6 +137,8 @@ function populateNames() {
   fetch('get_names.php')
       .then(response => response.json())
       .then(data => {
+          console.log('Data received from server:', data);  // Log data received
+
           // Clear existing options
           nameSelect.innerHTML = '';
           name2Select.innerHTML = '';
@@ -156,19 +158,26 @@ function populateNames() {
           // Restore selected values
           restoreSelectedOption(nameSelect, 'selectedNameId');
           restoreSelectedOption(name2Select, 'selectedName2Id');
-      });
+      })
+      .catch(error => console.error('Error fetching data:', error));
 }
 
 function restoreSelectedOption(selectElement, storageKey) {
   const selectedId = localStorage.getItem(storageKey);
+  console.log(`Restoring option for ${storageKey}:`, selectedId);  // Log the stored ID
+
   if (selectedId) {
       // Ensure value exists in options
       const option = selectElement.querySelector(`option[value="${selectedId}"]`);
       if (option) {
           selectElement.value = selectedId;
+          console.log(`Option with value ${selectedId} selected`);  // Log successful selection
+      } else {
+          console.log(`No matching option found for value ${selectedId}`);  // Log if no match found
       }
   }
 }
+
 
 
 function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
