@@ -112,109 +112,109 @@ document.addEventListener('DOMContentLoaded', function() {
     // updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
 
     // Fetch Data
-    const nameSelect = document.getElementById('name');
-    const name2Select = document.getElementById('name2');
-
-    function populateNames() {
-        // Ambil data dari localStorage terlebih dahulu
-        const savedNames = JSON.parse(localStorage.getItem('names')) || [];
-
-        if (savedNames.length > 0) {
-            savedNames.forEach(person => {
-                const option1 = document.createElement('option');
-                option1.value = person.id;
-                option1.textContent = person.name;
-                nameSelect.appendChild(option1);
-
-                const option2 = document.createElement('option');
-                option2.value = person.id;
-                option2.textContent = person.name;
-                name2Select.appendChild(option2);
-            });
-        } else {
-            // Jika tidak ada data di localStorage, ambil dari server
-            fetch('get_names.php')
-                .then(response => response.json())
-                .then(data => {
-                    localStorage.setItem('names', JSON.stringify(data));
-                    data.forEach(person => {
-                        const option1 = document.createElement('option');
-                        option1.value = person.id;
-                        option1.textContent = person.name;
-                        nameSelect.appendChild(option1);
-
-                        const option2 = document.createElement('option');
-                        option2.value = person.id;
-                        option2.textContent = person.name;
-                        name2Select.appendChild(option2);
-                    });
-                });
-        }
-    }
-
-    function updateDetails(selectElement, deptInput, posInput, nameInput) {
-        selectElement.addEventListener('change', function () {
-            const id = this.value;
-            if (id) {
-                fetch(`get_details.php?id=${id}`)
-                    .then(response => response.json())
-                    .then(data => {
-                        deptInput.value = data.dept;
-                        posInput.value = data.position;
-                        nameInput.value = data.name;
-
-                        // Simpan data ke localStorage setelah update
-                        localStorage.setItem(`${selectElement.id}-dept`, data.dept);
-                        localStorage.setItem(`${selectElement.id}-pos`, data.position);
-                        localStorage.setItem(`${selectElement.id}-name`, data.name);
-                    });
-            } else {
-                deptInput.value = '';
-                posInput.value = '';
-                nameInput.value = '';
-            }
-        });
-    }
-
-    function loadFromLocalStorage() {
-        const inputs = document.querySelectorAll("input, select");
-        inputs.forEach(input => {
-            const savedValue = localStorage.getItem(input.id);
-            if (savedValue !== null) {
-                if (input.tagName === 'SELECT') {
-                    input.value = savedValue;
-                    input.dispatchEvent(new Event('change')); // Trigger change event to update other fields
-                } else {
-                    input.value = savedValue;
-                }
-            }
-        });
-
-        // Memuat data canvas dari localStorage
-        const canvases = document.querySelectorAll("canvas");
-        canvases.forEach(canvas => {
-            const dataURL = localStorage.getItem(canvas.id);
-            if (dataURL) {
-                const ctx = canvas.getContext("2d");
-                const img = new Image();
-                img.onload = function() {
-                    ctx.drawImage(img, 0, 0);
-                };
-                img.src = dataURL;
-            }
-        });
-    }
-
-    // Panggil fungsi populateNames
-    populateNames();
-
-    // Panggil fungsi updateDetails untuk kedua dropdown
-    updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
-    updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
-
-    // Mengisi nilai dari localStorage saat halaman dimuat
-    loadFromLocalStorage();
-
+      const nameSelect = document.getElementById('name');
+      const name2Select = document.getElementById('name2');
+      const inputsAndSelects = document.querySelectorAll("input, select");
+  
+      function populateNames() {
+          fetch('get_names.php')
+              .then(response => response.json())
+              .then(data => {
+                  data.forEach(person => {
+                      const option1 = document.createElement('option');
+                      option1.value = person.id;
+                      option1.textContent = person.name;
+                      nameSelect.appendChild(option1);
+  
+                      const option2 = document.createElement('option');
+                      option2.value = person.id;
+                      option2.textContent = person.name;
+                      name2Select.appendChild(option2);
+                  });
+              });
+      }
+  
+      function updateDetails(selectElement, deptInput, posInput, nameInput) {
+          selectElement.addEventListener('change', function () {
+              const id = this.value;
+              if (id) {
+                  fetch(`get_details.php?id=${id}`)
+                      .then(response => response.json())
+                      .then(data => {
+                          deptInput.value = data.dept;
+                          posInput.value = data.position;
+                          nameInput.value = data.name;
+  
+                          // Simpan data ke localStorage setelah update
+                          localStorage.setItem(`${selectElement.id}-dept`, data.dept);
+                          localStorage.setItem(`${selectElement.id}-pos`, data.position);
+                          localStorage.setItem(`${selectElement.id}-name`, data.name);
+  
+                          console.log(`Details for ${selectElement.id} updated and saved to localStorage:`, {
+                              dept: data.dept,
+                              pos: data.position,
+                              name: data.name
+                          });
+                      });
+              } else {
+                  deptInput.value = '';
+                  posInput.value = '';
+                  nameInput.value = '';
+              }
+          });
+      }
+  
+      function saveToLocalStorage(event) {
+          const { id, value } = event.target;
+          localStorage.setItem(id, value);
+          console.log(`Saved ${id} to localStorage:`, value);
+      }
+  
+      // Menambahkan event listener ke semua input dan select
+      inputsAndSelects.forEach(element => {
+          element.addEventListener('input', saveToLocalStorage);
+          element.addEventListener('change', saveToLocalStorage);
+      });
+  
+      function loadFromLocalStorage() {
+          inputsAndSelects.forEach(input => {
+              const savedValue = localStorage.getItem(input.id);
+              if (savedValue !== null) {
+                  if (input.tagName === 'SELECT') {
+                      input.value = savedValue;
+                      input.dispatchEvent(new Event('change')); // Trigger change event to update other fields
+                  } else {
+                      input.value = savedValue;
+                  }
+                  console.log(`Loaded ${input.id} from localStorage:`, savedValue);
+              }
+          });
+  
+          // Memuat data canvas dari localStorage
+          const canvases = document.querySelectorAll("canvas");
+          canvases.forEach(canvas => {
+              const dataURL = localStorage.getItem(canvas.id);
+              if (dataURL) {
+                  const ctx = canvas.getContext("2d");
+                  const img = new Image();
+                  img.onload = function() {
+                      ctx.drawImage(img, 0, 0);
+                  };
+                  img.src = dataURL;
+                  console.log(`Loaded canvas data for ${canvas.id} from localStorage.`);
+              }
+          });
+      }
+  
+      // Panggil fungsi populateNames
+      populateNames();
+  
+      // Panggil fungsi updateDetails untuk kedua dropdown
+      updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
+      updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
+  
+      // Mengisi nilai dari localStorage saat halaman dimuat
+      loadFromLocalStorage();  
   });
 
 
