@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
 
     // Mengisi nilai dari localStorage saat halaman dimuat
-    loadFromLocalStorage();s
+    loadFromLocalStorage();
 
   });
 
