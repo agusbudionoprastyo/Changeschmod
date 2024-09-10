@@ -115,23 +115,61 @@ document.addEventListener('DOMContentLoaded', function() {
 const nameSelect = document.getElementById('name');
 const name2Select = document.getElementById('name2');
 
-function populateNames() {
-    fetch('get_names.php')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(person => {
-                const option = document.createElement('option');
-                option.value = person.id;
-                option.textContent = person.name;
-                nameSelect.appendChild(option);
-                name2Select.appendChild(option.cloneNode(true));
-            });
+// function populateNames() {
+//     fetch('get_names.php')
+//         .then(response => response.json())
+//         .then(data => {
+//             data.forEach(person => {
+//                 const option = document.createElement('option');
+//                 option.value = person.id;
+//                 option.textContent = person.name;
+//                 nameSelect.appendChild(option);
+//                 name2Select.appendChild(option.cloneNode(true));
+//             });
 
-            // Restore selected values
-            restoreSelectedOption(nameSelect, 'selectedNameId');
-            restoreSelectedOption(name2Select, 'selectedName2Id');
-        });
+//             // Restore selected values
+//             restoreSelectedOption(nameSelect, 'selectedNameId');
+//             restoreSelectedOption(name2Select, 'selectedName2Id');
+//         });
+// }
+
+function populateNames() {
+  fetch('get_names.php')
+      .then(response => response.json())
+      .then(data => {
+          // Clear existing options
+          nameSelect.innerHTML = '';
+          name2Select.innerHTML = '';
+
+          // Populate options
+          data.forEach(person => {
+              const option = document.createElement('option');
+              option.value = person.id;
+              option.textContent = person.name;
+              nameSelect.appendChild(option);
+
+              // Clone and add to second select
+              const clonedOption = option.cloneNode(true);
+              name2Select.appendChild(clonedOption);
+          });
+
+          // Restore selected values
+          restoreSelectedOption(nameSelect, 'selectedNameId');
+          restoreSelectedOption(name2Select, 'selectedName2Id');
+      });
 }
+
+function restoreSelectedOption(selectElement, storageKey) {
+  const selectedId = localStorage.getItem(storageKey);
+  if (selectedId) {
+      // Ensure value exists in options
+      const option = selectElement.querySelector(`option[value="${selectedId}"]`);
+      if (option) {
+          selectElement.value = selectedId;
+      }
+  }
+}
+
 
 function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
     selectElement.addEventListener('change', function () {
