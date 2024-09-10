@@ -176,8 +176,7 @@ function restoreSelectedOption(selectElement, storageKey) {
           console.log(`No matching option found for value ${selectedId}`);  // Log if no match found
       }
   }
-}
-
+} 
 
 function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
     selectElement.addEventListener('change', function () {
