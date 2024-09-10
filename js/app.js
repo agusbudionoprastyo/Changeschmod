@@ -112,6 +112,25 @@ document.addEventListener('DOMContentLoaded', function() {
 //   updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
 });
 
+// Ambil pilihan dari Local Storage
+document.addEventListener('DOMContentLoaded', function() {
+  const selectElement = document.getElementById('name');
+  const savedValue = localStorage.getItem('selectedEmployee');
+
+  if (savedValue) {
+      selectElement.value = savedValue;
+  }
+
+  // Ambil data dari server
+  fetch('get_names.php')
+      .then(response => response.json())
+      .then(data => {
+          const options = data.map(item => `<option value="${item.id}">${item.name}</option>`).join('');
+          selectElement.innerHTML = options;
+      })
+      .catch(error => console.error('Error:', error));
+});
+
 document.addEventListener('DOMContentLoaded', function () {
   const nameSelect = document.getElementById('name');
   const name2Select = document.getElementById('name2');
@@ -133,6 +152,11 @@ document.addEventListener('DOMContentLoaded', function () {
               restoreSelectedOption(name2Select, 'selectedName2Id');
           });
   }
+
+  // Simpan pilihan ke Local Storage
+  document.getElementById('employees').addEventListener('change', function() {
+    localStorage.setItem('selectedEmployee', this.value);
+});
 
   function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
       selectElement.addEventListener('change', function () {
