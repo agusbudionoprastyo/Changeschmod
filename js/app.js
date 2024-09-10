@@ -206,6 +206,7 @@ function syncSelectOptions(sourceId, targetId) {
   }
 }
 
+//fetch data
 document.addEventListener("DOMContentLoaded", () => {
   const nameSelect = document.getElementById('name');
   const name2Select = document.getElementById('name2');
@@ -277,11 +278,13 @@ document.addEventListener("DOMContentLoaded", () => {
           if (savedValue !== null) {
               if (input.tagName === 'SELECT') {
                   input.value = savedValue;
-                  input.dispatchEvent(new Event('change')); // Trigger change event to update other fields
+                  // Trigger the change event to update other fields based on the select value
+                  input.dispatchEvent(new Event('change'));
+                  console.log(`Loaded ${input.id} from localStorage:`, savedValue);
               } else {
                   input.value = savedValue;
+                  console.log(`Loaded ${input.id} from localStorage:`, savedValue);
               }
-              console.log(`Loaded ${input.id} from localStorage:`, savedValue);
           }
       });
 
@@ -311,4 +314,3 @@ document.addEventListener("DOMContentLoaded", () => {
   // Mengisi nilai dari localStorage saat halaman dimuat
   loadFromLocalStorage();
 });
-
