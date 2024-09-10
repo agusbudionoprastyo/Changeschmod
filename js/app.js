@@ -277,10 +277,15 @@ document.addEventListener("DOMContentLoaded", () => {
           const savedValue = localStorage.getItem(input.id);
           if (savedValue !== null) {
               if (input.tagName === 'SELECT') {
-                  input.value = savedValue;
-                  // Trigger the change event to update other fields based on the select value
-                  input.dispatchEvent(new Event('change'));
-                  console.log(`Loaded ${input.id} from localStorage:`, savedValue);
+                  // Pastikan opsi ada di select sebelum mengatur nilai
+                  const optionExists = Array.from(input.options).some(option => option.value === savedValue);
+                  if (optionExists) {
+                      input.value = savedValue;
+                      input.dispatchEvent(new Event('change'));
+                      console.log(`Loaded ${input.id} from localStorage:`, savedValue);
+                  } else {
+                      console.log(`Option with value ${savedValue} not found in ${input.id}`);
+                  }
               } else {
                   input.value = savedValue;
                   console.log(`Loaded ${input.id} from localStorage:`, savedValue);
