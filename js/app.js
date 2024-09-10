@@ -167,20 +167,10 @@ function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey
 
     // Load from localStorage
     const savedDetails = localStorage.getItem(storageKey);
-    if (savedDetails) {
-        const details = JSON.parse(savedDetails);
-        deptInput.value = details.dept;
-        posInput.value = details.position;
-        nameInput.value = details.name;
-        selectElement.value = details.id; // Set the select value based on saved ID
-    }
-}
-
-function restoreSelectedOption(selectElement, storageKey) {
-    const savedId = localStorage.getItem(storageKey);
+    const savedId = localStorage.getItem(storageKey + 'Id');
     if (savedId) {
         selectElement.value = savedId;
-        if (savedId) {
+        if (selectElement.value === savedId) {
             // Trigger change event to update details based on restored selection
             const event = new Event('change');
             selectElement.dispatchEvent(event);
@@ -188,9 +178,20 @@ function restoreSelectedOption(selectElement, storageKey) {
     }
 }
 
+function restoreSelectedOption(selectElement, storageKey) {
+    const savedId = localStorage.getItem(storageKey);
+    if (savedId) {
+        selectElement.value = savedId;
+        // Trigger change event to update details based on restored selection
+        const event = new Event('change');
+        selectElement.dispatchEvent(event);
+    }
+}
+
 populateNames();
 updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'), 'detailsNameSelect');
 updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'), 'detailsName2Select');
+
 });
 
 // Fungsi untuk memperbarui dropdown berdasarkan tanggal
