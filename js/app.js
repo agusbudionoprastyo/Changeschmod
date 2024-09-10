@@ -110,90 +110,102 @@ document.addEventListener('DOMContentLoaded', function() {
 //   populateNames();
 //   updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
 //   updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
-
-// Fetch Data
-const nameSelect = document.getElementById('name');
-const name2Select = document.getElementById('name2');
-
-function populateNames() {
-    fetch('get_names.php')
-        .then(response => response.json())
-        .then(data => {
-            data.forEach(person => {
-                const option = document.createElement('option');
-                option.value = person.id;
-                option.textContent = person.name;
-                nameSelect.appendChild(option);
-                name2Select.appendChild(option.cloneNode(true));
-            });
-
-            // Restore selected values
-            restoreSelectedOption(nameSelect, 'selectedNameId');
-            restoreSelectedOption(name2Select, 'selectedName2Id');
-        });
-}
-
-function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
-    selectElement.addEventListener('change', function () {
-        const id = this.value;
-        if (id) {
-            fetch(`get_details.php?id=${id}`)
-                .then(response => response.json())
-                .then(data => {
-                    deptInput.value = data.dept;
-                    posInput.value = data.position;
-                    nameInput.value = data.name;
-
-                    // Save to localStorage
-                    const details = {
-                        id: id,
-                        dept: data.dept,
-                        position: data.position,
-                        name: data.name
-                    };
-                    localStorage.setItem(storageKey, JSON.stringify(details));
-                    localStorage.setItem(storageKey + 'Id', id); // Save the selected ID
-                });
-        } else {
-            deptInput.value = '';
-            posInput.value = '';
-            nameInput.value = '';
-
-            // Remove from localStorage
-            localStorage.removeItem(storageKey);
-            localStorage.removeItem(storageKey + 'Id');
-        }
-    });
-
-    // Load from localStorage
-    const savedDetails = localStorage.getItem(storageKey);
-    if (savedDetails) {
-        const details = JSON.parse(savedDetails);
-        deptInput.value = details.dept;
-        posInput.value = details.position;
-        nameInput.value = details.name;
-        selectElement.value = details.id; // Set the select value based on saved ID
-    }
-}
-
-function restoreSelectedOption(selectElement, storageKey) {
-    const savedId = localStorage.getItem(storageKey);
-    if (savedId) {
-        selectElement.value = savedId;
-        if (savedId) {
-            // Trigger change event to update details based on restored selection
-            const event = new Event('change');
-            selectElement.dispatchEvent(event);
-        }
-    }
-}
-
-populateNames();
-updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'), 'detailsNameSelect');
-updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'), 'detailsName2Select');
-
-
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const nameSelect = document.getElementById('name');
+  const name2Select = document.getElementById('name2');
+
+  function populateNames() {
+      fetch('get_names.php')
+          .then(response => response.json())
+          .then(data => {
+              data.forEach(person => {
+                  const option = document.createElement('option');
+                  option.value = person.id;
+                  option.textContent = person.name;
+                  nameSelect.appendChild(option);
+                  name2Select.appendChild(option.cloneNode(true));
+              });
+
+              // Restore selected values
+              restoreSelectedOption(nameSelect, 'selectedNameId');
+              restoreSelectedOption(name2Select, 'selectedName2Id');
+          });
+  }
+
+  function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
+      selectElement.addEventListener('change', function () {
+          const id = this.value;
+          if (id) {
+              fetch(`get_details.php?id=${id}`)
+                  .then(response => response.json())
+                  .then(data => {
+                      deptInput.value = data.dept;
+                      posInput.value = data.position;
+                      nameInput.value = data.name;
+
+                      // Save to localStorage
+                      const details = {
+                          id: id,
+                          dept: data.dept,
+                          position: data.position,
+                          name: data.name
+                      };
+                      localStorage.setItem(storageKey, JSON.stringify(details));
+                      localStorage.setItem(storageKey + 'Id', id); // Save the selected ID
+                  });
+          } else {
+              deptInput.value = '';
+              posInput.value = '';
+              nameInput.value = '';
+
+              // Remove from localStorage
+              localStorage.removeItem(storageKey);
+              localStorage.removeItem(storageKey + 'Id');
+          }
+      });
+
+      // Load from localStorage
+      const savedDetails = localStorage.getItem(storageKey);
+      if (savedDetails) {
+          const details = JSON.parse(savedDetails);
+          deptInput.value = details.dept;
+          posInput.value = details.position;
+          nameInput.value = details.name;
+          selectElement.value = details.id; // Set the select value based on saved ID
+      }
+  }
+
+  function restoreSelectedOption(selectElement, storageKey) {
+      const savedId = localStorage.getItem(storageKey);
+      if (savedId) {
+          selectElement.value = savedId;
+          if (savedId) {
+              // Trigger change event to update details based on restored selection
+              const event = new Event('change');
+              selectElement.dispatchEvent(event);
+          }
+      }
+  }
+
+  // Check localStorage for existing data
+  const nameSelectSavedId = localStorage.getItem('selectedNameId');
+  const name2SelectSavedId = localStorage.getItem('selectedName2Id');
+
+  if (!nameSelectSavedId && !name2SelectSavedId) {
+      // Only populate names if no IDs are saved
+      populateNames();
+  } else {
+      // Restore selected options from localStorage
+      restoreSelectedOption(nameSelect, 'selectedNameId');
+      restoreSelectedOption(name2Select, 'selectedName2Id');
+  }
+
+  updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'), 'detailsNameSelect');
+  updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'), 'detailsName2Select');
+});
+
 
 // Fungsi untuk memperbarui dropdown berdasarkan tanggal
 function fromOptions() {
