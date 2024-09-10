@@ -70,79 +70,80 @@ document.addEventListener('DOMContentLoaded', function() {
     canvases.forEach(canvas => resizeCanvas(canvas));
   });
 
-  
-//
-  const nameSelect = document.getElementById('name');
-  const name2Select = document.getElementById('name2');
-  
-  function populateNames() {
-      fetch('get_names.php')
-          .then(response => response.json())
-          .then(data => {
-              // Kosongkan elemen select sebelum mengisi
-              nameSelect.innerHTML = '';
-              name2Select.innerHTML = '';
-  
-              // Isi nameSelect dengan data baru
-              data.forEach(person => {
-                  const option = document.createElement('option');
-                  option.value = person.id;
-                  option.textContent = person.name;
-                  nameSelect.appendChild(option);
-              });
-  
-              // Isi name2Select dengan data baru, tetapi pastikan tidak ada duplikasi
-              data.forEach(person => {
-                  const option = document.createElement('option');
-                  option.value = person.id;
-                  option.textContent = person.name;
-                  // Pastikan option tidak duplikat sebelum menambahkannya
-                  if (![...name2Select.options].some(opt => opt.value === option.value)) {
-                      name2Select.appendChild(option);
-                  }
-              });
-  
-              // Simpan data ke Local Storage
-              localStorage.setItem('namesData', JSON.stringify(data));
-          });
-  }
-  
-  function loadNamesFromLocalStorage() {
-      const storedData = localStorage.getItem('namesData');
-      if (storedData) {
-          const data = JSON.parse(storedData);
-  
-          // Kosongkan elemen select sebelum mengisi
-          nameSelect.innerHTML = '';
-          name2Select.innerHTML = '';
-  
-          // Isi nameSelect dengan data dari Local Storage
-          data.forEach(person => {
-              const option = document.createElement('option');
-              option.value = person.id;
-              option.textContent = person.name;
-              nameSelect.appendChild(option);
-          });
-  
-          // Isi name2Select dengan data dari Local Storage
-          data.forEach(person => {
-              const option = document.createElement('option');
-              option.value = person.id;
-              option.textContent = person.name;
-              // Pastikan option tidak duplikat sebelum menambahkannya
-              if (![...name2Select.options].some(opt => opt.value === option.value)) {
-                  name2Select.appendChild(option);
-              }
-          });
-      } else {
-          // Jika data tidak ada di Local Storage, fetch data dari server
-          populateNames();
-      }
-  }
-  
-  // Load names when the page loads
-  document.addEventListener('DOMContentLoaded', loadNamesFromLocalStorage);
-//  
+  // Fetch Data
+  // const nameSelect = document.getElementById('name');
+  // const name2Select = document.getElementById('name2');
+
+  // function populateNames() {
+  //     fetch('get_names.php')
+  //         .then(response => response.json())
+  //         .then(data => {
+  //             data.forEach(person => {
+  //                 const option = document.createElement('option');
+  //                 option.value = person.id;
+  //                 option.textContent = person.name;
+  //                 nameSelect.appendChild(option);
+  //                 name2Select.appendChild(option.cloneNode(true));
+  //             });
+  //         });
+  // }
+
+  // Fetch Data
+const nameSelect = document.getElementById('name');
+const name2Select = document.getElementById('name2');
+
+// Function to populate the select elements with names
+function populateNames() {
+    fetch('get_names.php')
+        .then(response => response.json())
+        .then(data => {
+            // Clear existing options
+            nameSelect.innerHTML = '';
+            name2Select.innerHTML = '';
+
+            data.forEach(person => {
+                const option = document.createElement('option');
+                option.value = person.id;
+                option.textContent = person.name;
+                nameSelect.appendChild(option);
+                name2Select.appendChild(option.cloneNode(true));
+            });
+
+            // Restore previously selected values
+            restoreSelections();
+        });
+}
+
+// Function to handle selection change and save to local storage
+function handleSelectChange(event) {
+    const selectId = event.target.id;
+    const selectedValue = event.target.value;
+
+    localStorage.setItem(selectId, selectedValue);
+}
+
+// Function to restore selections from local storage
+function restoreSelections() {
+    const nameValue = localStorage.getItem('name');
+    const name2Value = localStorage.getItem('name2');
+
+    if (nameValue) {
+        nameSelect.value = nameValue;
+    }
+    if (name2Value) {
+        name2Select.value = name2Value;
+    }
+}
+
+// Event listeners for select elements
+nameSelect.addEventListener('change', handleSelectChange);
+name2Select.addEventListener('change', handleSelectChange);
+
+// Populate names on page load
+// populateNames();
+
+
+  //
 
   function updateDetails(selectElement, deptInput, posInput, nameInput) {
       selectElement.addEventListener('change', function () {
