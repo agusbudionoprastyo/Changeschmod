@@ -112,11 +112,11 @@ document.addEventListener('DOMContentLoaded', function() {
 //   updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
 });
 
-// Ambil pilihan dari Local Storage
 document.addEventListener('DOMContentLoaded', function() {
   const selectElement = document.getElementById('name');
   const savedValue = localStorage.getItem('selectedEmployee');
 
+  // Set nilai terpilih jika ada di localStorage
   if (savedValue) {
       selectElement.value = savedValue;
   }
@@ -127,8 +127,18 @@ document.addEventListener('DOMContentLoaded', function() {
       .then(data => {
           const options = data.map(item => `<option value="${item.id}">${item.name}</option>`).join('');
           selectElement.innerHTML = options;
+
+          // Pastikan nilai yang tersimpan di localStorage ada di opsi yang diambil dari server
+          if (savedValue && !Array.from(selectElement.options).some(option => option.value === savedValue)) {
+              selectElement.value = '';
+          }
       })
       .catch(error => console.error('Error:', error));
+
+  // Simpan nilai yang dipilih ke localStorage saat ada perubahan
+  selectElement.addEventListener('change', function() {
+      localStorage.setItem('selectedEmployee', selectElement.value);
+  });
 });
 
 // document.addEventListener('DOMContentLoaded', function () {
