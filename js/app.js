@@ -112,56 +112,97 @@ document.addEventListener('DOMContentLoaded', function() {
   updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
 });
 
+// Fungsi untuk memperbarui dropdown berdasarkan tanggal
+function fromOptions() {
+  const from1Date = document.getElementById('from1').value;
+  const from1Day = new Date(from1Date).getDay();
 
-  function updateOptions() {
-    const from1Date = document.getElementById('from1').value;
-    const to1Date = document.getElementById('to1').value;
-    const from1Day = new Date(from1Date).getDay();
-    const to1Day = new Date(to1Date).getDay();
-  
-    const weekdaysOptions = ['MOD'];
-    const weekendsOptions = ['MOD 1', 'MOD 2'];
+  const weekdaysOptions = ['MOD'];
+  const weekendsOptions = ['MOD 1', 'MOD 2'];
 
-    function populateSelect(selectElement, options) {
-        // selectElement.innerHTML = ''; // Clear existing options
-        options.forEach(option => {
-            const opt = document.createElement('option');
-            opt.value = option;
-            opt.text = option;
-            selectElement.add(opt);
-        });
-        selectElement.disabled = false; // Enable the select element
-    }
+  function populateSelect(selectElement, options) {
+      selectElement.innerHTML = ''; // Clear existing options
+      options.forEach(option => {
+          const opt = document.createElement('option');
+          opt.value = option;
+          opt.text = option;
+          selectElement.add(opt);
+      });
+      selectElement.disabled = false; // Enable the select element
+  }
 
-    // Update first set of selects
-    if (from1Date) {
-        populateSelect(document.getElementById('frommod1'), (from1Day === 0 || from1Day === 6) ? weekendsOptions : weekdaysOptions);
-    }
-    if (to1Date) {
-        populateSelect(document.getElementById('tomod1'), (to1Day === 0 || to1Day === 6) ? weekendsOptions : weekdaysOptions);
-    }
+  // Update first set of selects
+  if (from1Date) {
+      populateSelect(document.getElementById('frommod1'), (from1Day === 0 || from1Day === 6) ? weekendsOptions : weekdaysOptions);
+  }
 
-    // Automatically fill second set of selects with same values as the first set
-    document.getElementById('from2').value = to1Date;
-    document.getElementById('to2').value = from1Date;
+  // Automatically fill second set of selects with same values as the first set
+  document.getElementById('to2').value = from1Date;
 
-    // Sync second set of selects with the same options
-    syncSelectOptions('frommod1', 'tomod2');
-    syncSelectOptions('tomod1', 'frommod2');
+  // Sync second set of selects with the same options
+  syncSelectOptions('frommod1', 'tomod2');
 }
 
+// Fungsi untuk memperbarui dropdown berdasarkan tanggal
+function toOptions() {
+  const to1Date = document.getElementById('to1').value;
+  const to1Day = new Date(to1Date).getDay();
+
+  const weekdaysOptions = ['MOD'];
+  const weekendsOptions = ['MOD 1', 'MOD 2'];
+
+  function populateSelect(selectElement, options) {
+      selectElement.innerHTML = ''; // Clear existing options
+      options.forEach(option => {
+          const opt = document.createElement('option');
+          opt.value = option;
+          opt.text = option;
+          selectElement.add(opt);
+      });
+      selectElement.disabled = false; // Enable the select element
+  }
+
+  // Update first set of selects
+  if (to1Date) {
+      populateSelect(document.getElementById('tomod1'), (to1Day === 0 || to1Day === 6) ? weekendsOptions : weekdaysOptions);
+  }
+  // Automatically fill second set of selects with same values as the first set
+  document.getElementById('from2').value = to1Date;
+
+  // Sync second set of selects with the same options
+  syncSelectOptions('tomod1', 'frommod2');
+}
+
+// Fungsi untuk menyinkronkan opsi antara dropdown
 function syncSelectOptions(sourceId, targetId) {
-    const sourceSelect = document.getElementById(sourceId);
-    const targetSelect = document.getElementById(targetId);
+  const sourceSelect = document.getElementById(sourceId);
+  const targetSelect = document.getElementById(targetId);
 
-    // Copy options from source select to target select
-    targetSelect.innerHTML = sourceSelect.innerHTML;
+  // Copy options from source select to target select
+  targetSelect.innerHTML = sourceSelect.innerHTML;
 
-    // Set target select value to match source select value if it exists
-    if (sourceSelect.value) {
-        targetSelect.value = sourceSelect.value;
-    }
+  // Set target select value to match source select value if it exists
+  if (sourceSelect.value) {
+      targetSelect.value = sourceSelect.value;
+  }
+}
+
+// Fungsi untuk memperbarui dropdown berdasarkan perubahan pilihan
+function updateDropdownsOnChange() {
+  const frommod1 = document.getElementById('frommod1');
+  const tomod1 = document.getElementById('tomod1');
+
+  frommod1.addEventListener('change', () => {
+      syncSelectOptions('frommod1', 'tomod2');
+  });
+
+  tomod1.addEventListener('change', () => {
+      syncSelectOptions('tomod1', 'frommod2');
+  });
 }
 
 // Initial setup
-updateOptions();
+fromOptions();
+toOptions();
+updateDropdownsOnChange();
+
