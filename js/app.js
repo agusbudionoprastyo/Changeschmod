@@ -133,6 +133,7 @@ const name2Select = document.getElementById('name2');
 //         });
 // }
 
+// Function to populate the select elements
 function populateNames() {
   fetch('get_names.php')
       .then(response => response.json())
@@ -162,6 +163,7 @@ function populateNames() {
       .catch(error => console.error('Error fetching data:', error));
 }
 
+// Function to restore the selected option from localStorage
 function restoreSelectedOption(selectElement, storageKey) {
   const selectedId = localStorage.getItem(storageKey);
   console.log(`Restoring option for ${storageKey}:`, selectedId);  // Log the stored ID
@@ -176,7 +178,30 @@ function restoreSelectedOption(selectElement, storageKey) {
           console.log(`No matching option found for value ${selectedId}`);  // Log if no match found
       }
   }
-} 
+}
+
+// Add event listeners to save selected values to localStorage
+function addEventListeners() {
+  nameSelect.addEventListener('change', function() {
+      localStorage.setItem('selectedNameId', nameSelect.value);
+      console.log('Selected Name ID saved to localStorage:', nameSelect.value);
+  });
+
+  name2Select.addEventListener('change', function() {
+      localStorage.setItem('selectedName2Id', name2Select.value);
+      console.log('Selected Name2 ID saved to localStorage:', name2Select.value);
+  });
+}
+
+// Initialize function to populate names and add event listeners
+function initialize() {
+  populateNames();
+  addEventListeners();
+}
+
+// Call the initialize function when the page loads
+document.addEventListener('DOMContentLoaded', initialize);
+
 
 function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
     selectElement.addEventListener('change', function () {
