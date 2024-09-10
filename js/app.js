@@ -110,11 +110,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // populateNames();
     // updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
     // updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
+
     // Fetch Data
-
-  });
-
-  document.addEventListener("DOMContentLoaded", () => {
     const nameSelect = document.getElementById('name');
     const name2Select = document.getElementById('name2');
 
@@ -216,8 +213,9 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
 
     // Mengisi nilai dari localStorage saat halaman dimuat
-    loadFromLocalStorage();
-});
+    loadFromLocalStorage();s
+
+  });
 
 
 //   function updateOptions() {
