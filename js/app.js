@@ -139,7 +139,7 @@ function populateNames() {
       .then(data => {
           console.log('Data received from server:', data);  // Log data received
 
-          // Clear existing options
+          // Clear existing options to avoid duplication
           nameSelect.innerHTML = '';
           name2Select.innerHTML = '';
 
@@ -177,7 +177,6 @@ function restoreSelectedOption(selectElement, storageKey) {
       }
   }
 }
-
 
 
 function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
