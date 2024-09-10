@@ -148,6 +148,91 @@
     <script src="js/axios.min.js"></script>
     <script src="js/script.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script>
+        // Function to load user options from the server
+        async function loadUserOptions() {
+            try {
+                const response = await fetch('/path/to/your/php/endpoint.php');
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                const users = await response.json();
+                
+                // Assuming you have an array of users to populate the select options
+                const select = document.getElementById('name');
+                users.forEach(user => {
+                    const option = document.createElement('option');
+                    option.value = user.id; // Assuming you have an id for each user
+                    option.textContent = user.name;
+                    select.appendChild(option);
+                });
+            } catch (error) {
+                console.error('Error loading users:', error);
+            }
+        }
+
+        // Function to handle the change event for the select element
+        async function handleSelectChange(event) {
+            const selectedId = event.target.value;
+            if (selectedId) {
+                try {
+                    const response = await fetch(`/path/to/your/php/endpoint.php?id=${selectedId}`);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    const user = await response.json();
+
+                    if (user) {
+                        document.getElementById('dept').value = user.dept || '';
+                        document.getElementById('pos').value = user.position || '';
+                        document.getElementById('nametext').value = user.name || '';
+                    }
+                } catch (error) {
+                    console.error('Error fetching user details:', error);
+                }
+            }
+        }
+
+        // Function to save data to localStorage
+        function saveToLocalStorage() {
+            const name = document.getElementById('name').value;
+            const dept = document.getElementById('dept').value;
+            const pos = document.getElementById('pos').value;
+            const nametext = document.getElementById('nametext').value;
+
+            localStorage.setItem('formData', JSON.stringify({
+                name,
+                dept,
+                pos,
+                nametext
+            }));
+        }
+
+        // Function to load data from localStorage
+        function loadFromLocalStorage() {
+            const savedData = JSON.parse(localStorage.getItem('formData'));
+
+            if (savedData) {
+                document.getElementById('name').value = savedData.name || '';
+                document.getElementById('dept').value = savedData.dept || '';
+                document.getElementById('pos').value = savedData.pos || '';
+                document.getElementById('nametext').value = savedData.nametext || '';
+            }
+        }
+
+        // Event listeners
+        document.getElementById('name').addEventListener('change', handleSelectChange);
+        document.getElementById('name').addEventListener('change', saveToLocalStorage);
+        document.getElementById('dept').addEventListener('input', saveToLocalStorage);
+        document.getElementById('pos').addEventListener('input', saveToLocalStorage);
+        document.getElementById('nametext').addEventListener('input', saveToLocalStorage);
+
+        // Load user options and form data when the page is loaded
+        window.addEventListener('load', function() {
+            loadUserOptions();
+            loadFromLocalStorage();
+        });
+    </script>
 
 </body>
 </html>
