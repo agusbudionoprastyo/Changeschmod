@@ -71,24 +71,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Fetch Data
-  // const nameSelect = document.getElementById('name');
-  // const name2Select = document.getElementById('name2');
-
-  // function populateNames() {
-  //     fetch('get_names.php')
-  //         .then(response => response.json())
-  //         .then(data => {
-  //             data.forEach(person => {
-  //                 const option = document.createElement('option');
-  //                 option.value = person.id;
-  //                 option.textContent = person.name;
-  //                 nameSelect.appendChild(option);
-  //                 name2Select.appendChild(option.cloneNode(true));
-  //             });
-  //         });
-  // }
-
-  // Fetch Data
 const nameSelect = document.getElementById('name');
 const name2Select = document.getElementById('name2');
 
@@ -109,8 +91,9 @@ function populateNames() {
                 name2Select.appendChild(option.cloneNode(true));
             });
 
-            // Restore previously selected values
+            // Restore previously selected values and details
             restoreSelections();
+            restoreDetails();
         });
 }
 
@@ -129,9 +112,64 @@ function restoreSelections() {
 
     if (nameValue) {
         nameSelect.value = nameValue;
+        handleSelectChange({ target: nameSelect }); // Trigger updateDetails for nameSelect
     }
     if (name2Value) {
         name2Select.value = name2Value;
+        handleSelectChange({ target: name2Select }); // Trigger updateDetails for name2Select
+    }
+}
+
+// Function to update details and save them to local storage
+function updateDetails(selectElement, deptInput, posInput, nameInput) {
+    selectElement.addEventListener('change', function () {
+        const id = this.value;
+        if (id) {
+            fetch(`get_details.php?id=${id}`)
+                .then(response => response.json())
+                .then(data => {
+                    deptInput.value = data.dept;
+                    posInput.value = data.position;
+                    nameInput.value = data.name;
+
+                    // Save details to local storage
+                    localStorage.setItem(`${selectElement.id}_dept`, data.dept);
+                    localStorage.setItem(`${selectElement.id}_position`, data.position);
+                    localStorage.setItem(`${selectElement.id}_name`, data.name);
+                });
+        } else {
+            deptInput.value = '';
+            posInput.value = '';
+            nameInput.value = '';
+
+            // Clear details from local storage
+            localStorage.removeItem(`${selectElement.id}_dept`);
+            localStorage.removeItem(`${selectElement.id}_position`);
+            localStorage.removeItem(`${selectElement.id}_name`);
+        }
+    });
+}
+
+// Function to restore details from local storage
+function restoreDetails() {
+    const nameDept = localStorage.getItem('name_dept');
+    const namePosition = localStorage.getItem('name_position');
+    const nameName = localStorage.getItem('name_name');
+    
+    if (nameSelect.value) {
+        document.getElementById('dept').value = nameDept || '';
+        document.getElementById('pos').value = namePosition || '';
+        document.getElementById('nametext').value = nameName || '';
+    }
+
+    const name2Dept = localStorage.getItem('name2_dept');
+    const name2Position = localStorage.getItem('name2_position');
+    const name2Name = localStorage.getItem('name2_name');
+    
+    if (name2Select.value) {
+        document.getElementById('dept2').value = name2Dept || '';
+        document.getElementById('pos2').value = name2Position || '';
+        document.getElementById('nametext2').value = name2Name || '';
     }
 }
 
@@ -140,33 +178,12 @@ nameSelect.addEventListener('change', handleSelectChange);
 name2Select.addEventListener('change', handleSelectChange);
 
 // Populate names on page load
-// populateNames();
+populateNames();
 
+// Initialize details update functionality
+updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
+updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
 
-  //
-
-  function updateDetails(selectElement, deptInput, posInput, nameInput) {
-      selectElement.addEventListener('change', function () {
-          const id = this.value;
-          if (id) {
-              fetch(`get_details.php?id=${id}`)
-                  .then(response => response.json())
-                  .then(data => {
-                      deptInput.value = data.dept;
-                      posInput.value = data.position;
-                      nameInput.value = data.name;
-                  });
-          } else {
-              deptInput.value = '';
-              posInput.value = '';
-              nameInput.value = '';
-          }
-      });
-  }
-
-  populateNames();
-  updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
-  updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
 });
 
 // Fungsi untuk memperbarui dropdown berdasarkan tanggal
