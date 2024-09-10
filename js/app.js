@@ -70,6 +70,46 @@ document.addEventListener('DOMContentLoaded', function() {
       canvases.forEach(canvas => resizeCanvas(canvas));
     });
 
+    // // Fetch Data
+    // const nameSelect = document.getElementById('name');
+    // const name2Select = document.getElementById('name2');
+
+    // function populateNames() {
+    //     fetch('get_names.php')
+    //         .then(response => response.json())
+    //         .then(data => {
+    //             data.forEach(person => {
+    //                 const option = document.createElement('option');
+    //                 option.value = person.id;
+    //                 option.textContent = person.name;
+    //                 nameSelect.appendChild(option);
+    //                 name2Select.appendChild(option.cloneNode(true));
+    //             });
+    //         });
+    // }
+
+    // function updateDetails(selectElement, deptInput, posInput, nameInput) {
+    //     selectElement.addEventListener('change', function () {
+    //         const id = this.value;
+    //         if (id) {
+    //             fetch(`get_details.php?id=${id}`)
+    //                 .then(response => response.json())
+    //                 .then(data => {
+    //                     deptInput.value = data.dept;
+    //                     posInput.value = data.position;
+    //                     nameInput.value = data.name;
+    //                 });
+    //         } else {
+    //             deptInput.value = '';
+    //             posInput.value = '';
+    //             nameInput.value = '';
+    //         }
+    //     });
+    // }
+
+    // populateNames();
+    // updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
+    // updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
     // Fetch Data
     const nameSelect = document.getElementById('name');
     const name2Select = document.getElementById('name2');
@@ -79,11 +119,15 @@ document.addEventListener('DOMContentLoaded', function() {
             .then(response => response.json())
             .then(data => {
                 data.forEach(person => {
-                    const option = document.createElement('option');
-                    option.value = person.id;
-                    option.textContent = person.name;
-                    nameSelect.appendChild(option);
-                    name2Select.appendChild(option.cloneNode(true));
+                    const option1 = document.createElement('option');
+                    option1.value = person.id;
+                    option1.textContent = person.name;
+                    nameSelect.appendChild(option1);
+
+                    const option2 = document.createElement('option');
+                    option2.value = person.id;
+                    option2.textContent = person.name;
+                    name2Select.appendChild(option2);
                 });
             });
     }
@@ -98,6 +142,11 @@ document.addEventListener('DOMContentLoaded', function() {
                         deptInput.value = data.dept;
                         posInput.value = data.position;
                         nameInput.value = data.name;
+
+                        // Simpan data ke localStorage setelah update
+                        localStorage.setItem(`${selectElement.id}-dept`, data.dept);
+                        localStorage.setItem(`${selectElement.id}-pos`, data.position);
+                        localStorage.setItem(`${selectElement.id}-name`, data.name);
                     });
             } else {
                 deptInput.value = '';
@@ -107,9 +156,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Panggil fungsi populateNames
     populateNames();
+
+    // Panggil fungsi updateDetails untuk kedua dropdown
     updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
     updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
+
   });
 
 //   function updateOptions() {
