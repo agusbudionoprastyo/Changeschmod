@@ -123,21 +123,13 @@ document.addEventListener('DOMContentLoaded', function() {
       selectElement.value = savedValue;
   }
 
-  // Ambil data dari server
-  fetch('get_names.php')
-      .then(response => response.json())
-      .then(data => {
-          console.log('Data fetched from server:', data);
-          const options = data.map(item => `<option value="${item.id}">${item.name}</option>`).join('');
-          selectElement.innerHTML = options;
-
-          // Pastikan nilai yang tersimpan di localStorage ada di opsi yang diambil dari server
-          if (savedValue && !Array.from(selectElement.options).some(option => option.value === savedValue)) {
-              console.log('Saved value not in options, clearing selection');
-              selectElement.value = '';
-          }
-      })
-      .catch(error => console.error('Error fetching data:', error));
+  // Event listener untuk klik pada dropdown
+  selectElement.addEventListener('click', function() {
+      // Cek apakah dropdown sudah diisi
+      if (selectElement.options.length === 0) {
+          fetchData();
+      }
+  });
 
   // Simpan nilai yang dipilih ke localStorage saat ada perubahan
   selectElement.addEventListener('change', function() {
@@ -145,7 +137,28 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.setItem('selectedEmployee', selectElement.value);
       console.log('Value saved to localStorage:', selectElement.value);
   });
+
+  // Fungsi untuk mengambil data dari server
+  function fetchData() {
+      console.log('Fetching data from server...');
+      
+      fetch('get_names.php')
+          .then(response => response.json())
+          .then(data => {
+              console.log('Data fetched from server:', data);
+              const options = data.map(item => `<option value="${item.id}">${item.name}</option>`).join('');
+              selectElement.innerHTML = options;
+
+              // Pastikan nilai yang tersimpan di localStorage ada di opsi yang diambil dari server
+              if (savedValue && !Array.from(selectElement.options).some(option => option.value === savedValue)) {
+                  console.log('Saved value not in options, clearing selection');
+                  selectElement.value = '';
+              }
+          })
+          .catch(error => console.error('Error fetching data:', error));
+  }
 });
+
 
 
 // document.addEventListener('DOMContentLoaded', function () {
