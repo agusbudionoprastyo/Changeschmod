@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function() {
 //   populateNames();
 //   updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
 //   updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
+
 // Fetch Data
 const nameSelect = document.getElementById('name');
 const name2Select = document.getElementById('name2');
@@ -125,6 +126,10 @@ function populateNames() {
                 nameSelect.appendChild(option);
                 name2Select.appendChild(option.cloneNode(true));
             });
+
+            // Restore selected values
+            restoreSelectedOption(nameSelect, 'selectedNameId');
+            restoreSelectedOption(name2Select, 'selectedName2Id');
         });
 }
 
@@ -141,11 +146,13 @@ function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey
 
                     // Save to localStorage
                     const details = {
+                        id: id,
                         dept: data.dept,
                         position: data.position,
                         name: data.name
                     };
                     localStorage.setItem(storageKey, JSON.stringify(details));
+                    localStorage.setItem(storageKey + 'Id', id); // Save the selected ID
                 });
         } else {
             deptInput.value = '';
@@ -154,6 +161,7 @@ function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey
 
             // Remove from localStorage
             localStorage.removeItem(storageKey);
+            localStorage.removeItem(storageKey + 'Id');
         }
     });
 
@@ -164,14 +172,25 @@ function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey
         deptInput.value = details.dept;
         posInput.value = details.position;
         nameInput.value = details.name;
-        selectElement.value = details.id; // This assumes you have saved the ID as well
+        selectElement.value = details.id; // Set the select value based on saved ID
+    }
+}
+
+function restoreSelectedOption(selectElement, storageKey) {
+    const savedId = localStorage.getItem(storageKey);
+    if (savedId) {
+        selectElement.value = savedId;
+        if (savedId) {
+            // Trigger change event to update details based on restored selection
+            const event = new Event('change');
+            selectElement.dispatchEvent(event);
+        }
     }
 }
 
 populateNames();
 updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'), 'detailsNameSelect');
 updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'), 'detailsName2Select');
-
 });
 
 // Fungsi untuk memperbarui dropdown berdasarkan tanggal
