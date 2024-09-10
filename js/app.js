@@ -189,8 +189,8 @@ function restoreSelectedOption(selectElement, storageKey) {
 }
 
 populateNames();
-updateDetails(nameSelect, document.getElementById('name'), document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'), 'detailsNameSelect');
-updateDetails(name2Select, document.getElementById('name2'), document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'), 'detailsName2Select');
+updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'), 'detailsNameSelect');
+updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'), 'detailsName2Select');
 
 
 });
