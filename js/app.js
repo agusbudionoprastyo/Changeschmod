@@ -203,64 +203,64 @@ function initialize() {
 document.addEventListener('DOMContentLoaded', initialize);
 
 
-function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
-    selectElement.addEventListener('change', function () {
-        const id = this.value;
-        if (id) {
-            fetch(`get_details.php?id=${id}`)
-                .then(response => response.json())
-                .then(data => {
-                    deptInput.value = data.dept;
-                    posInput.value = data.position;
-                    nameInput.value = data.name;
+// function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
+//     selectElement.addEventListener('change', function () {
+//         const id = this.value;
+//         if (id) {
+//             fetch(`get_details.php?id=${id}`)
+//                 .then(response => response.json())
+//                 .then(data => {
+//                     deptInput.value = data.dept;
+//                     posInput.value = data.position;
+//                     nameInput.value = data.name;
 
-                    // Save to localStorage
-                    const details = {
-                        id: id,
-                        dept: data.dept,
-                        position: data.position,
-                        name: data.name
-                    };
-                    localStorage.setItem(storageKey, JSON.stringify(details));
-                    localStorage.setItem(storageKey + 'Id', id); // Save the selected ID
-                });
-        } else {
-            deptInput.value = '';
-            posInput.value = '';
-            nameInput.value = '';
+//                     // Save to localStorage
+//                     const details = {
+//                         id: id,
+//                         dept: data.dept,
+//                         position: data.position,
+//                         name: data.name
+//                     };
+//                     localStorage.setItem(storageKey, JSON.stringify(details));
+//                     localStorage.setItem(storageKey + 'Id', id); // Save the selected ID
+//                 });
+//         } else {
+//             deptInput.value = '';
+//             posInput.value = '';
+//             nameInput.value = '';
 
-            // Remove from localStorage
-            localStorage.removeItem(storageKey);
-            localStorage.removeItem(storageKey + 'Id');
-        }
-    });
+//             // Remove from localStorage
+//             localStorage.removeItem(storageKey);
+//             localStorage.removeItem(storageKey + 'Id');
+//         }
+//     });
 
-    // Load from localStorage
-    const savedDetails = localStorage.getItem(storageKey);
-    if (savedDetails) {
-        const details = JSON.parse(savedDetails);
-        deptInput.value = details.dept;
-        posInput.value = details.position;
-        nameInput.value = details.name;
-        selectElement.value = details.id; // Set the select value based on saved ID
-    }
-}
+//     // Load from localStorage
+//     const savedDetails = localStorage.getItem(storageKey);
+//     if (savedDetails) {
+//         const details = JSON.parse(savedDetails);
+//         deptInput.value = details.dept;
+//         posInput.value = details.position;
+//         nameInput.value = details.name;
+//         selectElement.value = details.id; // Set the select value based on saved ID
+//     }
+// }
 
-function restoreSelectedOption(selectElement, storageKey) {
-    const savedId = localStorage.getItem(storageKey);
-    if (savedId) {
-        selectElement.value = savedId;
-        if (savedId) {
-            // Trigger change event to update details based on restored selection
-            const event = new Event('change');
-            selectElement.dispatchEvent(event);
-        }
-    }
-}
+// function restoreSelectedOption(selectElement, storageKey) {
+//     const savedId = localStorage.getItem(storageKey);
+//     if (savedId) {
+//         selectElement.value = savedId;
+//         if (savedId) {
+//             // Trigger change event to update details based on restored selection
+//             const event = new Event('change');
+//             selectElement.dispatchEvent(event);
+//         }
+//     }
+// }
 
-populateNames();
-updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'), 'detailsNameSelect');
-updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'), 'detailsName2Select');
+// populateNames();
+// updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'), 'detailsNameSelect');
+// updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'), 'detailsName2Select');
 
 
 });
