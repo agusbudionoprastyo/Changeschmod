@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const from1Day = new Date(from1Date).getDay();
     const to1Day = new Date(to1Date).getDay();
   
-    const weekdaysOptions = ['MOD'];
-    const weekendsOptions = ['MOD 1', 'MOD 2'];
+    const weekdaysOptions = ['', 'MOD'];
+    const weekendsOptions = ['', 'MOD 1', 'MOD 2'];
 
     function populateSelect(selectElement, options) {
         selectElement.innerHTML = ''; // Clear existing options
