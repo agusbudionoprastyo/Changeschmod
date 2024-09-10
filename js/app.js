@@ -70,57 +70,65 @@ document.addEventListener('DOMContentLoaded', function() {
     canvases.forEach(canvas => resizeCanvas(canvas));
   });
 
-  // // Fetch Data
-  const nameSelect = document.getElementById('name');
+//   // Fetch Data
+//   const nameSelect = document.getElementById('name');
+//   const name2Select = document.getElementById('name2');
+
+//   function populateNames() {
+//       fetch('get_names.php')
+//           .then(response => response.json())
+//           .then(data => {
+//               data.forEach(person => {
+//                   const option = document.createElement('option');
+//                   option.value = person.id;
+//                   option.textContent = person.name;
+//                   nameSelect.appendChild(option);
+//                   name2Select.appendChild(option.cloneNode(true));
+//               });
+//           });
+//   }
+
+//   function updateDetails(selectElement, deptInput, posInput, nameInput) {
+//       selectElement.addEventListener('change', function () {
+//           const id = this.value;
+//           if (id) {
+//               fetch(`get_details.php?id=${id}`)
+//                   .then(response => response.json())
+//                   .then(data => {
+//                       deptInput.value = data.dept;
+//                       posInput.value = data.position;
+//                       nameInput.value = data.name;
+//                   });
+//           } else {
+//               deptInput.value = '';
+//               posInput.value = '';
+//               nameInput.value = '';
+//           }
+//       });
+//   }
+
+//   populateNames();
+//   updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
+//   updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
+// Fetch Data
+const nameSelect = document.getElementById('name');
 const name2Select = document.getElementById('name2');
 
-// Function to populate names and store ids in localStorage
 function populateNames() {
     fetch('get_names.php')
         .then(response => response.json())
         .then(data => {
-            // Clear previous options
-            nameSelect.innerHTML = '';
-            name2Select.innerHTML = '';
-
-            // Save ids to localStorage
-            const ids = [];
             data.forEach(person => {
                 const option = document.createElement('option');
                 option.value = person.id;
                 option.textContent = person.name;
                 nameSelect.appendChild(option);
                 name2Select.appendChild(option.cloneNode(true));
-                ids.push(person.id);
             });
-
-            // Store ids in localStorage
-            localStorage.setItem('personIds', JSON.stringify(ids));
-        })
-        .catch(error => console.error('Error fetching names:', error));
+        });
 }
 
-// Function to load ids from localStorage and select options
-function loadFromLocalStorage() {
-    const storedIds = JSON.parse(localStorage.getItem('personIds')) || [];
-    const options = nameSelect.options;
-    for (let i = 0; i < options.length; i++) {
-        if (storedIds.includes(Number(options[i].value))) {
-            options[i].selected = true;
-        }
-    }
-
-    // Repeat the same for name2Select if needed
-    const options2 = name2Select.options;
-    for (let i = 0; i < options2.length; i++) {
-        if (storedIds.includes(Number(options2[i].value))) {
-            options2[i].selected = true;
-        }
-    }
-}
-
-// Update details based on selected option
-function updateDetails(selectElement, deptInput, posInput, nameInput) {
+function updateDetails(selectElement, deptInput, posInput, nameInput, storageKey) {
     selectElement.addEventListener('change', function () {
         const id = this.value;
         if (id) {
@@ -130,24 +138,40 @@ function updateDetails(selectElement, deptInput, posInput, nameInput) {
                     deptInput.value = data.dept;
                     posInput.value = data.position;
                     nameInput.value = data.name;
+
+                    // Save to localStorage
+                    const details = {
+                        dept: data.dept,
+                        position: data.position,
+                        name: data.name
+                    };
+                    localStorage.setItem(storageKey, JSON.stringify(details));
                 });
         } else {
             deptInput.value = '';
             posInput.value = '';
             nameInput.value = '';
+
+            // Remove from localStorage
+            localStorage.removeItem(storageKey);
         }
     });
+
+    // Load from localStorage
+    const savedDetails = localStorage.getItem(storageKey);
+    if (savedDetails) {
+        const details = JSON.parse(savedDetails);
+        deptInput.value = details.dept;
+        posInput.value = details.position;
+        nameInput.value = details.name;
+        selectElement.value = details.id; // This assumes you have saved the ID as well
+    }
 }
 
-// Call functions on window load
-window.addEventListener('load', () => {
-    populateNames(); // Populate names and ids
-    loadFromLocalStorage(); // Set selections based on localStorage
-});
+populateNames();
+updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'), 'detailsNameSelect');
+updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'), 'detailsName2Select');
 
-// Initialize updateDetails for both selects
-updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
-updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
 });
 
 // Fungsi untuk memperbarui dropdown berdasarkan tanggal
