@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
   const selectElement = document.getElementById('name');
   const savedValue = localStorage.getItem('selectedEmployee');
-  
+
   console.log('Saved value from localStorage:', savedValue);
 
   // Set nilai terpilih jika ada di localStorage
@@ -123,8 +123,16 @@ document.addEventListener('DOMContentLoaded', function() {
       selectElement.value = savedValue;
   }
 
+  // Event listener untuk fokus pada dropdown
+  selectElement.addEventListener('focus', function() {
+      // Cek apakah dropdown sudah diisi
+      if (selectElement.options.length === 0) {
+          fetchData();
+      }
+  });
+
   // Event listener untuk klik pada dropdown
-  selectElement.addEventListener('click', function() {
+  selectElement.addEventListener('mousedown', function() {
       // Cek apakah dropdown sudah diisi
       if (selectElement.options.length === 0) {
           fetchData();
@@ -158,6 +166,7 @@ document.addEventListener('DOMContentLoaded', function() {
           .catch(error => console.error('Error fetching data:', error));
   }
 });
+
 
 
 
