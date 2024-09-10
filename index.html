@@ -152,7 +152,7 @@
         // Function to load user options from the server
         async function loadUserOptions() {
             try {
-                const response = await fetch('/path/to/your/php/endpoint.php');
+                const response = await fetch('get_details.php');
                 if (!response.ok) {
                     throw new Error('Network response was not ok');
                 }
@@ -176,7 +176,7 @@
             const selectedId = event.target.value;
             if (selectedId) {
                 try {
-                    const response = await fetch(`/path/to/your/php/endpoint.php?id=${selectedId}`);
+                    const response = await fetch(`get_details.php?id=${selectedId}`);
                     if (!response.ok) {
                         throw new Error('Network response was not ok');
                     }
