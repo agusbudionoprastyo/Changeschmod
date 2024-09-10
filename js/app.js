@@ -186,28 +186,85 @@ updateDetails(name2Select, document.getElementById('dept2'), document.getElement
 
 });
 
+// URL API dan parameter
+const apiUrl = 'https://date.nager.at/Api/v2/PublicHolidays/';
+const countryCode = 'ID'; // Kode negara untuk Indonesia, periksa dokumentasi API
+const year = new Date().getFullYear(); // Tahun saat ini
+
+// Mendapatkan tanggal merah dari API
+async function fetchTanggalMerah() {
+  try {
+    const response = await fetch(`${apiUrl}${year}/${countryCode}`);
+    if (!response.ok) throw new Error('Network response was not ok');
+    const data = await response.json();
+    return data.map(holiday => holiday.date); // Mengambil tanggal libur
+  } catch (error) {
+    console.error('Terjadi kesalahan saat mengambil data:', error);
+    return [];
+  }
+}
+
+// Fungsi untuk memeriksa apakah tanggal ada di dalam tanggal merah
+function isTanggalMerah(date, tanggalMerah) {
+  return tanggalMerah.includes(date.toISOString().split('T')[0]);
+}
+
+// Fungsi untuk menyimpan data ke localStorage
+function saveToLocalStorage() {
+  localStorage.setItem('from1Date', document.getElementById('from1').value);
+  localStorage.setItem('to1Date', document.getElementById('to1').value);
+  localStorage.setItem('frommod1Value', document.getElementById('frommod1').value);
+  localStorage.setItem('tomod1Value', document.getElementById('tomod1').value);
+  localStorage.setItem('from2Date', document.getElementById('from2').value);
+  localStorage.setItem('to2Date', document.getElementById('to2').value);
+  localStorage.setItem('frommod2Value', document.getElementById('frommod2').value);
+  localStorage.setItem('tomod2Value', document.getElementById('tomod2').value);
+}
+
+// Fungsi untuk memuat data dari localStorage
+function loadFromLocalStorage() {
+  document.getElementById('from1').value = localStorage.getItem('from1Date') || '';
+  document.getElementById('to1').value = localStorage.getItem('to1Date') || '';
+  document.getElementById('frommod1').value = localStorage.getItem('frommod1Value') || '';
+  document.getElementById('tomod1').value = localStorage.getItem('tomod1Value') || '';
+  document.getElementById('from2').value = localStorage.getItem('from2Date') || '';
+  document.getElementById('to2').value = localStorage.getItem('to2Date') || '';
+  document.getElementById('frommod2').value = localStorage.getItem('frommod2Value') || '';
+  document.getElementById('tomod2').value = localStorage.getItem('tomod2Value') || '';
+}
+
 // Fungsi untuk memperbarui dropdown berdasarkan tanggal
-function fromOptions() {
+async function fromOptions() {
   const from1Date = document.getElementById('from1').value;
   const from1Day = new Date(from1Date).getDay();
 
   const weekdaysOptions = ['MOD'];
   const weekendsOptions = ['MOD 1', 'MOD 2'];
+  const redDateOptions = ['MOD 1', 'MOD 2']; // Opsi untuk tanggal merah
 
   function populateSelect(selectElement, options) {
-      selectElement.innerHTML = ''; // Clear existing options
-      options.forEach(option => {
-          const opt = document.createElement('option');
-          opt.value = option;
-          opt.text = option;
-          selectElement.add(opt);
-      });
-      selectElement.disabled = false; // Enable the select element
+    selectElement.innerHTML = ''; // Clear existing options
+    options.forEach(option => {
+      const opt = document.createElement('option');
+      opt.value = option;
+      opt.text = option;
+      selectElement.add(opt);
+    });
+    selectElement.disabled = false; // Enable the select element
   }
 
-  // Update first set of selects
   if (from1Date) {
-      populateSelect(document.getElementById('frommod1'), (from1Day === 0 || from1Day === 6) ? weekendsOptions : weekdaysOptions);
+    const tanggalMerah = await fetchTanggalMerah(); // Ambil tanggal merah dari API
+
+    let options = [];
+    if (isTanggalMerah(new Date(from1Date), tanggalMerah)) {
+      options = redDateOptions;
+    } else if (from1Day === 0 || from1Day === 6) {
+      options = weekendsOptions;
+    } else {
+      options = weekdaysOptions;
+    }
+    populateSelect(document.getElementById('frommod1'), options);
   }
 
   // Automatically fill second set of selects with same values as the first set
@@ -215,36 +272,53 @@ function fromOptions() {
 
   // Sync second set of selects with the same options
   syncSelectOptions('frommod1', 'tomod2');
+
+  // Save to localStorage
+  saveToLocalStorage();
 }
 
 // Fungsi untuk memperbarui dropdown berdasarkan tanggal
-function toOptions() {
+async function toOptions() {
   const to1Date = document.getElementById('to1').value;
   const to1Day = new Date(to1Date).getDay();
 
   const weekdaysOptions = ['MOD'];
   const weekendsOptions = ['MOD 1', 'MOD 2'];
+  const redDateOptions = ['MOD 1', 'MOD 2']; // Opsi untuk tanggal merah
 
   function populateSelect(selectElement, options) {
-      selectElement.innerHTML = ''; // Clear existing options
-      options.forEach(option => {
-          const opt = document.createElement('option');
-          opt.value = option;
-          opt.text = option;
-          selectElement.add(opt);
-      });
-      selectElement.disabled = false; // Enable the select element
+    selectElement.innerHTML = ''; // Clear existing options
+    options.forEach(option => {
+      const opt = document.createElement('option');
+      opt.value = option;
+      opt.text = option;
+      selectElement.add(opt);
+    });
+    selectElement.disabled = false; // Enable the select element
   }
 
-  // Update first set of selects
   if (to1Date) {
-      populateSelect(document.getElementById('tomod1'), (to1Day === 0 || to1Day === 6) ? weekendsOptions : weekdaysOptions);
+    const tanggalMerah = await fetchTanggalMerah(); // Ambil tanggal merah dari API
+
+    let options = [];
+    if (isTanggalMerah(new Date(to1Date), tanggalMerah)) {
+      options = redDateOptions;
+    } else if (to1Day === 0 || to1Day === 6) {
+      options = weekendsOptions;
+    } else {
+      options = weekdaysOptions;
+    }
+    populateSelect(document.getElementById('tomod1'), options);
   }
+
   // Automatically fill second set of selects with same values as the first set
   document.getElementById('from2').value = to1Date;
 
   // Sync second set of selects with the same options
   syncSelectOptions('tomod1', 'frommod2');
+
+  // Save to localStorage
+  saveToLocalStorage();
 }
 
 // Fungsi untuk menyinkronkan opsi antara dropdown
@@ -252,7 +326,7 @@ function syncSelectOptions(sourceId, targetId) {
   const sourceSelect = document.getElementById(sourceId);
   const targetSelect = document.getElementById(targetId);
 
-  // Copy options from source select to target select
+  // Copy options to source select to target select
   targetSelect.innerHTML = sourceSelect.innerHTML;
 
   // Set target select value to match source select value if it exists
@@ -268,15 +342,19 @@ function updateDropdownsOnChange() {
 
   frommod1.addEventListener('change', () => {
       syncSelectOptions('frommod1', 'tomod2');
+      saveToLocalStorage();
   });
 
   tomod1.addEventListener('change', () => {
       syncSelectOptions('tomod1', 'frommod2');
+      saveToLocalStorage();
   });
 }
 
 // Initial setup
-fromOptions();
-toOptions();
-updateDropdownsOnChange();
-
+window.addEventListener('DOMContentLoaded', () => {
+  loadFromLocalStorage(); // Load data from localStorage on page load
+  fromOptions();
+  toOptions();
+  updateDropdownsOnChange();
+});
