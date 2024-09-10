@@ -207,33 +207,3 @@ function openDatePicker(inputId) {
         console.error('Input element not found:', inputId);
     }
 }
-
-//Save localstorage
-
-document.addEventListener("DOMContentLoaded", () => {
-    // Fungsi untuk menyimpan nilai input ke localStorage
-    function saveToLocalStorage(event) {
-        const { id, value } = event.target;
-        localStorage.setItem(id, value);
-    }
-
-    // Fungsi untuk mengisi nilai input dari localStorage saat halaman dimuat
-    function loadFromLocalStorage() {
-        const inputs = document.querySelectorAll("input, select"); // Menargetkan semua input dan select
-        inputs.forEach(input => {
-            const savedValue = localStorage.getItem(input.id);
-            if (savedValue !== null) {
-                input.value = savedValue;
-            }
-        });
-    }
-
-    // Menambahkan event listener ke semua input dan select
-    const inputs = document.querySelectorAll("input, select");
-    inputs.forEach(input => {
-        input.addEventListener("input", saveToLocalStorage);
-    });
-
-    // Mengisi nilai dari localStorage saat halaman dimuat
-    loadFromLocalStorage();
-});

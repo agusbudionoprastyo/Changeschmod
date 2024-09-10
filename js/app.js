@@ -111,25 +111,48 @@ document.addEventListener('DOMContentLoaded', function() {
     // updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
     // updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
     // Fetch Data
+
+  });
+
+  document.addEventListener("DOMContentLoaded", () => {
     const nameSelect = document.getElementById('name');
     const name2Select = document.getElementById('name2');
 
     function populateNames() {
-        fetch('get_names.php')
-            .then(response => response.json())
-            .then(data => {
-                data.forEach(person => {
-                    const option1 = document.createElement('option');
-                    option1.value = person.id;
-                    option1.textContent = person.name;
-                    nameSelect.appendChild(option1);
+        // Ambil data dari localStorage terlebih dahulu
+        const savedNames = JSON.parse(localStorage.getItem('names')) || [];
 
-                    const option2 = document.createElement('option');
-                    option2.value = person.id;
-                    option2.textContent = person.name;
-                    name2Select.appendChild(option2);
-                });
+        if (savedNames.length > 0) {
+            savedNames.forEach(person => {
+                const option1 = document.createElement('option');
+                option1.value = person.id;
+                option1.textContent = person.name;
+                nameSelect.appendChild(option1);
+
+                const option2 = document.createElement('option');
+                option2.value = person.id;
+                option2.textContent = person.name;
+                name2Select.appendChild(option2);
             });
+        } else {
+            // Jika tidak ada data di localStorage, ambil dari server
+            fetch('get_names.php')
+                .then(response => response.json())
+                .then(data => {
+                    localStorage.setItem('names', JSON.stringify(data));
+                    data.forEach(person => {
+                        const option1 = document.createElement('option');
+                        option1.value = person.id;
+                        option1.textContent = person.name;
+                        nameSelect.appendChild(option1);
+
+                        const option2 = document.createElement('option');
+                        option2.value = person.id;
+                        option2.textContent = person.name;
+                        name2Select.appendChild(option2);
+                    });
+                });
+        }
     }
 
     function updateDetails(selectElement, deptInput, posInput, nameInput) {
@@ -156,6 +179,35 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    function loadFromLocalStorage() {
+        const inputs = document.querySelectorAll("input, select");
+        inputs.forEach(input => {
+            const savedValue = localStorage.getItem(input.id);
+            if (savedValue !== null) {
+                if (input.tagName === 'SELECT') {
+                    input.value = savedValue;
+                    input.dispatchEvent(new Event('change')); // Trigger change event to update other fields
+                } else {
+                    input.value = savedValue;
+                }
+            }
+        });
+
+        // Memuat data canvas dari localStorage
+        const canvases = document.querySelectorAll("canvas");
+        canvases.forEach(canvas => {
+            const dataURL = localStorage.getItem(canvas.id);
+            if (dataURL) {
+                const ctx = canvas.getContext("2d");
+                const img = new Image();
+                img.onload = function() {
+                    ctx.drawImage(img, 0, 0);
+                };
+                img.src = dataURL;
+            }
+        });
+    }
+
     // Panggil fungsi populateNames
     populateNames();
 
@@ -163,7 +215,10 @@ document.addEventListener('DOMContentLoaded', function() {
     updateDetails(nameSelect, document.getElementById('dept'), document.getElementById('pos'), document.getElementById('nametext'));
     updateDetails(name2Select, document.getElementById('dept2'), document.getElementById('pos2'), document.getElementById('nametext2'));
 
-  });
+    // Mengisi nilai dari localStorage saat halaman dimuat
+    loadFromLocalStorage();
+});
+
 
 //   function updateOptions() {
 //     const from1Date = document.getElementById('from1').value;
