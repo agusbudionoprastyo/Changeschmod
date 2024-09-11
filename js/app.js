@@ -89,7 +89,7 @@ function populateNames() {
                 option.value = person.id;
                 option.textContent = person.name;
                 nameSelect.appendChild(option);
-                name2Select.appendChild(option.cloneNode(false));
+                name2Select.appendChild(option.cloneNode(true));
             });
 
             // Restore previously selected values and details
