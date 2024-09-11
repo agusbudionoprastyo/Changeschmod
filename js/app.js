@@ -188,14 +188,14 @@ updateDetails(name2Select, document.getElementById('dept2'), document.getElement
 });
 
 // URL API dan parameter
-const apiUrl = 'https://date.nager.at/Api/v2/PublicHolidays/';
-const countryCode = 'ID'; // Kode negara untuk Indonesia, periksa dokumentasi API
-const year = new Date().getFullYear(); // Tahun saat ini
+const apiUrl = 'https://libur.deno.dev/api';
+// const countryCode = 'ID'; // Kode negara untuk Indonesia, periksa dokumentasi API
+// const year = new Date().getFullYear(); // Tahun saat ini
 
 // Mendapatkan tanggal merah dari API
 async function fetchTanggalMerah() {
   try {
-    const response = await fetch(`${apiUrl}${year}/${countryCode}`);
+    const response = await fetch(`${apiUrl}`);
     if (!response.ok) throw new Error('Network response was not ok');
     const data = await response.json();
     return data.map(holiday => holiday.date); // Mengambil tanggal libur
