@@ -211,129 +211,148 @@ function isTanggalMerah(date, tanggalMerah) {
 
 // Fungsi untuk menyimpan data ke localStorage
 function saveToLocalStorage() {
-  localStorage.setItem('from1Date', document.getElementById('from1').value);
-  localStorage.setItem('to1Date', document.getElementById('to1').value);
-  localStorage.setItem('frommod1Value', document.getElementById('frommod1').value);
-  localStorage.setItem('tomod1Value', document.getElementById('tomod1').value);
-  localStorage.setItem('from2Date', document.getElementById('from2').value);
-  localStorage.setItem('to2Date', document.getElementById('to2').value);
-  localStorage.setItem('frommod2Value', document.getElementById('frommod2').value);
-  localStorage.setItem('tomod2Value', document.getElementById('tomod2').value);
+  const data = {
+    from1Date: document.getElementById('from1').value,
+    to1Date: document.getElementById('to1').value,
+    frommod1Value: document.getElementById('frommod1').value,
+    tomod1Value: document.getElementById('tomod1').value,
+    from2Date: document.getElementById('from2').value,
+    to2Date: document.getElementById('to2').value,
+    frommod2Value: document.getElementById('frommod2').value,
+    tomod2Value: document.getElementById('tomod2').value
+  };
+
+  for (const key in data) {
+    localStorage.setItem(key, data[key]);
+  }
+
+  // Log the data being saved
+  console.log('Data saved to localStorage:', data);
 }
+
 
 // Fungsi untuk memuat data dari localStorage
 function loadFromLocalStorage() {
-  document.getElementById('from1').value = localStorage.getItem('from1Date') || '';
-  document.getElementById('to1').value = localStorage.getItem('to1Date') || '';
-  document.getElementById('frommod1').value = localStorage.getItem('frommod1Value') || '';
-  document.getElementById('tomod1').value = localStorage.getItem('tomod1Value') || '';
-  document.getElementById('from2').value = localStorage.getItem('from2Date') || '';
-  document.getElementById('to2').value = localStorage.getItem('to2Date') || '';
-  document.getElementById('frommod2').value = localStorage.getItem('frommod2Value') || '';
-  document.getElementById('tomod2').value = localStorage.getItem('tomod2Value') || '';
+  const data = {
+    from1Date: localStorage.getItem('from1Date') || '',
+    to1Date: localStorage.getItem('to1Date') || '',
+    frommod1Value: localStorage.getItem('frommod1Value') || '',
+    tomod1Value: localStorage.getItem('tomod1Value') || '',
+    from2Date: localStorage.getItem('from2Date') || '',
+    to2Date: localStorage.getItem('to2Date') || '',
+    frommod2Value: localStorage.getItem('frommod2Value') || '',
+    tomod2Value: localStorage.getItem('tomod2Value') || ''
+  };
+
+  // Apply the loaded values to the form fields
+  document.getElementById('from1').value = data.from1Date;
+  document.getElementById('to1').value = data.to1Date;
+  document.getElementById('frommod1').value = data.frommod1Value;
+  document.getElementById('tomod1').value = data.tomod1Value;
+  document.getElementById('from2').value = data.from2Date;
+  document.getElementById('to2').value = data.to2Date;
+  document.getElementById('frommod2').value = data.frommod2Value;
+  document.getElementById('tomod2').value = data.tomod2Value;
+
+  // Log the loaded data
+  console.log('Data loaded from localStorage:', data);
 }
 
-// Fungsi untuk memperbarui dropdown berdasarkan tanggal
+
 async function fromOptions() {
   const from1Date = document.getElementById('from1').value;
-  const from1Day = new Date(from1Date).getDay();
-
-  const weekdaysOptions = ['MOD'];
-  const weekendsOptions = ['MOD 1', 'MOD 2'];
-  const redDateOptions = ['MOD 1', 'MOD 2']; // Opsi untuk tanggal merah
-
-  function populateSelect(selectElement, options) {
-    selectElement.innerHTML = ''; // Clear existing options
-    options.forEach(option => {
-      const opt = document.createElement('option');
-      opt.value = option;
-      opt.text = option;
-      selectElement.add(opt);
-    });
-    selectElement.disabled = false; // Enable the select element
-  }
 
   if (from1Date) {
     const tanggalMerah = await fetchTanggalMerah(); // Ambil tanggal merah dari API
+    const from1Day = new Date(from1Date).getDay();
 
     let options = [];
     if (isTanggalMerah(new Date(from1Date), tanggalMerah)) {
-      options = redDateOptions;
+      options = ['MOD 1', 'MOD 2'];
     } else if (from1Day === 0 || from1Day === 6) {
-      options = weekendsOptions;
+      options = ['MOD 1', 'MOD 2'];
     } else {
-      options = weekdaysOptions;
+      options = ['MOD'];
     }
+
     populateSelect(document.getElementById('frommod1'), options);
+
+    const fromMod1Value = localStorage.getItem('frommod1Value');
+    if (fromMod1Value) {
+      document.getElementById('frommod1').value = fromMod1Value;
+    }
+  } else {
+    // Jika from1Date kosong, kosongkan opsi dari dropdown
+    populateSelect(document.getElementById('frommod1'), []);
   }
 
-  // Automatically fill second set of selects with same values as the first set
   document.getElementById('to2').value = from1Date;
-
-  // Sync second set of selects with the same options
   syncSelectOptions('frommod1', 'tomod2');
-
-  // Save to localStorage
   saveToLocalStorage();
 }
 
-// Fungsi untuk memperbarui dropdown berdasarkan tanggal
 async function toOptions() {
   const to1Date = document.getElementById('to1').value;
-  const to1Day = new Date(to1Date).getDay();
-
-  const weekdaysOptions = ['MOD'];
-  const weekendsOptions = ['MOD 1', 'MOD 2'];
-  const redDateOptions = ['MOD 1', 'MOD 2']; // Opsi untuk tanggal merah
-
-  function populateSelect(selectElement, options) {
-    selectElement.innerHTML = ''; // Clear existing options
-    options.forEach(option => {
-      const opt = document.createElement('option');
-      opt.value = option;
-      opt.text = option;
-      selectElement.add(opt);
-    });
-    selectElement.disabled = false; // Enable the select element
-  }
 
   if (to1Date) {
     const tanggalMerah = await fetchTanggalMerah(); // Ambil tanggal merah dari API
+    const to1Day = new Date(to1Date).getDay();
 
     let options = [];
     if (isTanggalMerah(new Date(to1Date), tanggalMerah)) {
-      options = redDateOptions;
+      options = ['MOD 1', 'MOD 2'];
     } else if (to1Day === 0 || to1Day === 6) {
-      options = weekendsOptions;
+      options = ['MOD 1', 'MOD 2'];
     } else {
-      options = weekdaysOptions;
+      options = ['MOD'];
     }
+
     populateSelect(document.getElementById('tomod1'), options);
+
+    const toMod1Value = localStorage.getItem('tomod1Value');
+    if (toMod1Value) {
+      document.getElementById('tomod1').value = toMod1Value;
+    }
+  } else {
+    // Jika to1Date kosong, kosongkan opsi dari dropdown
+    populateSelect(document.getElementById('tomod1'), []);
   }
 
-  // Automatically fill second set of selects with same values as the first set
   document.getElementById('from2').value = to1Date;
-
-  // Sync second set of selects with the same options
   syncSelectOptions('tomod1', 'frommod2');
-
-  // Save to localStorage
   saveToLocalStorage();
 }
+
+function populateSelect(selectElement, options) {
+  selectElement.innerHTML = ''; // Clear existing options
+  options.forEach(option => {
+    const opt = document.createElement('option');
+    opt.value = option;
+    opt.text = option;
+    selectElement.add(opt);
+  });
+  selectElement.disabled = false; // Enable the select element
+}
+
+
 
 // Fungsi untuk menyinkronkan opsi antara dropdown
 function syncSelectOptions(sourceId, targetId) {
   const sourceSelect = document.getElementById(sourceId);
   const targetSelect = document.getElementById(targetId);
 
-  // Copy options to source select to target select
-  targetSelect.innerHTML = sourceSelect.innerHTML;
+  // Only sync options if not already synced
+  if (sourceSelect.innerHTML !== targetSelect.innerHTML) {
+    // Copy options to source select to target select
+    targetSelect.innerHTML = sourceSelect.innerHTML;
+  }
 
   // Set target select value to match source select value if it exists
   if (sourceSelect.value) {
       targetSelect.value = sourceSelect.value;
   }
 }
+
 
 // Fungsi untuk memperbarui dropdown berdasarkan perubahan pilihan
 function updateDropdownsOnChange() {
@@ -351,10 +370,12 @@ function updateDropdownsOnChange() {
   });
 }
 
-// Initial setup
-window.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('DOMContentLoaded', async () => {
   loadFromLocalStorage(); // Load data from localStorage on page load
-  fromOptions();
-  toOptions();
+
+  // Tunggu sampai data di-load sebelum memanggil fungsi lainnya
+  await fromOptions();
+  await toOptions();
+  
   updateDropdownsOnChange();
 });
