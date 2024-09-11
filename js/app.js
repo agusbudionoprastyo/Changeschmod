@@ -79,16 +79,17 @@ function populateNames() {
     fetch('get_names.php')
         .then(response => response.json())
         .then(data => {
-            // Clear existing options
-            nameSelect.innerHTML = '';
-            name2Select.innerHTML = '';
+
+            // // Clear existing options
+            // nameSelect.innerHTML = '';
+            // name2Select.innerHTML = '';
 
             data.forEach(person => {
                 const option = document.createElement('option');
                 option.value = person.id;
                 option.textContent = person.name;
                 nameSelect.appendChild(option);
-                name2Select.appendChild(option.cloneNode(true));
+                name2Select.appendChild(option.cloneNode(false));
             });
 
             // Restore previously selected values and details
