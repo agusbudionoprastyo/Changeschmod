@@ -100,6 +100,8 @@ document.getElementById('save-btn').addEventListener('click', async function() {
                 confirmButton: 'roundedBtn'
             }
         }).then(() => {
+            // Clear local storage
+            localStorage.clear();
             // Add a delay before reloading
             setTimeout(() => {
                 window.location.reload();
