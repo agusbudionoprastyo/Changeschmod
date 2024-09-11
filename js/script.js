@@ -203,9 +203,12 @@ function isCanvasEmpty(canvasId) {
 
 function openDatePicker(inputId) {
     const inputElement = document.getElementById(inputId);
-    if (inputElement) {
-        inputElement.focus(); // Focus on the date input to open the calendar
+    if (inputElement && inputElement.type === 'date') {
+        // Check if the element is an input of type date
+        // Use a workaround if needed (may not work in all browsers)
+        inputElement.focus(); // Focus on the date input
+        inputElement.click(); // Simulate a click on the date input
     } else {
-        console.error('Input element not found:', inputId);
+        console.error('Input element not found or is not a date input:', inputId);
     }
 }
