@@ -1,74 +1,134 @@
 document.addEventListener('DOMContentLoaded', function() {
   const pads = [];
-  const canvases = [];
+const canvases = [];
 
-  function resizeCanvas(canvas) {
-    const ratio = Math.max(window.devicePixelRatio || 1, 1);
-    const context = canvas.getContext("2d");
-    const width = canvas.offsetWidth;
-    const height = canvas.offsetHeight;
+// Function to resize the canvas
+function resizeCanvas(canvas) {
+  const ratio = Math.max(window.devicePixelRatio || 1, 1);
+  const context = canvas.getContext("2d");
+  const width = canvas.offsetWidth;
+  const height = canvas.offsetHeight;
 
-    canvas.width = width * ratio;
-    canvas.height = height * ratio;
+  canvas.width = width * ratio;
+  canvas.height = height * ratio;
 
-    context.scale(ratio, ratio);
-    context.clearRect(0, 0, width, height); // Clear the canvas before resizing
+  context.scale(ratio, ratio);
+  context.clearRect(0, 0, width, height); // Clear the canvas before resizing
 
-    // Optionally re-render the existing signature here
-    const pad = pads[canvases.indexOf(canvas)];
-    if (pad && !pad.isEmpty()) {
-      pad.fromData(pad.toData());
+  // Optionally re-render the existing signature here
+  const pad = pads[canvases.indexOf(canvas)];
+  if (pad && !pad.isEmpty()) {
+    pad.fromData(pad.toData());
+  }
+}
+
+// Initialize Signature Pads
+for (let i = 1; i <= 4; i++) {
+  const canvas = document.querySelector(`#signature-pad-${i} canvas`);
+  canvases.push(canvas);
+  pads[i - 1] = new SignaturePad(canvas);
+
+  // Event listener for Undo Button
+  const undoButton = document.querySelector(`#signature-pad-${i} [data-action=undo]`);
+  if (undoButton) {
+    undoButton.addEventListener("click", () => {
+      const pad = pads[i - 1];
+      const data = pad.toData();
+      if (data) {
+        data.pop(); // Remove the last dot or line
+        pad.fromData(data);
+      }
+    });
+  }
+
+  // Event listener for Clear Button
+  const clearButton = document.querySelector(`#signature-pad-${i} .undoClear`);
+  if (clearButton) {
+    clearButton.addEventListener('click', function() {
+      pads[i - 1].clear();
+      localStorage.removeItem(`signature-pad-${i}`); // Remove from local storage
+      console.log(`Signature ${i} cleared and removed from local storage.`);
+    });
+  }
+
+  // Event listener for Save Button
+  if (i === 4) { // Assuming the last pad has a submit button
+    const saveButton = document.querySelector(`#signature-pad-${i} #save-btn`);
+    if (saveButton) {
+      saveButton.addEventListener('click', function() {
+        // Directly obtain data URL from the pad without checking if it's empty
+        const dataURL = pads[i - 1].toDataURL();
+        console.log(`Signature ${i} data URL:`, dataURL);
+        // Handle the data URL (e.g., send it to a server or display it)
+      });
     }
   }
 
-  // Initialize Signature Pads
-  for (let i = 1; i <= 4; i++) {
-    const canvas = document.querySelector(`#signature-pad-${i} canvas`);
-    canvases.push(canvas);
-    pads[i - 1] = new SignaturePad(canvas);
-
-    // Event listener for Undo Button
-    const undoButton = document.querySelector(`#signature-pad-${i} [data-action=undo]`);
-    if (undoButton) {
-      undoButton.addEventListener("click", () => {
-        const pad = pads[i - 1];
-        const data = pad.toData();
-        if (data) {
-          data.pop(); // Remove the last dot or line
-          pad.fromData(data);
+  // // Event listener for the Sign Button
+  // const signButton = document.querySelector(`#signature-pad-${i} #sign`);
+  // if (signButton) {
+  //   signButton.addEventListener('click', function() {
+  //     const pad = pads[i - 1];
+  //     const dataURL = pad.toDataURL();
+  //     localStorage.setItem(`signature-pad-${i}`, dataURL);
+  //     console.log(`Signature ${i} saved to local storage.`);
+  //   });
+  // }
+  // Event listener for the Sign Button
+  const signButton = document.querySelector(`#signature-pad-${i} #sign`);
+  if (signButton) {
+    signButton.addEventListener('click', function() {
+      const pad = pads[i - 1];
+      const dataURL = pad.toDataURL();
+      
+      // Save the signature data URL to local storage
+      localStorage.setItem(`signature-pad-${i}`, dataURL);
+      console.log(`Signature ${i} saved to local storage.`);
+      
+      // Show success message using SweetAlert
+      Swal.fire({
+        icon: 'info',
+        title: 'Signed!',
+        text: 'Your signature has been saved.',
+        confirmButtonText: 'OK',
+        customClass: {
+          popup: 'rounded',
+          confirmButton: 'roundedBtn'
         }
-      });
-    }
-
-    // Event listener for Clear Button
-    const clearButton = document.querySelector(`#signature-pad-${i} .undoClear`);
-    if (clearButton) {
-      clearButton.addEventListener('click', function() {
-        pads[i - 1].clear();
-      });
-    }
-
-      // Event listener for Save Button
-      if (i === 4) { // Assuming the last pad has a submit button
-          const saveButton = document.querySelector(`#signature-pad-${i} #save-btn`);
-          if (saveButton) {
-          saveButton.addEventListener('click', function() {
-              // Directly obtain data URL from the pad without checking if it's empty
-              const dataURL = pads[i - 1].toDataURL();
-              console.log(`Signature ${i} data URL:`, dataURL);
-              // Handle the data URL (e.g., send it to a server or display it)
-          });
-          }
-      }  
+      })
+    });
   }
 
-  // Resize all canvases on page load
-  canvases.forEach(canvas => resizeCanvas(canvas));
 
-  // Resize canvases on window resize
-  window.addEventListener("resize", function() {
-    canvases.forEach(canvas => resizeCanvas(canvas));
+}
+
+// Load saved signatures from local storage
+function loadSignatures() {
+  pads.forEach((pad, index) => {
+    const dataURL = localStorage.getItem(`signature-pad-${index + 1}`);
+    if (dataURL) {
+      const img = new Image();
+      img.onload = () => {
+        pad.clear(); // Clear the current pad
+        pad.fromDataURL(dataURL); // Load the saved data
+      };
+      img.src = dataURL;
+    }
   });
+}
+
+// Resize all canvases on page load
+canvases.forEach(canvas => resizeCanvas(canvas));
+
+// Resize canvases on window resize
+window.addEventListener("resize", function() {
+  canvases.forEach(canvas => resizeCanvas(canvas));
+});
+
+// Load signatures on page load
+window.addEventListener('load', loadSignatures);
+  
+//
 
   // Fetch Data
 const nameSelect = document.getElementById('name');
