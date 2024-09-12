@@ -39,7 +39,7 @@ if ($data) {
             $stmt->bind_param("ssss", $name, $position, $dept, $id);
         } else {
             // Jika ID belum ada, lakukan INSERT
-            $insertQuery = "INSERT INTO your_table_name (ID, Name, Position, Dept) VALUES (?, ?, ?, ?)";
+            $insertQuery = "INSERT INTO employees (ID, Name, Position, Dept) VALUES (?, ?, ?, ?)";
             $stmt = $conn->prepare($insertQuery);
             $stmt->bind_param("ssss", $id, $name, $position, $dept);
         }
