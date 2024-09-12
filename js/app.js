@@ -117,7 +117,7 @@ for (let i = 1; i <= 4; i++) {
 
 }
 
-// Load saved signatures from local storage
+// Function to load saved signatures
 function loadSignatures() {
   pads.forEach((pad, index) => {
     const dataURL = localStorage.getItem(`signature-pad-${index + 1}`);
@@ -132,16 +132,19 @@ function loadSignatures() {
   });
 }
 
-// Resize all canvases on page load
-canvases.forEach(canvas => resizeCanvas(canvas));
+// Function to resize canvases and then load signatures
+function resizeAndLoadSignatures() {
+  canvases.forEach(canvas => resizeCanvas(canvas));
+  loadSignatures(); // Load signatures after resizing
+}
+
+// Resize canvases and load signatures on page load
+window.addEventListener('load', resizeAndLoadSignatures);
 
 // Resize canvases on window resize
-window.addEventListener("resize", function() {
-  canvases.forEach(canvas => resizeCanvas(canvas));
+window.addEventListener('resize', () => {
+  resizeAndLoadSignatures();
 });
-
-// Load signatures on page load
-window.addEventListener('load', loadSignatures);
   
 //
 
