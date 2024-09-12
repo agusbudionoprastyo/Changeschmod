@@ -105,7 +105,7 @@ document.getElementById('save-btn').addEventListener('click', async function() {
             // Add a delay before reloading
             setTimeout(() => {
             // Clear form data
-            document.getElementById('imageForm').reset();
+            window.location.reload();
             }, 1000); // Delay in milliseconds (1000ms = 1 seconds)
         });
     } catch (error) {
@@ -123,7 +123,7 @@ document.getElementById('save-btn').addEventListener('click', async function() {
         }).then(() => {
             // Add a delay before reloading
             setTimeout(() => {
-                window.location.reload();
+            window.location.reload();
             }, 1000); // Delay in milliseconds (1000ms = 1 seconds)
         });
     }
