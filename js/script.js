@@ -208,8 +208,8 @@ function openDatePickerFrom() {
         inputElement.click(); // Simulate a click on the date input
     } 
 
-    function openDatePickerTo() {
-        const inputElement = document.getElementById('to1');
-            inputElement.focus(); // Focus on the date input
-            inputElement.click(); // Simulate a click on the date input
-        } 
+function openDatePickerTo() {
+    const inputElement = document.getElementById('to1');
+        inputElement.focus(); // Focus on the date input
+        inputElement.click(); // Simulate a click on the date input
+    } 
