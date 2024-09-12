@@ -104,7 +104,8 @@ document.getElementById('save-btn').addEventListener('click', async function() {
             localStorage.clear();
             // Add a delay before reloading
             setTimeout(() => {
-                window.location.reload();
+            // Clear form data
+            document.getElementById('imageForm').reset();
             }, 1000); // Delay in milliseconds (1000ms = 1 seconds)
         });
     } catch (error) {
