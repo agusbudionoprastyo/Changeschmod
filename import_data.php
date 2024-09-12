@@ -17,27 +17,40 @@ if ($conn->connect_error) {
 $data = json_decode(file_get_contents('php://input'), true);
 
 if ($data) {
-    // Siapkan pernyataan SQL
-    $stmt = $conn->prepare("INSERT INTO employees (name, dept) VALUES (?, ?)");
-    
-    if ($stmt === false) {
-        die("Prepare failed: " . $conn->error);
-    }
-
     foreach ($data as $row) {
-        $col1 = $row[0];
-        $col2 = $row[1];
+        $id = $conn->real_escape_string($row[0]);
+        $name = $conn->real_escape_string($row[1]);
+        $position = $conn->real_escape_string($row[2]);
+        $dept = $conn->real_escape_string($row[3]);
 
-        // Bind parameters and execute
-        $stmt->bind_param("ss", $col1, $col2);
+        // Periksa apakah ID sudah ada di database
+        $checkQuery = "SELECT COUNT(*) FROM employees WHERE ID = ?";
+        $stmt = $conn->prepare($checkQuery);
+        $stmt->bind_param("s", $id);
+        $stmt->execute();
+        $stmt->bind_result($count);
+        $stmt->fetch();
+        $stmt->close();
+
+        if ($count > 0) {
+            // Jika ID sudah ada, lakukan UPDATE
+            $updateQuery = "UPDATE employees SET Name = ?, Position = ?, Dept = ? WHERE ID = ?";
+            $stmt = $conn->prepare($updateQuery);
+            $stmt->bind_param("ssss", $name, $position, $dept, $id);
+        } else {
+            // Jika ID belum ada, lakukan INSERT
+            $insertQuery = "INSERT INTO your_table_name (ID, Name, Position, Dept) VALUES (?, ?, ?, ?)";
+            $stmt = $conn->prepare($insertQuery);
+            $stmt->bind_param("ssss", $id, $name, $position, $dept);
+        }
 
         if (!$stmt->execute()) {
             echo "Error: " . $stmt->error;
         }
+
+        // Tutup pernyataan
+        $stmt->close();
     }
-    
-    // Tutup pernyataan
-    $stmt->close();
 }
 
 // Tutup koneksi
