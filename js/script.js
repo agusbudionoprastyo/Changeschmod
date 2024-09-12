@@ -202,14 +202,14 @@ function isCanvasEmpty(canvasId) {
     return true;
 }
 
-function openDatePicker(inputId) {
-    const inputElement = document.getElementById(inputId);
-    if (inputElement && inputElement.type === 'date') {
-        // Check if the element is an input of type date
-        // Use a workaround if needed (may not work in all browsers)
+function openDatePickerFrom() {
+    const inputElement = document.getElementById('from1');
         inputElement.focus(); // Focus on the date input
         inputElement.click(); // Simulate a click on the date input
-    } else {
-        console.error('Input element not found or is not a date input:', inputId);
-    }
-}
+    } 
+
+    function openDatePickerTo() {
+        const inputElement = document.getElementById('to1');
+            inputElement.focus(); // Focus on the date input
+            inputElement.click(); // Simulate a click on the date input
+        } 

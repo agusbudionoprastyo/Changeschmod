@@ -43,7 +43,7 @@
         <div class="input-group">
             <label for="from1"><h3>From</h3></label>
             <div class="input-wrapper">
-                <button type="button" class="date-input" onclick="openDatePicker()"><i class="fa-solid fa-calendar-day"></i></button>
+                <button type="button" class="date-input" onclick="openDatePickerFrom()"><i class="fa-solid fa-calendar-day"></i></button>
                 <input type="date" class="date-input" id="from1" name="from1" onchange="fromOptions()"/>
                 <select id="frommod1" name="frommod1">
                 </select>
@@ -51,27 +51,12 @@
 
             <label for="to1"><h3>To</h3></label>
             <div class="input-wrapper">
-                <button type="button" class="date-input" onclick="openDatePicker()"><i class="fa-solid fa-calendar-day"></i></button>
+                <button type="button" class="date-input" onclick="openDatePickerTo()"><i class="fa-solid fa-calendar-day"></i></button>
                 <input type="date" class="date-input" id="to1" name="to1" onchange="toOptions()"/>
                 <select id="tomod1" name="tomod1">
                 </select>
             </div>
         </div>
-
-        <div id="signature-pad-1" class="signature-pad">
-            <label><h3>Requested By (Employee 1)</h3></label>
-            <canvas id="signature1"></canvas>
-            <div class="input-group">
-                <div class="input-wrapper">
-                    <button type="button" class="undoClear" data-action="clear"><i class="fa-solid fa-eraser"></i></button>
-                    <button type="button" class="undoClear" data-action="undo"><i class="fa-solid fa-rotate-left"></i></button>
-                    <button type="button" id="sign"><i class="fa-solid fa-signature"></i> Sign</button>
-                    
-                </div>
-            </div>
-        </div>
-
-        <hr><br>
 
         <label><h3>2<sup>nd</sup> Employee</h3></label> 
         <div class="input-group">
@@ -105,6 +90,19 @@
             <div class="input-wrapper">
                 <input type="date" class="date-input" id="to2" name="to2" disabled />
                 <select id="tomod2" name="tomod2" disabled></select>
+            </div>
+        </div>
+
+        <div id="signature-pad-1" class="signature-pad">
+            <label><h3>Requested By (Employee 1)</h3></label>
+            <canvas id="signature1"></canvas>
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <button type="button" class="undoClear" data-action="clear"><i class="fa-solid fa-eraser"></i></button>
+                    <button type="button" class="undoClear" data-action="undo"><i class="fa-solid fa-rotate-left"></i></button>
+                    <button type="button" id="sign"><i class="fa-solid fa-signature"></i> Sign</button>
+                    
+                </div>
             </div>
         </div>
 
