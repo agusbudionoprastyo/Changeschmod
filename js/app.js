@@ -79,26 +79,41 @@ for (let i = 1; i <= 4; i++) {
   if (signButton) {
     signButton.addEventListener('click', function() {
       const pad = pads[i - 1];
-      const dataURL = pad.toDataURL();
       
-      // Save the signature data URL to local storage
-      localStorage.setItem(`signature-pad-${i}`, dataURL);
-      console.log(`Signature ${i} saved to local storage.`);
-      
-      // Show success message using SweetAlert
-      Swal.fire({
-        icon: 'info',
-        title: 'Signed!',
-        text: 'Your signature has been saved.',
-        confirmButtonText: 'OK',
-        customClass: {
-          popup: 'rounded',
-          confirmButton: 'roundedBtn'
-        }
-      })
+      // Check if the pad has any data
+      if (!pad.isEmpty()) {
+        const dataURL = pad.toDataURL();
+        
+        // Save the signature data URL to local storage
+        localStorage.setItem(`signature-pad-${i}`, dataURL);
+        console.log(`Signature ${i} saved to local storage.`);
+        
+        // Show success message using SweetAlert
+        Swal.fire({
+          icon: 'info',
+          title: 'Signed!',
+          text: 'Your signature has been saved.',
+          confirmButtonText: 'OK',
+          customClass: {
+            popup: 'rounded',
+            confirmButton: 'roundedBtn'
+          }
+        });
+      } else {
+        // Show message if the pad is empty
+        Swal.fire({
+          icon: 'warning',
+          title: 'No Signature!',
+          text: 'Please add a signature before saving.',
+          confirmButtonText: 'OK',
+          customClass: {
+            popup: 'rounded',
+            confirmButton: 'roundedBtn'
+          }
+        });
+      }
     });
   }
-
 
 }
 
