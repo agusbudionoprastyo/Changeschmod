@@ -347,9 +347,9 @@ async function fromOptions() {
 
     let options = [];
     if (isTanggalMerah(new Date(from1Date), tanggalMerah)) {
-      options = ['MOD 1', 'MOD 2'];
+      options = ['MOD1', 'MOD2'];
     } else if (from1Day === 0 || from1Day === 6) {
-      options = ['MOD 1', 'MOD 2'];
+      options = ['MOD1', 'MOD2'];
     } else {
       options = ['MOD'];
     }
@@ -379,9 +379,9 @@ async function toOptions() {
 
     let options = [];
     if (isTanggalMerah(new Date(to1Date), tanggalMerah)) {
-      options = ['MOD 1', 'MOD 2'];
+      options = ['MOD1', 'MOD2'];
     } else if (to1Day === 0 || to1Day === 6) {
-      options = ['MOD 1', 'MOD 2'];
+      options = ['MOD1', 'MOD2'];
     } else {
       options = ['MOD'];
     }
