@@ -145,6 +145,48 @@ async function blobToBase64(blob) {
     });
 }
 
+// function validateForm() {
+//     let valid = true;
+
+//     // Check required fields
+//     const fields = ['name', 'dept', 'from1', 'to1', 'name2', 'dept2', 'from2', 'to2'];
+//     fields.forEach(id => {
+//         const field = document.getElementById(id);
+//         if (field && field.value.trim() === '') {
+//             valid = false;
+//             field.style.borderColor = 'red';
+//         } else {
+//             field.style.borderColor = '';
+//         }
+//     });
+
+//     // Check if signature canvases are filled
+//     const signatureFields = ['signature1', 'signature2', 'signature3', 'signature4'];
+//     signatureFields.forEach(id => {
+//         if (isCanvasEmpty(id)) {
+//             valid = false;
+//             document.getElementById(id).style.borderColor = 'red';
+//         } else {
+//             document.getElementById(id).style.borderColor = '';
+//         }
+//     });
+
+//     if (!valid) {
+//         Swal.fire({
+//             icon: 'warning',
+//             title: 'Oops!',
+//             text: 'Please fill in all required fields and provide all necessary signatures.',
+//             confirmButtonText: 'OK',
+//             customClass: {
+//                 popup: 'rounded',
+//                 confirmButton: 'roundedBtn'
+//             }
+//         });
+//     }    
+
+//     return valid;
+// }
+
 function validateForm() {
     let valid = true;
 
@@ -171,6 +213,30 @@ function validateForm() {
         }
     });
 
+    // Validate month for from1 and to1
+    const from1 = document.getElementById('from1').value;
+    const to1 = document.getElementById('to1').value;
+
+    if (from1 && to1) {
+        const fromDate = new Date(from1);
+        const toDate = new Date(to1);
+
+        // Check if months are different
+        if (fromDate.getMonth() !== toDate.getMonth() || fromDate.getFullYear() !== toDate.getFullYear()) {
+            valid = false;
+            Swal.fire({
+                icon: 'error',
+                title: '!',
+                text: 'The months of From and To dates must be the same in the schedule.',
+                confirmButtonText: 'OK',
+                customClass: {
+                    popup: 'rounded',
+                    confirmButton: 'roundedBtn'
+                }
+            });
+        }
+    }
+
     if (!valid) {
         Swal.fire({
             icon: 'warning',
@@ -182,7 +248,7 @@ function validateForm() {
                 confirmButton: 'roundedBtn'
             }
         });
-    }    
+    }
 
     return valid;
 }
