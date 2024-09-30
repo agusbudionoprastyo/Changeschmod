@@ -254,7 +254,6 @@ function validateForm() {
     return valid;
 }
 
-
 // Function to check if the canvas is empty
 function isCanvasEmpty(canvasId) {
     const canvas = document.getElementById(canvasId);
