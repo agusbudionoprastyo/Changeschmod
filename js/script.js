@@ -213,50 +213,7 @@ function validateForm() {
         }
     });
 
-    // Validate month for from1 and to1
-    const from1 = document.getElementById('from1').value;
-    const to1 = document.getElementById('to1').value;
-
-    console.log('From1:', from1, 'To1:', to1); // Log input values
-
-    if (from1 && to1) {
-        const fromDate = new Date(from1);
-        const toDate = new Date(to1);
-
-        console.log('From Date:', fromDate, 'To Date:', toDate); // Log Date objects
-
-        // Check if the dates are valid
-        if (isNaN(fromDate) || isNaN(toDate)) {
-            valid = false;
-            Swal.fire({
-                icon: 'error',
-                title: 'Invalid Date',
-                text: 'Please enter valid dates.',
-                confirmButtonText: 'OK',
-                customClass: {
-                    popup: 'rounded',
-                    confirmButton: 'roundedBtn'
-                }
-            });
-        } else {
-            // Check if months are different
-            if (fromDate.getMonth() !== toDate.getMonth() || fromDate.getFullYear() !== toDate.getFullYear()) {
-                valid = false;
-                Swal.fire({
-                    icon: 'error',
-                    title: '!',
-                    text: 'The months of From and To dates must be the same in the schedule.',
-                    confirmButtonText: 'OK',
-                    customClass: {
-                        popup: 'rounded',
-                        confirmButton: 'roundedBtn'
-                    }
-                });
-            }
-        }
-    }
-
-    // Show a single error message if valid is false
+    // Return early if not valid
     if (!valid) {
         Swal.fire({
             icon: 'warning',
@@ -268,10 +225,51 @@ function validateForm() {
                 confirmButton: 'roundedBtn'
             }
         });
+        return false; // Form is invalid
     }
 
-    return valid;
+    // Validate month for from1 and to1
+    const from1 = document.getElementById('from1').value;
+    const to1 = document.getElementById('to1').value;
+
+    if (from1 && to1) {
+        const fromDate = new Date(from1);
+        const toDate = new Date(to1);
+
+        // Check if the dates are valid
+        if (isNaN(fromDate) || isNaN(toDate)) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Invalid Date',
+                text: 'Please enter valid dates in the correct format (YYYY-MM-DD).',
+                confirmButtonText: 'OK',
+                customClass: {
+                    popup: 'rounded',
+                    confirmButton: 'roundedBtn'
+                }
+            });
+            return false; // Dates are invalid
+        }
+
+        // Check if months are different
+        if (fromDate.getMonth() !== toDate.getMonth() || fromDate.getFullYear() !== toDate.getFullYear()) {
+            Swal.fire({
+                icon: 'error',
+                title: '!',
+                text: 'The months of From and To dates must be the same in the schedule.',
+                confirmButtonText: 'OK',
+                customClass: {
+                    popup: 'rounded',
+                    confirmButton: 'roundedBtn'
+                }
+            });
+            return false; // Months are different
+        }
+    }
+
+    return true; // All validations passed
 }
+
 
 // Function to check if the canvas is empty
 function isCanvasEmpty(canvasId) {
