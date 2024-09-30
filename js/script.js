@@ -255,8 +255,8 @@ function validateForm() {
         if (fromDate.getMonth() !== toDate.getMonth() || fromDate.getFullYear() !== toDate.getFullYear()) {
             Swal.fire({
                 icon: 'error',
-                title: 'Bulan dari tanggal From dan To harus sama.',
-                text: 'The months of From and To dates must be the same.',
+                title: 'Bulan dari kedua employee harus sama.',
+                text: 'The months of 2 employee must be the same.',
                 confirmButtonText: 'OK',
                 customClass: {
                     popup: 'rounded',
