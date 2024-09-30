@@ -217,7 +217,7 @@ function validateForm() {
     if (!valid) {
         Swal.fire({
             icon: 'warning',
-            title: 'Oops!',
+            title: 'Silakan isi semua kolom dan tanda tangan yang diperlukan.',
             text: 'Please fill in all required fields and provide all necessary signatures.',
             confirmButtonText: 'OK',
             customClass: {
@@ -255,7 +255,7 @@ function validateForm() {
         if (fromDate.getMonth() !== toDate.getMonth() || fromDate.getFullYear() !== toDate.getFullYear()) {
             Swal.fire({
                 icon: 'error',
-                title: '!',
+                title: 'Bulan dari tanggal From dan To harus sama.',
                 text: 'The months of From and To dates must be the same.',
                 confirmButtonText: 'OK',
                 customClass: {
