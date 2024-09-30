@@ -217,23 +217,42 @@ function validateForm() {
     const from1 = document.getElementById('from1').value;
     const to1 = document.getElementById('to1').value;
 
+    console.log('From1:', from1, 'To1:', to1); // Log input values
+
     if (from1 && to1) {
         const fromDate = new Date(from1);
         const toDate = new Date(to1);
 
-        // Check if months are different
-        if (fromDate.getMonth() !== toDate.getMonth() || fromDate.getFullYear() !== toDate.getFullYear()) {
+        console.log('From Date:', fromDate, 'To Date:', toDate); // Log Date objects
+
+        // Check if the dates are valid
+        if (isNaN(fromDate) || isNaN(toDate)) {
             valid = false;
             Swal.fire({
                 icon: 'error',
-                title: '!',
-                text: 'The months of From and To dates must be the same in the schedule.',
+                title: 'Invalid Date',
+                text: 'Please enter valid dates.',
                 confirmButtonText: 'OK',
                 customClass: {
                     popup: 'rounded',
                     confirmButton: 'roundedBtn'
                 }
             });
+        } else {
+            // Check if months are different
+            if (fromDate.getMonth() !== toDate.getMonth() || fromDate.getFullYear() !== toDate.getFullYear()) {
+                valid = false;
+                Swal.fire({
+                    icon: 'error',
+                    title: '!',
+                    text: 'The months of From and To dates must be the same in the schedule.',
+                    confirmButtonText: 'OK',
+                    customClass: {
+                        popup: 'rounded',
+                        confirmButton: 'roundedBtn'
+                    }
+                });
+            }
         }
     }
 
