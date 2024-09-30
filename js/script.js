@@ -256,7 +256,7 @@ function validateForm() {
             Swal.fire({
                 icon: 'error',
                 title: '!',
-                text: 'The months of From and To dates must be the same in the schedule.',
+                text: 'The months of From and To dates must be the same.',
                 confirmButtonText: 'OK',
                 customClass: {
                     popup: 'rounded',
