@@ -237,6 +237,7 @@ function validateForm() {
         }
     }
 
+    // Show a single error message if valid is false
     if (!valid) {
         Swal.fire({
             icon: 'warning',
@@ -252,6 +253,7 @@ function validateForm() {
 
     return valid;
 }
+
 
 // Function to check if the canvas is empty
 function isCanvasEmpty(canvasId) {
